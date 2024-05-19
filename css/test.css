@@ -1,0 +1,124 @@
+body {
+  background-color: #f4f4f9;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #FF9A9E 0%, #FAD0C4 100%);
+  color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.banner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+#my-color {
+  background: linear-gradient(115deg, rgba(255, 110, 97, 0.5) 50%, rgba(204, 204, 204, 0.5) 50%), 
+      url("https://picsum.photos/id/237/2000/1500") no-repeat center center;
+}
+
+#wardrobe {
+  background: linear-gradient(115deg, rgba(0, 250, 0, 0.5) 50%, rgba(204, 204, 204, 0.5) 50%), 
+      url("https://picsum.photos/id/238/2000/1500") no-repeat center center;
+}
+
+#outfit-suggestions {
+  background: linear-gradient(115deg, rgba(0, 0, 250, 0.5) 50%, rgba(204, 204, 204, 0.5) 50%), 
+      url("https://picsum.photos/id/239/2000/1500") no-repeat center center;
+}
+
+#shopping {
+  background: linear-gradient(115deg, rgba(250, 250, 0, 0.5) 50%, rgba(204, 204, 204, 0.5) 50%), 
+      url("https://picsum.photos/id/240/2000/1500") no-repeat center center;
+}
+
+#community {
+  background: linear-gradient(115deg, rgba(250, 0, 250, 0.5) 50%, rgba(204, 204, 204, 0.5) 50%), 
+      url("https://picsum.photos/id/241/2000/1500") no-repeat center center;
+}
+
+#schedule {
+  background: linear-gradient(115deg, rgba(0, 250, 250, 0.5) 50%, rgba(204, 204, 204, 0.5) 50%), 
+      url("https://picsum.photos/id/242/2000/1500") no-repeat center center;
+}
+
+.banner-text {
+  z-index: 1;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-text h1 {
+  font-size: 40px;
+  border-bottom: 1px solid #fff;
+  font-weight: 900;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+.banner-text p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.btn-primary {
+  background-color: #FF6F61;
+  border-color: #FF6F61;
+  border-radius: 20px;
+}
+
+footer {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #fff;
+  color: #777;
+}
+
+.spacer {
+  height: 30px;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .banner {
+      height: 500px;
+  }
+
+  .banner-text h1 {
+      font-size: 60px;
+  }
+
+  .banner-text p {
+      font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) {
+  .banner {
+      height: 700px;
+  }
+
+  .banner-text h1 {
+      font-size: 80px;
+  }
+
+  .banner-text p {
+      font-size: 20px;
+  }
+}
