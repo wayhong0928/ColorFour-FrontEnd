@@ -188,6 +188,7 @@ header {
 
 .btn-primary:hover {
   background-color: #f9d9ca; /* Change background color on hover */
+  border: #f9d9ca;
 }
 
 #title {
@@ -281,11 +282,38 @@ header {
 }
 
 .image-container .overlay1 {
-  top: 190px;
+  top: 150px;
   left: -100px;
   width: 100%;
-  height: 75%;
+  height: 80%;
   background-color: #7b695f;
+}
+
+.image-container .overlay1::after {
+  content: "";
+  position: absolute;
+  top: -200px;
+  left: 50px;
+  width: 60%;
+  height: 100%;
+  border: 3px solid #dbcaba;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .order-md-2 {
+    order: 1 !important;
+  }
+  .col-md-6.order-md-2.d-flex.flex-column.justify-content-center.mx-auto {
+    margin-top: 200px; /* 調整為你需要的值 */
+  }
+  .image-container .overlay1 {
+    top: 140px; /* 調整為你需要的值 */
+  }
+  .image-container .overlay1::after {
+    top: -200px; /* 調整為你需要的值 */
+  }
 }
 
 .image-container .overlay2 {
@@ -294,7 +322,14 @@ header {
   right: -30px;
   width: 800px;
   height: 65%;
-  background-color: rgba(230, 181, 174, 0.5);
+  background-color: #c6c6bc;
+}
+
+@media (max-width: 768px) {
+  .col-md-6.d-flex.flex-column.justify-content-center.mx-auto {
+    order: 2 !important; /* 移至下方 */
+    margin-top: 20px; /* 往下位移 */
+  }
 }
 
 .row .overlay3 {
@@ -303,13 +338,13 @@ header {
   left: -20px;
   width: calc(100% + 40px);
   height: calc(100% + 40px);
-  background-color: rgba(230, 181, 174, 0.5);
+  background-color: #8d8185;
   z-index: -1;
   border-radius: 10px;
 }
 
 .extra-margin {
-  margin-top: 150px; /* 调整此值以增加行之间的间距 */
+  margin-top: 100px; /* 调整此值以增加行之间的间距 */
 }
 
 h2.featurette-heading {
