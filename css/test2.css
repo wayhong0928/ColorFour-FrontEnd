@@ -1,0 +1,433 @@
+body {
+  background-color: #f4f4f9;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f0e4d4;
+  color: white;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-container .search-icon {
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  color: #888;
+}
+
+.nav input[type="search"] {
+  padding: 10px 15px 10px 35px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  width: 250px;
+  transition: width 0.4s ease-in-out;
+}
+
+.nav input[type="search"]:focus {
+  width: 300px;
+  outline: none;
+}
+
+.nav button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  margin-left: 10px; /* 確保按鈕與輸入框有一定間距 */
+}
+
+.nav button:hover {
+  background-color: #f0e4d4;
+}
+
+/* 側邊欄樣式 */
+.sidebar {
+  width: 200px; /* 根據需要調整寬度 */
+  background-color: #f0f0f0; /* 側邊欄的背景顏色 */
+  padding: 20px; /* 添加內容間距 */
+  box-sizing: border-box; /* 將內容框模型設置為邊框盒 */
+  position: fixed; /* 固定定位，使其保持在右側 */
+  top: 60px; /* 根據頁眉高度進行調整 */
+  right: 0; /* 右側對齊 */
+  height: calc(100% - 120px); /* 根據頁眉和頁腳的高度進行調整 */
+  overflow-y: auto; /* 如果內容溢出，添加滾動條 */
+  z-index: 10; /* 確保側邊欄顯示在動態廣告上面 */
+}
+
+.sidebar-divider {
+  border: 0;
+  height: 1px;
+  margin: 20px 0;
+  background-color: #ccc; /* 分隔線顏色 */
+}
+
+/* 側邊欄顯示/隱藏狀態 */
+.sidebar {
+  display: none; /* 預設隱藏側邊欄 */
+}
+
+.sidebar.show {
+  display: block; /* 顯示側邊欄 */
+}
+
+.member-photo {
+  width: 150px; /* 根據需求調整照片寬度 */
+  height: auto; /* 根據寬度自動調整高度 */
+  border-radius: 50%; /* 圓形照片 */
+  display: block;
+  margin: 20px auto; /* 居中顯示 */
+}
+
+.page-links {
+  margin-top: 20px;
+}
+
+.page-links a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #333; /* 鏈接文字顏色 */
+}
+
+.page-links a:hover {
+  text-decoration: underline; /* 鼠標懸停時添加底線效果 */
+}
+/*內容區*/
+.banner {
+  width: 100%;
+  max-width: 80%;
+  margin: auto;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.banner-text {
+  z-index: 1;
+  color: #917b56;
+  text-shadow: 2px 2px 4px rgba(127, 125, 125, 0.4);
+}
+
+.banner-text h3 {
+  font-size: 25px;
+  border-bottom: 1px solid #917b56;
+  font-weight: 900;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+.banner-text h1 {
+  font-size: 40px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  font-weight: 900;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+.banner-text p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.btn-primary {
+  background-color: #e6b5ae;
+  border-color: #e6b5ae;
+  border-radius: 20px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #f9d9ca; /* Change background color on hover */
+  border: #f9d9ca;
+}
+
+#title {
+  background: linear-gradient(115deg, rgba(225, 166, 161, 0.5) 50%, rgba(235, 233, 233, 0.5) 50%),
+    url("/img/給你點顏色瞧瞧 1.png") no-repeat center center;
+}
+
+#title p {
+  color: white;
+}
+
+/* 三個功能區*/
+
+.content {
+  margin-right: 220px; /* 根據側邊欄寬度調整內容區域的邊距 */
+  /* 添加其他內容的樣式 */
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  padding-bottom: 60px;
+  width: calc(100% - 200px); /* 预留侧边栏的宽度 */
+  margin: auto; /* 侧边栏的宽度 */
+}
+
+.content-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  padding-bottom: 20px; /* 在底部添加填充以容纳水平线 */
+  margin: auto;
+}
+
+/* 添加水平线 */
+.content-box::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc; /* 根据需要调整线条颜色 */
+  margin-top: 20px; /* 调整线条上方的间距 */
+}
+
+.image-text-pair {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #ccc; /* 边框 */
+  padding: 20px; /* 内距 */
+  border-radius: 10px; /* 圆角 */
+  max-width: 300px; /* 调整方框的最大宽度 */
+  background-color: white; /* 背景色，确保圆角对齐 */
+}
+
+.image img {
+  width: 100%; /* 调整图片的宽度 */
+  height: auto; /* 根据宽度自动调整高度 */
+  border-radius: 10px; /* 确保图片圆角 */
+  margin-bottom: 10px;
+}
+
+.text {
+  max-width: 200px; /* 调整文本的最大宽度 */
+  margin-bottom: 20px;
+}
+
+/*下排三*/
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  display: block;
+  border-radius: 10px;
+}
+
+.image-container .overlay1,
+.image-container .overlay2 {
+  position: absolute;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.image-container .overlay1 {
+  top: 150px;
+  left: -100px;
+  width: 100%;
+  height: 80%;
+  background-color: #7b695f;
+}
+
+.image-container .overlay1::after {
+  content: "";
+  position: absolute;
+  top: -200px;
+  left: 50px;
+  width: 60%;
+  height: 100%;
+  border: 3px solid #dbcaba;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .order-md-2 {
+    order: 1 !important;
+  }
+  .col-md-6.order-md-2.d-flex.flex-column.justify-content-center.mx-auto {
+    margin-top: 200px; /* 調整為你需要的值 */
+  }
+  .image-container .overlay1 {
+    top: 140px; /* 調整為你需要的值 */
+  }
+  .image-container .overlay1::after {
+    top: -200px; /* 調整為你需要的值 */
+  }
+}
+
+.image-container .overlay2 {
+  position: absolute;
+  top: -50px;
+  right: -30px;
+  width: 800px;
+  height: 65%;
+  background-color: #c6c6bc;
+}
+
+@media (max-width: 768px) {
+  .col-md-6.d-flex.flex-column.justify-content-center.mx-auto {
+    order: 2 !important; /* 移至下方 */
+    margin-top: 20px; /* 往下位移 */
+  }
+}
+
+.row .overlay3 {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
+  background-color: #8d8185;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.extra-margin {
+  margin-top: 100px; /* 调整此值以增加行之间的间距 */
+}
+
+h2.featurette-heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+p.lead {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f0e4d4;
+  color: white;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-col {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.footer-col a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-col a img {
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.featurette {
+  margin-bottom: 2rem;
+}
+
+.spacer {
+  height: 40px;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  h2.featurette-heading {
+    font-size: 2.5rem;
+  }
+
+  p.lead {
+    font-size: 1.5rem;
+  }
+
+  .featurette {
+    display: flex;
+    align-items: center;
+  }
+
+  .featurette:nth-child(odd) .col-md-7 {
+    order: 2;
+  }
+
+  .featurette:nth-child(odd) .col-md-5 {
+    order: 1;
+  }
+}
