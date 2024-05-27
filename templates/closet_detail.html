@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/test2.css" />
+    <link rel="stylesheet" href="../css/closet_detail.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="nav">
+        <form action="">
+          <div class="search-container">
+            <img src="/img/magnifying-glass.png" class="search-icon" alt="Search Icon" />
+            <input type="search" placeholder="請輸入關鍵字" />
+          </div>
+          <button><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+        </form>
+        <!-- 添加代表右側邊欄的圖示 -->
+        <a href="javascript:void(0);" id="sidebar-toggle"
+          ><img src="/img/選單按鈕.png" class="zoom" style="width: 45px; height: 50px"
+        /></a>
+      </div>
+    </header>
+    <div class="sidebar">
+      <img src="https://picsum.photos/id/684/600/400" alt="會員照片" class="member-photo" />
+      <hr class="sidebar-divider" />
+      <div class="page-links">
+        <a href="index.html">Home</a>
+        <a href="#">我的氣色</a>
+        <a href="#">線上衣櫃</a>
+        <a href="#">穿搭建議師</a>
+        <a href="#">To Do List</a>
+        <a href="#">about us</a>
+        <a href="#"> 登出</a>
+        <hr class="sidebar-divider" />
+        <a href="contact.html">聯繫客服</a>
+      </div>
+    </div>
+    <div style="margin-top: 150px;"></div>
+
+    <main>
+      <div class="container">
+        <div class="item-detail">
+            <img src="" alt="服飾圖片" id="itemImage">
+            <div class="item-info">
+                <h1 id="itemName"></h1>
+                <p id="itemBrand"></p>
+                <p class="price" id="itemPrice"></p>
+                <p class="added-date" id="itemAddedDate"></p>
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <a href="index.html"><img src="/img/house.png" class="zoom" style="width: 50px; height: 50px" /></a>
+          <a href="suggest.html"><img src="/img/clothing.png" class="zoom" style="width: 45px; height: 50px" /></a>
+          <a href="post_new.html"><img src="/img/新增貼文1.png" class="zoom" style="width: 50px; height: 50px" /></a>
+          <a href="closet.html"><img src="/img/衣櫃1.png" class="zoom" style="width: 50px; height: 50px" /></a>
+          <a href="user.html"><img src="/img/user_1.png" class="zoom" style="width: 45px; height: 50px" /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // 從URL取得參數
+      const urlParams = new URLSearchParams(window.location.search);
+      const itemParam = urlParams.get('item');
+
+      // 模擬資料庫資料
+      const items = [
+          { name: '冬季大衣', category: 'coat', brand: '品牌A', price: 150, image: 'https://picsum.photos/300/200?random=1', link: 'closet_detail.html?item=coat', addedDate: '2024-01-01' },
+          { name: '夏季連衣裙', category: 'top', brand: '品牌B', price: 100, image: 'https://picsum.photos/300/200?random=2', link: 'closet_detail.html?item=dress', addedDate: '2024-01-02' },
+          { name: '牛仔褲', category: 'bottom', brand: '品牌C', price: 120, image: 'https://picsum.photos/300/200?random=3', link: 'closet_detail.html?item=jeans', addedDate: '2024-01-03' },
+          { name: '針織衫', category: 'top', brand: '品牌A', price: 90, image: 'https://picsum.photos/300/200?random=4', link: 'closet_detail.html?item=sweater', addedDate: '2024-01-04' },
+          { name: '運動鞋', category: 'shoes', brand: '品牌B', price: 80, image: 'https://picsum.photos/300/200?random=5', link: 'closet_detail.html?item=shoes', addedDate: '2024-01-05' },
+          { name: '墨鏡', category: 'accessories', brand: '品牌C', price: 50, image: 'https://picsum.photos/300/200?random=6', link: 'closet_detail.html?item=sunglasses', addedDate: '2024-01-06' },
+          { name: '手錶', category: 'accessories', brand: '品牌A', price: 200, image: 'https://picsum.photos/300/200?random=7', link: 'closet_detail.html?item=watch', addedDate: '2024-01-07' },
+          { name: '風衣', category: 'coat', brand: '品牌B', price: 180, image: 'https://picsum.photos/300/200?random=8', link: 'closet_detail.html?item=trench', addedDate: '2024-01-08' },
+          { name: '連帽衫', category: 'top', brand: '品牌C', price: 130, image: 'https://picsum.photos/300/200?random=9', link: 'closet_detail.html?item=hoodie', addedDate: '2024-01-09' },
+          { name: '短褲', category: 'bottom', brand: '品牌A', price: 70, image: 'https://picsum.photos/300/200?random=10', link: 'closet_detail.html?item=shorts', addedDate: '2024-01-10' },
+          { name: '西裝外套', category: 'coat', brand: '品牌D', price: 220, image: 'https://picsum.photos/300/200?random=11', link: 'closet_detail.html?item=suit', addedDate: '2024-01-11' },
+          { name: 'T恤', category: 'top', brand: '品牌E', price: 50, image: 'https://picsum.photos/300/200?random=12', link: 'closet_detail.html?item=tshirt', addedDate: '2024-01-12' },
+          { name: '皮帶', category: 'accessories', brand: '品牌F', price: 40, image: 'https://picsum.photos/300/200?random=13', link: 'closet_detail.html?item=belt', addedDate: '2024-01-13' },
+          { name: '運動褲', category: 'bottom', brand: '品牌G', price: 60, image: 'https://picsum.photos/300/200?random=14', link: 'closet_detail.html?item=sportspants', addedDate: '2024-01-14' },
+          { name: '棒球帽', category: 'accessories', brand: '品牌H', price: 30, image: 'https://picsum.photos/300/200?random=15', link: 'closet_detail.html?item=cap', addedDate: '2024-01-15' },
+          { name: '羽絨服', category: 'coat', brand: '品牌I', price: 250, image: 'https://picsum.photos/300/200?random=16', link: 'closet_detail.html?item=downjacket', addedDate: '2024-01-16' },
+          { name: '連身裙', category: 'top', brand: '品牌J', price: 110, image: 'https://picsum.photos/300/200?random=17', link: 'closet_detail.html?item=dress', addedDate: '2024-01-17' },
+          { name: '短靴', category: 'shoes', brand: '品牌K', price: 140, image: 'https://picsum.photos/300/200?random=18', link: 'closet_detail.html?item=boots', addedDate: '2024-01-18' },
+          { name: '牛仔外套', category: 'coat', brand: '品牌L', price: 160, image: 'https://picsum.photos/300/200?random=19', link: 'closet_detail.html?item=denimjacket', addedDate: '2024-01-19' },
+          { name: '手提包', category: 'accessories', brand: '品牌M', price: 90, image: 'https://picsum.photos/300/200?random=20', link: 'closet_detail.html?item=bag', addedDate: '2024-01-20' },
+      ];
+
+      // 根據參數找到對應的項目
+      const item = items.find(i => i.link.includes(itemParam));
+
+      // 更新頁面上的元素
+      if (item) {
+          document.getElementById('itemImage').src = item.image;
+          document.getElementById('itemName').textContent = item.name;
+          document.getElementById('itemBrand').textContent = '品牌: ' + item.brand;
+          document.getElementById('itemPrice').textContent = '價格: $' + item.price;
+          document.getElementById('itemAddedDate').textContent = '加入日期: ' + item.addedDate;
+      } else {
+         document.getElementById('itemImage').src = "查無資料";
+          document.getElementById('itemName').textContent = "查無資料";
+          document.getElementById('itemBrand').textContent = '品牌: ' + "查無資料";
+          document.getElementById('itemPrice').textContent = '價格: $' + "查無資料";
+          document.getElementById('itemAddedDate').textContent = '加入日期: ' + "查無資料";
+      }
+    
+
+    </script>
+
+    <script>
+      let counter = 1;
+      setInterval(function () {
+        document.getElementById("radio" + counter).checked = true;
+        counter++;
+        if (counter > 4) {
+          counter = 1;
+        }
+      }, 5000);
+
+      // Dropdown menu functionality
+      document.querySelector(".more-options svg").addEventListener("click", function () {
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+        dropdownMenu.classList.toggle("show");
+      });
+
+      document.addEventListener("click", function (event) {
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+        if (!event.target.closest(".more-options")) {
+          dropdownMenu.classList.remove("show");
+        }
+      });
+    </script>
+    <script>
+      // 獲取右側邊欄和右側邊欄圖示的元素
+      const sidebar = document.querySelector(".sidebar");
+      const sidebarToggle = document.getElementById("sidebar-toggle");
+
+      // 監聽右側邊欄圖示的點擊事件
+      sidebarToggle.addEventListener("click", function () {
+        // 切換右側邊欄的顯示狀態
+        sidebar.classList.toggle("show");
+      });
+    </script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="js/bootstrap.min..js"></script>
+    <script src="js/popper.min.js"></script>
+  </body>
+</html>

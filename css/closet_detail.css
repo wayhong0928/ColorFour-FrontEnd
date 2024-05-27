@@ -1,0 +1,48 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.item-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item-detail img {
+    max-width: 100%;
+    border-radius: 20px;
+}
+.item-info {
+    margin-top: 20px;
+    text-align: center;
+}
+.item-info h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.item-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.item-info .price {
+    font-size: 1.5rem;
+    color: #333;
+}
+.item-info .added-date {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* RWD設計 */
+@media (min-width: 768px) {
+    .item-detail {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .item-info {
+        text-align: left;
+        margin-left: 20px;
+        max-width: 50%;
+    }
+}
