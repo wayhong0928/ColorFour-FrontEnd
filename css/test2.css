@@ -4,6 +4,12 @@ body {
   color: #333;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -15,6 +21,7 @@ header {
 .nav {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background-color: #f0e4d4;
   color: white;
@@ -67,7 +74,7 @@ header {
   border: none;
   color: white;
   font-size: 16px;
-  margin-left: 10px; /* 確保按鈕與輸入框有一定間距 */
+  margin-left: 10px;
 }
 
 .nav button:hover {
@@ -194,7 +201,7 @@ header {
 
 #title {
   background: linear-gradient(115deg, rgba(225, 166, 161, 0.5) 50%, rgba(235, 233, 233, 0.5) 50%),
-    url("/img/給你點顏色瞧瞧 1.png") no-repeat center center;
+    url("/img/advertise_1.png") no-repeat center center;
 }
 
 #title p {
@@ -225,6 +232,7 @@ header {
   gap: 20px;
   justify-content: center;
   align-items: flex-start;
+  min-width:250px;
   max-width: 1200px;
   padding-bottom: 20px; /* 在底部添加填充以容纳水平线 */
   margin: auto;
@@ -306,14 +314,18 @@ header {
   .order-md-2 {
     order: 1 !important;
   }
-  .col-md-6.order-md-2.d-flex.flex-column.justify-content-center.mx-auto {
-    margin-top: 200px; /* 調整為你需要的值 */
-  }
+  
   .image-container .overlay1 {
-    top: 140px; /* 調整為你需要的值 */
+    top: 140px; /* 调整为你需要的值 */
   }
   .image-container .overlay1::after {
-    top: -200px; /* 調整為你需要的值 */
+    top: -200px; /* 调整为你需要的值 */
+  }
+
+  .col-md-6.order-md-2.d-flex.flex-column.justify-content-center.mx-auto {
+    order: 2;
+    margin-top: 80px; /* 确保在移动设备上有足够的空隙 */
+    margin-bottom: 20px; /* 增加下方间距，避免覆盖图片 */
   }
 }
 
@@ -338,6 +350,7 @@ header {
   top: -20px;
   left: -20px;
   width: calc(100% + 40px);
+  max-width: none;
   height: calc(100% + 40px);
   background-color: #8d8185;
   z-index: -1;
@@ -347,6 +360,21 @@ header {
 .extra-margin {
   margin-top: 100px; /* 调整此值以增加行之间的间距 */
 }
+
+@media (max-width: 768px) {
+  .extra-margin {
+    margin-top: 50px; /* 在小屏幕上减少间距 */
+  }
+
+  .col-md-6.order-md-2.d-flex.flex-column.justify-content-center.mx-auto.adjusted {
+    margin-top: 50px; /* 确保在移动设备上有足够的空隙 */
+  }
+
+  .col-md-5.order-md-1.position-relative {
+    margin-bottom: 20px; /* 增加下方间距，确保空隙一致 */
+  }
+}
+
 
 h2.featurette-heading {
   font-size: 2rem;

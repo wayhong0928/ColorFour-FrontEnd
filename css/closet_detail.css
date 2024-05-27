@@ -1,3 +1,30 @@
+*{
+    list-style: none;
+}
+
+.wrap{
+    padding: 10px 0;
+}
+
+.bread{
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+.bread li{
+    padding: 0 20px;
+}
+.bread li + li{
+    padding-left: 0;
+}
+.bread li + li:before{
+    content: '>';
+    color: blue;
+    margin-right: 20px;
+}
+.bread a{
+    text-decoration: none;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
