@@ -83,41 +83,66 @@ header {
 }
 
 /* 側邊欄樣式 */
+/* 侧边栏样式 */
 .sidebar {
-  width: 200px; /* 根據需要調整寬度 */
-  background-color: #f0f0f0; /* 側邊欄的背景顏色 */
-  padding: 20px; /* 添加內容間距 */
-  box-sizing: border-box; /* 將內容框模型設置為邊框盒 */
-  position: fixed; /* 固定定位，使其保持在右側 */
-  top: 60px; /* 根據頁眉高度進行調整 */
-  right: 0; /* 右側對齊 */
-  height: calc(100% - 120px); /* 根據頁眉和頁腳的高度進行調整 */
-  overflow-y: auto; /* 如果內容溢出，添加滾動條 */
-  z-index: 10; /* 確保側邊欄顯示在動態廣告上面 */
-}
-
-.sidebar-divider {
-  border: 0;
-  height: 1px;
-  margin: 20px 0;
-  background-color: #ccc; /* 分隔線顏色 */
-}
-
-/* 側邊欄顯示/隱藏狀態 */
-.sidebar {
-  display: none; /* 預設隱藏側邊欄 */
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
 }
 
 .sidebar.show {
-  display: block; /* 顯示側邊欄 */
+    right: 0;
+}
+
+.sidebar .sidebar-divider {
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.sidebar .page-links a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.sidebar .page-links a:hover {
+    background-color: #ddd;
+}
+
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #f8f9fa;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar.show {
+    transform: translateX(0);
 }
 
 .member-photo {
-  width: 150px; /* 根據需求調整照片寬度 */
-  height: auto; /* 根據寬度自動調整高度 */
-  border-radius: 50%; /* 圓形照片 */
-  display: block;
-  margin: 20px auto; /* 居中顯示 */
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.sidebar-divider {
+    border-top: 1px solid #dee2e6;
+    margin: 20px 0;
 }
 
 .page-links {
@@ -125,14 +150,18 @@ header {
 }
 
 .page-links a {
-  display: block;
-  margin-bottom: 10px;
-  text-decoration: none;
-  color: #333; /* 鏈接文字顏色 */
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
 }
 
 .page-links a:hover {
-  text-decoration: underline; /* 鼠標懸停時添加底線效果 */
+    background-color: #e9ecef;
+}
+
+.zoom {
+    transition: transform 0.2s;
 }
 
 /* main css */
