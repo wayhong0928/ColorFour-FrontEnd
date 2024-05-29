@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: relative;
+    text-align: center;
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: rgb(25, 24, 24);
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.header-image {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    min-width:250px;
+    padding-bottom: 20px; /* 在底部添加填充以容纳水平线 */
+    margin: auto;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.question {
+    display: none;
+}
+
+.question.active {
+    display: block;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+.navigation-buttons {
+    margin-top: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#submit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.color-block {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+
+.options{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    min-width:250px;
+    max-width: 1200px;
+    padding-bottom: 20px; /* 在底部添加填充以容纳水平线 */
+    margin: auto;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    flex-direction: column;
+}
+
+
+.color-blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    margin-bottom: 10px;
+}
+
+
+@media (min-width: 600px) {
+    .options label {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .color-blocks {
+        margin-right: 10px;
+    }
+}
+
+.brown {
+    background-color: #755642;
+}
+
+.brown2 {
+    background-color: #472f2b;
+}
+
+.brown3 {
+    background-color: #452a2b;
+}
+
+.brown4 {
+    background-color: #2b2b2f;
+}
+
+.tea {
+    background-color: #7c533d;
+}
+
+.gray {
+    background-color: #3d3934;
+}
+
+.btea {
+    background-color: #402a1d;
+}
+
+.black {
+    background-color: #281912;
+}
+
+.purple {
+    background-color: #ca6b8d;
+}
+
+.purple2 {
+    background-color: #ce9abe;
+}
+
+.purple3 {
+    background-color: #a7375f;
+}
+
+.purple4 {
+    background-color: #844a70;
+}
+
+.yellow {
+    background-color: #ddd1ab;
+}
+
+.yellow2 {
+    background-color: #fefec8;
+}
+
+.yellow3 {
+    background-color: #b49461;
+}
+
+.yellow4 {
+    background-color: #bde352;
+}
+
+.orange {
+    background-color: #FD6721;
+}
+
+.pink {
+    background-color: #EB4A69;
+}
+
+.red {
+    background-color: #D64C30;
+}
+
+.ppurple {
+    background-color: #CB02AA;
+}

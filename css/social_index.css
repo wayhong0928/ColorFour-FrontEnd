@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  box-sizing: border-box;
+}
+
 body,
 html {
   margin: 0;
@@ -18,15 +22,19 @@ header {
   align-items: center;
 }
 
-
+header, footer {
+  z-index: 2;
+  position: relative;
+}
 
 .post {
-  background-color: #f3f3f5;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 40px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 600px;
+  background-color: #fff;
   color: rgb(8, 8, 8);
-  max-width: 800px;
   width: 100%;
   box-sizing: border-box;
   text-align: left; /* 確保內容靠左對齊 */
@@ -107,6 +115,7 @@ header {
   padding: 0;
   text-align: left;
   margin-bottom: 20px;
+  margin: 10px 0;
 }
 
 .prot li {
@@ -118,6 +127,7 @@ header {
   justify-content: flex-start;
   gap: 10px;
   margin-top: 20px;
+  align-items: center;
 }
 
 .post-actions button {
@@ -135,6 +145,31 @@ header {
 }
 
 
+.slider_container1 img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.comment-section {
+  display: none;
+  margin-top: 10px;
+}
+
+.comment-section textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.comment-section button {
+  margin-top: 10px;
+}
+
+.main-content {
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
 
 @media screen and (max-width: 800px) {
   .slider {
