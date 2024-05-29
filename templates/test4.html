@@ -1,208 +1,289 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/test.css">
-    <link rel="stylesheet" href="../css/test4.css">
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>出櫃啦~給你點顏色瞧瞧!</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/test2.css" />
+    <link rel="stylesheet" href="../css/social_index.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .post {
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            max-width: 600px;
+            background-color: #fff;
+        }
+        .post-header, .post-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .post-userinfo {
+            display: flex;
+            align-items: center;
+        }
+        .post-avatar {
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .more-options {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+        .dropdown-menu.show {
+            display: block;
+        }
+        .slider_container1 img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .prot {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        .comment-section {
+            display: none;
+            margin-top: 10px;
+        }
+        .comment-section textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .comment-section button {
+            margin-top: 10px;
+        }
+        header, footer {
+            z-index: 2;
+            position: relative;
+        }
+        .main-content {
+            padding-top: 150px;
+            padding-bottom: 100px;
+        }
+    </style>
+</head>
+<body>
     <header>
         <div class="nav">
-          <form action="">
-            <div class="search-container">
-              <img src="/img/magnifying_glass_icon.png" class="search-icon" alt="Search Icon">
-              <input type="search" placeholder="請輸入關鍵字">
-            </div>
-            <button><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
-          </form>
-          <a href="javascript:void(0);" id="sidebar-toggle">
-            <img src="/img/menu_button_icon.png" class="zoom" style="width: 45px; height: 50px">
-          </a>
+            <form action="">
+                <div class="search-container">
+                    <img src="/img/magnifying_glass_icon.png" class="search-icon" alt="Search Icon">
+                    <input type="search" placeholder="請輸入關鍵字">
+                </div>
+                <button><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+            </form>
+            <a href="javascript:void(0);" id="sidebar-toggle">
+                <img src="/img/menu_button_icon.png" class="zoom" style="width: 45px; height: 50px">
+            </a>
         </div>
-      </header>
-      <div class="sidebar">
+    </header>
+    <div class="sidebar">
         <img src="https://picsum.photos/id/684/600/400" alt="會員照片" class="member-photo" />
         <hr class="sidebar-divider" />
         <div class="page-links">
-          <a href="index.html">Home</a>
-          <a href="social_index.html" >社群互動</a>
-          <a href="color_result.html">我的氣色</a>
-          <a href="closet_home.html">線上衣櫃</a>
-          <a href="suggest.html">穿搭建議師</a>
-          <a href="buy.html">採購建議師</a>
-          <a href="todo_index.html">To Do List</a>
-          <a href="about.html">about us</a>
-          <a href="#"> 登出</a>
-          <hr class="sidebar-divider" />
-          <a href="contact.html">聯繫客服</a>
-        </div>
-      </div>
-    <div class="container">
-        <div class="row" style="margin-top: 150px;">
-            <aside class="col-lg-3 mb-4">
-                <h2>篩選</h2>
-                <div class="mb-3">
-                    <label for="category" class="form-label">分類:</label>
-                    <select id="category" class="form-select">
-                        <option value="all">全部</option>
-                        <option value="top">上衣</option>
-                        <option value="bottom">下身</option>
-                        <option value="coat">外套</option>
-                        <option value="shoes">鞋子</option>
-                        <option value="accessories">配件</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="brand" class="form-label">品牌:</label>
-                    <select id="brand" class="form-select">
-                        <option value="all">全部</option>
-                        <option value="brandA">品牌A</option>
-                        <option value="brandB">品牌B</option>
-                        <option value="brandC">品牌C</option>
-                    </select>
-                </div>
-            </aside>
-            <main class="col-lg-9">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div>
-                        <label for="sort-by" class="form-label">排序方式:</label>
-                        <select id="sort-by" class="form-select">
-                            <option value="newest">新增時間 (先到後)</option>
-                            <option value="oldest">新增時間 (後到先)</option>
-                            <option value="brand">品牌名稱</option>
-                            <option value="price-low-high">價格 (低到高)</option>
-                            <option value="price-high-low">價格 (高到低)</option>
-                        </select>
-                    </div>
-                    <div>
-                        <button class="btn btn-outline-secondary">新增單品</button>
-                        <button class="btn btn-outline-secondary">刪除單品</button>
-                    </div>
-                </div>
-                <div class="row" id="wardrobe-list">
-                    <!-- 衣櫃項目將動態生成在此 -->
-                </div>
-                <nav aria-label="Page navigation">
-                    <ul class="pagination justify-content-center">
-                        <!-- 分頁項在此 -->
-                    </ul>
-                </nav>
-            </main>
+            <a href="../index.html">Home</a>
+            <a href="social_index.html" >社群互動</a>
+            <a href="color_index.html">我的氣色</a>
+            <a href="closet_home.html">線上衣櫃</a>
+            <a href="suggest.html">穿搭建議師</a>
+            <a href="buy.html">採購建議師</a>
+            <a href="todo_index.html">To Do List</a>
+            <a href="about.html">about us</a>
+            <a href="#"> 登出</a>
+            <hr class="sidebar-divider" />
+            <a href="contact.html">聯繫客服</a>
         </div>
     </div>
+    <div class="main-content">
+        <div class="post">
+            <div class="post-header">
+                <div class="post-userinfo">
+                    <img src="https://picsum.photos/25" alt="User Avatar" class="post-avatar" />
+                    <span class="post-username">username</span>
+                </div>
+                <div class="more-options">
+                    <svg aria-label="更多選項" class="change" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24">
+                        <title>更多選項</title>
+                        <circle cx="12" cy="12" r="1.5"></circle>
+                        <circle cx="6" cy="12" r="1.5"></circle>
+                        <circle cx="18" cy="12" r="1.5"></circle>
+                    </svg>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">編輯</a></li>
+                        <li><a href="#">刪除</a></li>
+                        <li><a href="#">分享</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="slider_container1">
+                <div><img src="https://picsum.photos/250" class="l_photo" /></div>
+            </div>
+            <ul class="prot">
+                <li>今天美美哒~</li>
+                <li>#洋裝 #美女 #夏季人</li>
+            </ul>
+            <div class="post-actions">
+                <button class="like-button">讚</button>
+                <button class="comment-button">留言</button>
+            </div>
+            <div class="comment-section">
+                <textarea placeholder="請輸入留言..."></textarea>
+                <button class="btn btn-primary">提交留言</button>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="post-header">
+                <div class="post-userinfo">
+                    <img src="https://picsum.photos/25" alt="User Avatar" class="post-avatar" />
+                    <span class="post-username">username</span>
+                </div>
+                <div class="more-options">
+                    <svg aria-label="更多選項" class="change" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24">
+                        <title>更多選項</title>
+                        <circle cx="12" cy="12" r="1.5"></circle>
+                        <circle cx="6" cy="12" r="1.5"></circle>
+                        <circle cx="18" cy="12" r="1.5"></circle>
+                    </svg>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">編輯</a></li>
+                        <li><a href="#">刪除</a></li>
+                        <li><a href="#">分享</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="slider_container1">
+                <div><img src="https://picsum.photos/250" class="l_photo" /></div>
+            </div>
+            <ul class="prot">
+                <li>天氣真好~野餐去囉!</li>
+                <li>#洋裝 #美女 #夏季人</li>
+            </ul>
+            <div class="post-actions">
+                <button class="like-button">讚</button>
+                <button class="comment-button">留言</button>
+            </div>
+            <div class="comment-section">
+                <textarea placeholder="請輸入留言..."></textarea>
+                <button class="btn btn-primary">提交留言</button>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="post-header">
+                <div class="post-userinfo">
+                    <img src="https://picsum.photos/25" alt="User Avatar" class="post-avatar" />
+                    <span class="post-username">username</span>
+                </div>
+                <div class="more-options">
+                    <svg aria-label="更多選項" class="change" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24">
+                        <title>更多選項</title>
+                        <circle cx="12" cy="12" r="1.5"></circle>
+                        <circle cx="6" cy="12" r="1.5"></circle>
+                        <circle cx="18" cy="12" r="1.5"></circle>
+                    </svg>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">編輯</a></li>
+                        <li><a href="#">刪除</a></li>
+                        <li><a href="#">分享</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slider_container1">
+                <div><img src="https://picsum.photos/250" class="l_photo" /></div>
+            </div>
+            <ul class="prot">
+                <li>最新流行的裙子~</li>
+                <li>#裙子 #時尚 #夏季</li>
+            </ul>
+            <div class="post-actions">
+                <button class="like-button">讚</button>
+                <button class="comment-button">留言</button>
+            </div>
+            <div class="comment-section">
+                <textarea placeholder="請輸入留言..."></textarea>
+                <button class="btn btn-primary">提交留言</button>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 100px"></div>
     <footer class="footer">
         <div class="footer-container">
-          <div class="footer-col">
-            <a href="../index.html"><img src="/img/house_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
-            <a href="suggest.html"><img src="/img/clothing_icon.png" class="zoom" style="width: 45px; height: 50px" /></a>
-            <a href="post_new.html"><img src="/img/new_post_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
-            <a href="closet_home.html"><img src="/img/closet_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
-            <a href="user.html"><img src="/img/user_icon.png" class="zoom" style="width: 45px; height: 50px" /></a>
-          </div>
+            <div class="footer-col">
+                <a href="../index.html"><img src="/img/house_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
+                <a href="suggest.html"><img src="/img/clothing_icon.png" class="zoom" style="width: 45px; height: 50px" /></a>
+                <a href="post_new.html"><img src="/img/new_post_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
+                <a href="closet_home.html"><img src="/img/closet_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
+                <a href="user.html"><img src="/img/user_icon.png" class="zoom" style="width: 45px; height: 50px" /></a>
+            </div>
         </div>
-      </footer>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="../js/bootstrap.min..js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/main.js"></script>
+    </footer>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const wardrobeList = document.getElementById('wardrobe-list');
-            const categoryFilter = document.getElementById('category');
-            const brandFilter = document.getElementById('brand');
-            const sortByFilter = document.getElementById('sort-by');
+        let counter = 1;
+        setInterval(function () {
+            document.getElementById("radio" + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1;
+            }
+        }, 5000);
 
-            const items = [
-              { name: '冬季大衣', category: 'coat', brand: '品牌A', price: 150, image: 'https://picsum.photos/300/200?random=1', link: 'closet_detail.html?item=coat', addedDate: '2024-01-01' },
-              { name: '夏季連衣裙', category: 'top', brand: '品牌B', price: 100, image: 'https://picsum.photos/300/200?random=2', link: 'closet_detail.html?item=dress', addedDate: '2024-01-02' },
-              { name: '牛仔褲', category: 'bottom', brand: '品牌C', price: 120, image: 'https://picsum.photos/300/200?random=3', link: 'closet_detail.html?item=jeans', addedDate: '2024-01-03' },
-              { name: '針織衫', category: 'top', brand: '品牌A', price: 90, image: 'https://picsum.photos/300/200?random=4', link: 'closet_detail.html?item=sweater', addedDate: '2024-01-04' },
-              { name: '運動鞋', category: 'shoes', brand: '品牌B', price: 80, image: 'https://picsum.photos/300/200?random=5', link: 'closet_detail.html?item=shoes', addedDate: '2024-01-05' },
-              { name: '墨鏡', category: 'accessories', brand: '品牌C', price: 50, image: 'https://picsum.photos/300/200?random=6', link: 'closet_detail.html?item=sunglasses', addedDate: '2024-01-06' },
-              { name: '手錶', category: 'accessories', brand: '品牌A', price: 200, image: 'https://picsum.photos/300/200?random=7', link: 'closet_detail.html?item=watch', addedDate: '2024-01-07' },
-              { name: '風衣', category: 'coat', brand: '品牌B', price: 180, image: 'https://picsum.photos/300/200?random=8', link: 'closet_detail.html?item=trench', addedDate: '2024-01-08' },
-              { name: '連帽衫', category: 'top', brand: '品牌C', price: 130, image: 'https://picsum.photos/300/200?random=9', link: 'closet_detail.html?item=hoodie', addedDate: '2024-01-09' },
-              { name: '短褲', category: 'bottom', brand: '品牌A', price: 70, image: 'https://picsum.photos/300/200?random=10', link: 'closet_detail.html?item=shorts', addedDate: '2024-01-10' },
-              { name: '西裝外套', category: 'coat', brand: '品牌D', price: 220, image: 'https://picsum.photos/300/200?random=11', link: 'closet_detail.html?item=suit', addedDate: '2024-01-11' },
-              { name: 'T恤', category: 'top', brand: '品牌E', price: 50, image: 'https://picsum.photos/300/200?random=12', link: 'closet_detail.html?item=tshirt', addedDate: '2024-01-12' },
-              { name: '皮帶', category: 'accessories', brand: '品牌F', price: 40, image: 'https://picsum.photos/300/200?random=13', link: 'closet_detail.html?item=belt', addedDate: '2024-01-13' },
-              { name: '運動褲', category: 'bottom', brand: '品牌G', price: 60, image: 'https://picsum.photos/300/200?random=14', link: 'closet_detail.html?item=sportspants', addedDate: '2024-01-14' },
-              { name: '棒球帽', category: 'accessories', brand: '品牌H', price: 30, image: 'https://picsum.photos/300/200?random=15', link: 'closet_detail.html?item=cap', addedDate: '2024-01-15' },
-              { name: '羽絨服', category: 'coat', brand: '品牌I', price: 250, image: 'https://picsum.photos/300/200?random=16', link: 'closet_detail.html?item=downjacket', addedDate: '2024-01-16' },
-              { name: '連身裙', category: 'top', brand: '品牌J', price: 110, image: 'https://picsum.photos/300/200?random=17', link: 'closet_detail.html?item=dress', addedDate: '2024-01-17' },
-              { name: '短靴', category: 'shoes', brand: '品牌K', price: 140, image: 'https://picsum.photos/300/200?random=18', link: 'closet_detail.html?item=boots', addedDate: '2024-01-18' },
-              { name: '牛仔外套', category: 'coat', brand: '品牌L', price: 160, image: 'https://picsum.photos/300/200?random=19', link: 'closet_detail.html?item=denimjacket', addedDate: '2024-01-19' },
-              { name: '手提包', category: 'accessories', brand: '品牌M', price: 90, image: 'https://picsum.photos/300/200?random=20', link: 'closet_detail.html?item=bag', addedDate: '2024-01-20' },
-          ];
-
-
-          const sidebarToggle = document.getElementById('sidebar-toggle');
-    const sidebar = document.querySelector('.sidebar');
-
-    sidebarToggle.addEventListener('click', function() {
-        sidebar.classList.toggle('show');
-    });
-
-    function renderWardrobeList() {
-        wardrobeList.innerHTML = '';
-
-        const selectedCategory = categoryFilter.value;
-        const selectedBrand = brandFilter.value;
-        const sortBy = sortByFilter.value;
-
-        let filteredItems = items.filter(item => {
-            return (selectedCategory === 'all' || item.category === selectedCategory) &&
-                   (selectedBrand === 'all' || item.brand === selectedBrand);
+        // Dropdown menu functionality
+        document.querySelector(".more-options svg").addEventListener("click", function () {
+            const dropdownMenu = document.querySelector(".dropdown-menu");
+            dropdownMenu.classList.toggle("show");
         });
 
-        switch (sortBy) {
-            case 'newest':
-                filteredItems.sort((a, b) => new Date(b.addedDate) - new Date(a.addedDate));
-                break;
-            case 'oldest':
-                filteredItems.sort((a, b) => new Date(a.addedDate) - new Date(b.addedDate));
-                break;
-            case 'brand':
-                filteredItems.sort((a, b) => a.brand.localeCompare(b.brand));
-                break;
-            case 'price-low-high':
-                filteredItems.sort((a, b) => a.price - b.price);
-                break;
-            case 'price-high-low':
-                filteredItems.sort((a, b) => b.price - a.price);
-                break;
-        }
-
-        filteredItems.forEach(item => {
-            const card = document.createElement('div');
-            card.className = 'col-lg-4 col-md-6 mb-4';
-            card.innerHTML = `
-                <div class="card">
-                    <img src="${item.image}" class="card-img-top" alt="${item.name}">
-                    <div class="card-body">
-                        <h5 class="card-title">${item.name}</h5>
-                        <p class="card-text">品牌: ${item.brand}</p>
-                        <p class="card-text">價格: $${item.price}</p>
-                        <a href="${item.link}" class="btn btn-primary">查看詳情</a>
-                    </div>
-                </div>
-            `;
-            wardrobeList.appendChild(card);
+        document.addEventListener("click", function (event) {
+            const dropdownMenu = document.querySelector(".dropdown-menu");
+            if (!event.target.closest(".more-options")) {
+                dropdownMenu.classList.remove("show");
+            }
         });
-    }
 
-    categoryFilter.addEventListener('change', renderWardrobeList);
-    brandFilter.addEventListener('change', renderWardrobeList);
-    sortByFilter.addEventListener('change', renderWardrobeList);
+        // Comment box functionality
+        document.querySelectorAll('.comment-button').forEach(button => {
+            button.addEventListener('click', function () {
+                const commentBox = this.parentElement.nextElementSibling;
+                commentBox.style.display = commentBox.style.display === 'none' || !commentBox.style.display ? 'block' : 'none';
+            });
+        });
 
-    renderWardrobeList();
-});
+        // Sidebar toggle functionality
+        const sidebar = document.querySelector(".sidebar");
+        const sidebarToggle = document.getElementById("sidebar-toggle");
+
+        sidebarToggle.addEventListener("click", function () {
+            sidebar.classList.toggle("show");
+        });
     </script>
-  </body>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="js/bootstrap.min..js"></script>
+    <script src="js/popper.min.js"></script>
+</body>
 </html>
