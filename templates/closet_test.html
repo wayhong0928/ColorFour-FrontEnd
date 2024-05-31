@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/test.css" />
+    <link rel="stylesheet" href="../css/closet.css" />
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <form action="">
+                <div class="search-container">
+                    <img src="../img/magnifying_glass_icon.png" class="search-icon" alt="Search Icon" />
+                    <input type="search" placeholder="請輸入關鍵字" />
+                </div>
+                <button><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+            </form>
+            <a href="javascript:void(0);" id="sidebar-toggle">
+                <img src="../img/menu_button_icon.png" class="zoom" style="width: 45px; height: 50px" />
+            </a>
+        </div>
+    </header>
+    <div class="sidebar">
+        <img src="https://picsum.photos/id/684/600/400" alt="會員照片" class="member-photo" />
+        <hr class="sidebar-divider" />
+        <div class="page-links">
+            <a href="../index.html">Home</a>
+            <a href="social_index.html">社群互動</a>
+            <a href="color_index.html">我的氣色</a>
+            <a href="closet_home.html">線上衣櫃</a>
+            <a href="suggest.html">穿搭建議師</a>
+            <a href="buy.html">採購建議師</a>
+            <a href="todo_index.html">To Do List</a>
+            <a href="about.html">about us</a>
+            <a href="#">登出</a>
+            <hr class="sidebar-divider" />
+            <a href="contact.html">聯繫客服</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 150px">
+            <aside class="col-lg-3 mb-4">
+                <h2>篩選</h2>
+                <div class="mb-3">
+                    <label for="category" class="form-label">分類:</label>
+                    <select id="category" class="form-select">
+                        <option value="all">全部</option>
+                        <option value="top">上衣</option>
+                        <option value="bottom">下身</option>
+                        <option value="coat">外套</option>
+                        <option value="shoes">鞋子</option>
+                        <option value="accessories">配件</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="brand" class="form-label">品牌:</label>
+                    <select id="brand" class="form-select">
+                        <option value="all">全部</option>
+                        <option value="brandA">品牌A</option>
+                        <option value="brandB">品牌B</option>
+                        <option value="brandC">品牌C</option>
+                    </select>
+                </div>
+            </aside>
+            <main class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                        <label for="sort-by" class="form-label">排序方式:</label>
+                        <select id="sort-by" class="form-select">
+                            <option value="newest">新增時間 (先到後)</option>
+                            <option value="oldest">新增時間 (後到先)</option>
+                            <option value="brand">品牌名稱</option>
+                            <option value="price-low-high">價格 (低到高)</option>
+                            <option value="price-high-low">價格 (高到低)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="btn btn-outline-secondary">新增單品</button>
+                        <button class="btn btn-outline-secondary">刪除單品</button>
+                    </div>
+                </div>
+                <div class="row" id="wardrobe-list">
+                    <!-- 衣櫃項目將動態生成在此 -->
+                </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <!-- 分頁項在此 -->
+                    </ul>
+                </nav>
+            </main>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <a href="../index.html"><img src="../img/house_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
+                <a href="suggest.html"><img src="../img/clothing_icon.png" class="zoom" style="width: 45px; height: 50px" /></a>
+                <a href="post_new.html"><img src="../img/new_post_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
+                <a href="closet_home.html"><img src="../img/closet_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
+                <a href="user.html"><img src="../img/user_icon.png" class="zoom" style="width: 45px; height: 50px" /></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const wardrobeList = document.getElementById("wardrobe-list");
+            const categoryFilter = document.getElementById("category");
+            const brandFilter = document.getElementById("brand");
+            const sortByFilter = document.getElementById("sort-by");
+
+            const items = [
+          {
+            name: "冬季大衣",
+            category: "coat",
+            brand: "品牌A",
+            price: 150,
+            image: "https://picsum.photos/300/200?random=1",
+            link: "closet_detail.html?item=coat",
+            addedDate: "2024-01-01",
+          },
+          {
+            name: "夏季連衣裙",
+            category: "top",
+            brand: "品牌B",
+            price: 100,
+            image: "https://picsum.photos/300/200?random=2",
+            link: "closet_detail.html?item=dress",
+            addedDate: "2024-01-02",
+          },
+          {
+            name: "牛仔褲",
+            category: "bottom",
+            brand: "品牌C",
+            price: 120,
+            image: "https://picsum.photos/300/200?random=3",
+            link: "closet_detail.html?item=jeans",
+            addedDate: "2024-01-03",
+          },
+          {
+            name: "針織衫",
+            category: "top",
+            brand: "品牌A",
+            price: 90,
+            image: "https://picsum.photos/300/200?random=4",
+            link: "closet_detail.html?item=sweater",
+            addedDate: "2024-01-04",
+          },
+          {
+            name: "運動鞋",
+            category: "shoes",
+            brand: "品牌B",
+            price: 80,
+            image: "https://picsum.photos/300/200?random=5",
+            link: "closet_detail.html?item=shoes",
+            addedDate: "2024-01-05",
+          },
+          {
+            name: "墨鏡",
+            category: "accessories",
+            brand: "品牌C",
+            price: 50,
+            image: "https://picsum.photos/300/200?random=6",
+            link: "closet_detail.html?item=sunglasses",
+            addedDate: "2024-01-06",
+          },
+          {
+            name: "手錶",
+            category: "accessories",
+            brand: "品牌A",
+            price: 200,
+            image: "https://picsum.photos/300/200?random=7",
+            link: "closet_detail.html?item=watch",
+            addedDate: "2024-01-07",
+          },
+          {
+            name: "風衣",
+            category: "coat",
+            brand: "品牌B",
+            price: 180,
+            image: "https://picsum.photos/300/200?random=8",
+            link: "closet_detail.html?item=trench",
+            addedDate: "2024-01-08",
+          },
+          {
+            name: "連帽衫",
+            category: "top",
+            brand: "品牌C",
+            price: 130,
+            image: "https://picsum.photos/300/200?random=9",
+            link: "closet_detail.html?item=hoodie",
+            addedDate: "2024-01-09",
+          },
+          {
+            name: "短褲",
+            category: "bottom",
+            brand: "品牌A",
+            price: 70,
+            image: "https://picsum.photos/300/200?random=10",
+            link: "closet_detail.html?item=shorts",
+            addedDate: "2024-01-10",
+          },
+          {
+            name: "西裝外套",
+            category: "coat",
+            brand: "品牌D",
+            price: 220,
+            image: "https://picsum.photos/300/200?random=11",
+            link: "closet_detail.html?item=suit",
+            addedDate: "2024-01-11",
+          },
+          {
+            name: "T恤",
+            category: "top",
+            brand: "品牌E",
+            price: 50,
+            image: "https://picsum.photos/300/200?random=12",
+            link: "closet_detail.html?item=tshirt",
+            addedDate: "2024-01-12",
+          },
+          {
+            name: "皮帶",
+            category: "accessories",
+            brand: "品牌F",
+            price: 40,
+            image: "https://picsum.photos/300/200?random=13",
+            link: "closet_detail.html?item=belt",
+            addedDate: "2024-01-13",
+          },
+          {
+            name: "運動褲",
+            category: "bottom",
+            brand: "品牌G",
+            price: 60,
+            image: "https://picsum.photos/300/200?random=14",
+            link: "closet_detail.html?item=sportspants",
+            addedDate: "2024-01-14",
+          },
+          {
+            name: "棒球帽",
+            category: "accessories",
+            brand: "品牌H",
+            price: 30,
+            image: "https://picsum.photos/300/200?random=15",
+            link: "closet_detail.html?item=cap",
+            addedDate: "2024-01-15",
+          },
+          {
+            name: "羽絨服",
+            category: "coat",
+            brand: "品牌I",
+            price: 250,
+            image: "https://picsum.photos/300/200?random=16",
+            link: "closet_detail.html?item=downjacket",
+            addedDate: "2024-01-16",
+          },
+          {
+            name: "連身裙",
+            category: "top",
+            brand: "品牌J",
+            price: 110,
+            image: "https://picsum.photos/300/200?random=17",
+            link: "closet_detail.html?item=dress",
+            addedDate: "2024-01-17",
+          },
+          {
+            name: "短靴",
+            category: "shoes",
+            brand: "品牌K",
+            price: 140,
+            image: "https://picsum.photos/300/200?random=18",
+            link: "closet_detail.html?item=boots",
+            addedDate: "2024-01-18",
+          },
+          {
+            name: "牛仔外套",
+            category: "coat",
+            brand: "品牌L",
+            price: 160,
+            image: "https://picsum.photos/300/200?random=19",
+            link: "closet_detail.html?item=denimjacket",
+            addedDate: "2024-01-19",
+          },
+          {
+            name: "手提包",
+            category: "accessories",
+            brand: "品牌M",
+            price: 90,
+            image: "https://picsum.photos/300/200?random=20",
+            link: "closet_detail.html?item=bag",
+            addedDate: "2024-01-20",
+          },
+        ];
+
+            function renderItems(filteredItems) {
+                wardrobeList.innerHTML = "";
+                filteredItems.forEach(item => {
+                    const card = document.createElement("div");
+                    card.classList.add("col-12", "col-sm-6", "col-md-4", "col-lg-3", "mb-4");
+                    card.innerHTML = `
+                        <div class="card mb-3">
+                            <img src="${item.image}" class="card-img-top" alt="${item.name}">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="${item.link}">${item.name}</a></h5>
+                            </div>
+                        </div>
+                    `;
+                    wardrobeList.appendChild(card);
+                });
+            }
+
+            function filterItems() {
+                const selectedCategory = categoryFilter.value;
+                const selectedBrand = brandFilter.value;
+                const sortBy = sortByFilter.value;
+
+                let filteredItems = items.filter(item => {
+                    const categoryMatch = selectedCategory === "all" || item.category === selectedCategory;
+                    const brandMatch = selectedBrand === "all" || item.brand === selectedBrand;
+                    return categoryMatch && brandMatch;
+                });
+
+                switch (sortBy) {
+                    case "newest":
+                        filteredItems.sort((a, b) => new Date(b.addedDate) - new Date(a.addedDate));
+                        break;
+                    case "oldest":
+                        filteredItems.sort((a, b) => new Date(a.addedDate) - new Date(b.addedDate));
+                        break;
+                    case "brand":
+                        filteredItems.sort((a, b) => a.brand.localeCompare(b.brand));
+                        break;
+                    case "price-low-high":
+                        filteredItems.sort((a, b) => a.price - b.price);
+                        break;
+                    case "price-high-low":
+                        filteredItems.sort((a, b) => b.price - a.price);
+                        break;
+                }
+
+                renderItems(filteredItems);
+            }
+
+            categoryFilter.addEventListener("change", filterItems);
+            brandFilter.addEventListener("change", filterItems);
+            sortByFilter.addEventListener("change", filterItems);
+
+            renderItems(items);
+
+            const sidebarToggle = document.getElementById('sidebar-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            sidebarToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
