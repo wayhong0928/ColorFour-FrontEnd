@@ -1,0 +1,242 @@
+body {
+  background-color: #f4f4f9;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f0e4d4;
+  color: white;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-container .search-icon {
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  color: #888;
+}
+
+.nav input[type="search"] {
+  padding: 10px 15px 10px 35px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  width: 250px;
+  transition: width 0.4s ease-in-out;
+}
+
+.nav input[type="search"]:focus {
+  width: 300px;
+  outline: none;
+}
+
+.nav button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.nav button:hover {
+  background-color: #f0e4d4;
+}
+
+
+/* 側邊欄樣式 */
+.sidebar {
+  width: 200px; /* 根據需要調整寬度 */
+  background-color: #f0f0f0; /* 側邊欄的背景顏色 */
+  padding: 20px; /* 添加內容間距 */
+  box-sizing: border-box; /* 將內容框模型設置為邊框盒 */
+  position: fixed; /* 固定定位，使其保持在右側 */
+  top: 60px; /* 根據頁眉高度進行調整 */
+  right: 0; /* 右側對齊 */
+  height: calc(100% - 120px); /* 根據頁眉和頁腳的高度進行調整 */
+  overflow-y: auto; /* 如果內容溢出，添加滾動條 */
+  z-index: 10; /* 確保側邊欄顯示在動態廣告上面 */
+}
+
+.sidebar-divider {
+  border: 0;
+  height: 1px;
+  margin: 20px 0;
+  background-color: #ccc; /* 分隔線顏色 */
+}
+
+/* 側邊欄顯示/隱藏狀態 */
+.sidebar {
+  display: none; /* 預設隱藏側邊欄 */
+}
+
+.sidebar.show {
+  display: block; /* 顯示側邊欄 */
+}
+
+.member-photo {
+  width: 150px; /* 根據需求調整照片寬度 */
+  height: auto; /* 根據寬度自動調整高度 */
+  border-radius: 50%; /* 圓形照片 */
+  display: block;
+  margin: 20px auto; /* 居中顯示 */
+}
+
+.page-links {
+  margin-top: 20px;
+}
+
+.page-links a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #333; /* 鏈接文字顏色 */
+}
+
+.page-links a:hover {
+  text-decoration: underline; /* 鼠標懸停時添加底線效果 */
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f0e4d4;
+  color: white;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-col {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.footer-col a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-col a img {
+  vertical-align: middle;
+}
+
+.img-fluid {
+  margin-right: 7%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.featurette {
+  margin-bottom: 2rem;
+}
+
+.spacer {
+  height: 40px;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  h2.featurette-heading {
+    font-size: 2.5rem;
+  }
+
+  p.lead {
+    font-size: 1.5rem;
+  }
+
+  .featurette {
+    display: flex;
+    align-items: center;
+  }
+
+  .featurette:nth-child(odd) .col-md-7 {
+    order: 2;
+  }
+
+  .featurette:nth-child(odd) .col-md-5 {
+    order: 1;
+  }
+}
+
+.text-center {
+  color: #917b56;
+  text-shadow: 2px 2px 4px rgba(127, 125, 125, 0.4);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.text-center::after {
+  content: "";
+  display: block;
+  width: 93%;
+  height: 1px;
+  background-color: #ccc; /* 根据需要调整线条颜色 */
+  margin-top: 15px; /* 调整线条上方的间距 */
+}
+
+.text-left p {
+  font-size: 16px;
+  font-weight: 350;
+  margin-right: 7%;
+}
+
+.container text-center {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}

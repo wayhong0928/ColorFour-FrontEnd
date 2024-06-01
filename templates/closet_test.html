@@ -1,118 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Title</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Bootstrap CSS v5.2.1 -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/test.css" />
     <link rel="stylesheet" href="../css/closet.css" />
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <div class="nav">
-        <form action="">
-          <div class="search-container">
-            <img src="../img/magnifying_glass_icon.png" class="search-icon" alt="Search Icon" />
-            <input type="search" placeholder="請輸入關鍵字" />
-          </div>
-          <button><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
-        </form>
-        <a href="javascript:void(0);" id="sidebar-toggle">
-          <img src="../img/menu_button_icon.png" class="zoom" style="width: 45px; height: 50px" />
-        </a>
-      </div>
+        <div class="nav">
+            <form action="">
+                <div class="search-container">
+                    <img src="../img/magnifying_glass_icon.png" class="search-icon" alt="Search Icon" />
+                    <input type="search" placeholder="請輸入關鍵字" />
+                </div>
+                <button><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+            </form>
+            <a href="javascript:void(0);" id="sidebar-toggle">
+                <img src="../img/menu_button_icon.png" class="zoom" style="width: 45px; height: 50px" />
+            </a>
+        </div>
     </header>
     <div class="sidebar">
-      <img src="https://picsum.photos/id/684/600/400" alt="會員照片" class="member-photo" />
-      <hr class="sidebar-divider" />
-      <div class="page-links">
-        <a href="../index.html">Home</a>
-        <a href="social_index.html">社群互動</a>
-        <a href="color_index.html">我的氣色</a>
-        <a href="closet_home.html">線上衣櫃</a>
-        <a href="suggest.html">穿搭建議師</a>
-        <a href="buy.html">採購建議師</a>
-        <a href="todo_index.html">To Do List</a>
-        <a href="about.html">about us</a>
-        <a href="#"> 登出</a>
+        <img src="https://picsum.photos/id/684/600/400" alt="會員照片" class="member-photo" />
         <hr class="sidebar-divider" />
-        <a href="contact.html">聯繫客服</a>
-      </div>
+        <div class="page-links">
+            <a href="../index.html">Home</a>
+            <a href="social_index.html">社群互動</a>
+            <a href="color_index.html">我的氣色</a>
+            <a href="closet_home.html">線上衣櫃</a>
+            <a href="suggest.html">穿搭建議師</a>
+            <a href="buy.html">採購建議師</a>
+            <a href="todo_index.html">To Do List</a>
+            <a href="about.html">about us</a>
+            <a href="#">登出</a>
+            <hr class="sidebar-divider" />
+            <a href="contact.html">聯繫客服</a>
+        </div>
     </div>
     <div class="container">
-      <div class="row" style="margin-top: 150px">
-        <aside class="col-lg-3 mb-4">
-          <h2>篩選</h2>
-          <div class="mb-3">
-            <label for="category" class="form-label">分類:</label>
-            <select id="category" class="form-select">
-              <option value="all">全部</option>
-              <option value="top">上衣</option>
-              <option value="bottom">下身</option>
-              <option value="coat">外套</option>
-              <option value="shoes">鞋子</option>
-              <option value="accessories">配件</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="brand" class="form-label">品牌:</label>
-            <select id="brand" class="form-select">
-              <option value="all">全部</option>
-              <option value="brandA">品牌A</option>
-              <option value="brandB">品牌B</option>
-              <option value="brandC">品牌C</option>
-            </select>
-          </div>
-        </aside>
-        <main class="col-lg-9">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <div>
-              <label for="sort-by" class="form-label">排序方式:</label>
-              <select id="sort-by" class="form-select">
-                <option value="newest">新增時間 (先到後)</option>
-                <option value="oldest">新增時間 (後到先)</option>
-                <option value="brand">品牌名稱</option>
-                <option value="price-low-high">價格 (低到高)</option>
-                <option value="price-high-low">價格 (高到低)</option>
-              </select>
-            </div>
-            <div>
-              <button class="btn btn-outline-secondary">新增單品</button>
-              <button class="btn btn-outline-secondary">刪除單品</button>
-            </div>
-          </div>
-          <div class="row" id="wardrobe-list">
-            <!-- 衣櫃項目將動態生成在此 -->
-          </div>
-          <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
-              <!-- 分頁項在此 -->
-            </ul>
-          </nav>
-        </main>
-      </div>
+        <div class="row" style="margin-top: 150px">
+            <aside class="col-lg-3 mb-4">
+                <h2>篩選</h2>
+                <div class="mb-3">
+                    <label for="category" class="form-label">分類:</label>
+                    <select id="category" class="form-select">
+                        <option value="all">全部</option>
+                        <option value="top">上衣</option>
+                        <option value="bottom">下身</option>
+                        <option value="coat">外套</option>
+                        <option value="shoes">鞋子</option>
+                        <option value="accessories">配件</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="brand" class="form-label">品牌:</label>
+                    <select id="brand" class="form-select">
+                        <option value="all">全部</option>
+                        <option value="brandA">品牌A</option>
+                        <option value="brandB">品牌B</option>
+                        <option value="brandC">品牌C</option>
+                    </select>
+                </div>
+            </aside>
+            <main class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                        <label for="sort-by" class="form-label">排序方式:</label>
+                        <select id="sort-by" class="form-select">
+                            <option value="newest">新增時間 (先到後)</option>
+                            <option value="oldest">新增時間 (後到先)</option>
+                            <option value="brand">品牌名稱</option>
+                            <option value="price-low-high">價格 (低到高)</option>
+                            <option value="price-high-low">價格 (高到低)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="btn btn-outline-secondary">新增單品</button>
+                        <button class="btn btn-outline-secondary">刪除單品</button>
+                    </div>
+                </div>
+                <div class="row" id="wardrobe-list">
+                    <!-- 衣櫃項目將動態生成在此 -->
+                </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <!-- 分頁項在此 -->
+                    </ul>
+                </nav>
+            </main>
+        </div>
     </div>
     <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-col">
-          <a href="../index.html"><img src="../img/house_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
-          <a href="suggest.html"><img src="../img/clothing_icon.png" class="zoom" style="width: 45px; height: 50px" /></a>
-          <a href="post_new.html"><img src="../img/new_post_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
-          <a href="closet_home.html"><img src="../img/closet_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
-          <a href="user.html"><img src="../img/user_icon.png" class="zoom" style="width: 45px; height: 50px" /></a>
+        <div class="footer-container">
+            <div class="footer-col">
+                <a href="../index.html"><img src="../img/house_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
+                <a href="suggest.html"><img src="../img/clothing_icon.png" class="zoom" style="width: 45px; height: 50px" /></a>
+                <a href="post_new.html"><img src="../img/new_post_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
+                <a href="closet_home.html"><img src="../img/closet_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
+                <a href="user.html"><img src="../img/user_icon.png" class="zoom" style="width: 45px; height: 50px" /></a>
+            </div>
         </div>
-      </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
-    <script src="../js/bootstrap.min..js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/main.js"></script>
     <script>
-              document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function () {
             const wardrobeList = document.getElementById("wardrobe-list");
             const categoryFilter = document.getElementById("category");
             const brandFilter = document.getElementById("brand");
@@ -363,9 +361,5 @@
             });
         });
     </script>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="../js/bootstrap.min..js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/main.js"></script>
-  </body>
+</body>
 </html>
