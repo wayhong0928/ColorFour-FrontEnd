@@ -39,6 +39,7 @@ header {
 
 .nav {
   min-width: 100%;
+  position: fixed;
   top: 0;
   background-color: var(--header-footer-bg-color);
   color: white;
