@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Bootstrap CSS v5.2.1 -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/test2.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <script defer src="js/main.js"></script>
+    <title>你的穿搭造型師</title>
   </head>
 
   <body>
@@ -36,8 +37,8 @@
         <a href="templates/closet_home.html">線上衣櫃</a>
         <a href="templates/suggest.html">穿搭建議師</a>
         <a href="templates/buy.html">採購建議師</a>
-        <a href="templates/todo_index.html">To Do List</a>
-        <a href="templates/about.html">about us</a>
+        <a href="templates/todo_index.html">穿搭日程</a>
+        <a href="templates/about.html">關於我們</a>
         <a href="#"> 登出</a>
         <hr class="sidebar-divider" />
         <a href="templates/contact.html">聯繫客服</a>
@@ -148,40 +149,6 @@
       </div>
     </footer>
 
-    <script>
-      let counter = 1;
-      setInterval(function () {
-        document.getElementById("radio" + counter).checked = true;
-        counter++;
-        if (counter > 4) {
-          counter = 1;
-        }
-      }, 5000);
-
-      // Dropdown menu functionality
-      document.querySelector(".more-options svg").addEventListener("click", function () {
-        const dropdownMenu = document.querySelector(".dropdown-menu");
-        dropdownMenu.classList.toggle("show");
-      });
-
-      document.addEventListener("click", function (event) {
-        const dropdownMenu = document.querySelector(".dropdown-menu");
-        if (!event.target.closest(".more-options")) {
-          dropdownMenu.classList.remove("show");
-        }
-      });
-    </script>
-    <script>
-      // 獲取右側邊欄和右側邊欄圖示的元素
-      const sidebar = document.querySelector(".sidebar");
-      const sidebarToggle = document.getElementById("sidebar-toggle");
-
-      // 監聽右側邊欄圖示的點擊事件
-      sidebarToggle.addEventListener("click", function () {
-        // 切換右側邊欄的顯示狀態
-        sidebar.classList.toggle("show");
-      });
-    </script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="js/bootstrap.min..js"></script>
     <script src="js/popper.min.js"></script>
