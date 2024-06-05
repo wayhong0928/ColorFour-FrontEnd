@@ -1,4 +1,9 @@
-// loading header, aside, footer
+// loading header, footer and sidebar-toggle
+/**
+ * 異步加載 HTML 模板到指定的元素中。
+ * @param {string} templateId - 將模板載入的元素 ID。
+ * @param {string} filePath - HTML 模板檔案的路徑。
+ */
 async function loadTemplate(templateId, filePath) {
   try {
     const response = await fetch(filePath);
@@ -17,17 +22,7 @@ async function loadTemplate(templateId, filePath) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", async function () {
-  const currentFile = location.pathname.split("/").pop();
-  let basePath = "./";
-
-  if (currentFile !== "index.html") {
-    basePath = "../";
-  }
-
-  await loadTemplate("header", `${basePath}templates/header.html`);
-  await loadTemplate("footer", `${basePath}templates/footer.html`);
-
+function initSidebar() {
   const sidebar = document.querySelector(".sidebar");
   const sidebarToggle = document.getElementById("sidebar-toggle");
 
@@ -38,4 +33,13 @@ document.addEventListener("DOMContentLoaded", async function () {
   } else {
     console.error("Sidebar or toggle button not found.");
   }
+}
+
+document.addEventListener("DOMContentLoaded", async function () {
+
+  await loadTemplate("header", `header.html`);
+  await loadTemplate("footer", `footer.html`);
+  
+  initSidebar();
 });
+// end of loading header, footer and sidebar-toggle

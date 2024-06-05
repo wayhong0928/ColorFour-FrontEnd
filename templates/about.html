@@ -1,49 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>你的穿搭造型師</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Bootstrap CSS v5.2.1 -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/test2.css" />
     <link rel="stylesheet" href="../css/about.css" />
   </head>
 
   <body>
-    <header>
-      <div class="nav">
-        <form action="">
-          <div class="search-container">
-            <img src="../img/magnifying_glass_icon.png" class="search-icon" alt="Search Icon" />
-            <input type="search" placeholder="請輸入關鍵字" />
-          </div>
-          <button><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
-        </form>
-        <a href="javascript:void(0);" id="sidebar-toggle">
-          <img src="../img/menu_button_icon.png" class="zoom" style="width: 45px; height: 50px" />
-        </a>
-      </div>
-    </header>
-    <div class="sidebar">
-      <img src="https://picsum.photos/id/684/600/400" alt="會員照片" class="member-photo" />
-      <hr class="sidebar-divider" />
-      <div class="page-links">
-        <a href="../index.html">Home</a>
-        <a href="social_index.html">社群互動</a>
-        <a href="color_index.html">我的氣色</a>
-        <a href="closet_home.html">線上衣櫃</a>
-        <a href="suggest.html">穿搭建議師</a>
-        <a href="buy.html">採購建議師</a>
-        <a href="todo_index.html">To Do List</a>
-        <a href="about.html">about us</a>
-        <a href="#"> 登出</a>
-        <hr class="sidebar-divider" />
-        <a href="contact.html">聯繫客服</a>
-      </div>
-    </div>
+    <div id="header"></div>
     <div class="head"></div>
     <div class="spacer"></div>
     <main>
@@ -131,53 +100,10 @@
       <div style="height: 100px"></div>
     </main>
     <div style="margin-top: 150px"></div>
-    <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-col">
-            <a href="../index.html"><img src="../img/house_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
-            <a href="suggest.html"><img src="../img/clothing_icon.png" class="zoom" style="width: 45px; height: 50px" /></a>
-            <a href="post_new.html"><img src="../img/new_post_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
-            <a href="closet_home.html"><img src="../img/closet_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
-            <a href="user.html"><img src="../img/user_icon.png" class="zoom" style="width: 45px; height: 50px" /></a>
-          </div>
-        </div>
-      </footer>
+    <div id="footer"></div>
   </body>
-  <script>
-    let counter = 1;
-    setInterval(function () {
-      document.getElementById("radio" + counter).checked = true;
-      counter++;
-      if (counter > 4) {
-        counter = 1;
-      }
-    }, 5000);
-
-    // Dropdown menu functionality
-    document.querySelector(".more-options svg").addEventListener("click", function () {
-      const dropdownMenu = document.querySelector(".dropdown-menu");
-      dropdownMenu.classList.toggle("show");
-    });
-
-    document.addEventListener("click", function (event) {
-      const dropdownMenu = document.querySelector(".dropdown-menu");
-      if (!event.target.closest(".more-options")) {
-        dropdownMenu.classList.remove("show");
-      }
-    });
-  </script>
-  <script>
-    // 獲取右側邊欄和右側邊欄圖示的元素
-    const sidebar = document.querySelector(".sidebar");
-    const sidebarToggle = document.getElementById("sidebar-toggle");
-
-    // 監聽右側邊欄圖示的點擊事件
-    sidebarToggle.addEventListener("click", function () {
-      // 切換右側邊欄的顯示狀態
-      sidebar.classList.toggle("show");
-    });
-  </script>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="../js/bootstrap.min..js"></script>
   <script src="../js/popper.min.js"></script>
+  <script defer src="../js/main.js"></script>
 </html>

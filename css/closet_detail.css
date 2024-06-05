@@ -1,7 +1,3 @@
-*{
-    list-style: none;
-}
-
 .wrap{
     padding: 10px 0;
 }
@@ -14,6 +10,7 @@
 
 .bread li{
     padding: 0 20px;
+    list-style: none;
 }
 
 .bread li + li{
@@ -28,50 +25,46 @@
 
 .bread a{
     text-decoration: none;
+    color: #333;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    position: relative; /* 確保 .back 和 .item-detail 在同一個相對定位上下文中 */
+  max-width: 1200px;
+  min-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; 
+  background-color: #e9e8e8;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
 }
 
-.item-detail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* 讓子元素置中 */
-    position: relative; /* 使 .item-detail 相對於 .container 定位 */
-    z-index: 1; /* 確保 .item-detail 在 .back 之上 */
-    width: 100%; /* 確保 .item-detail 佔滿父容器的寬度 */
-    min-height: 200px; /* 設置一個最小高度以確保色塊顯示 */
+.item-img {
+  width: 50%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  position: relative; 
+  z-index: 1; 
 }
-
-.back {
-    position: absolute;
-    top: 0; /* 根據需要調整 */
-    left: 5%; /* 確保色塊不貼齊螢幕邊緣 */
-    right: 5%; /* 確保色塊不貼齊螢幕邊緣 */
-    width: 90%; /* 根據需要調整 */
-    height: 100%; /* 確保色塊高度與 .container 高度一致 */
-    background-color: #e9e8e8;
-    z-index: 0;
-    border-radius: 10px;
-}
-
-.item-detail img {
-    max-width: 100%;
-    border-radius: 20px;
+.item-img img {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  border-radius: 20px;
 }
 
 .item-info {
-    margin-top: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 確保文字置中 */
-    width: 100%; /* 確保 .item-info 佔滿父容器的寬度 */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: start; /* 確保文字置中 */
 }
 
 .item-info h1,
@@ -100,16 +93,17 @@
 }
 
 /* RWD設計 */
-@media (min-width: 768px) {
-    .item-detail {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center; /* 確保圖片和文字在水平和垂直方向上居中 */
-    }
-    .item-info {
-        text-align: left;
-        margin-left: 20px;
-        max-width: 50%;    
-    }
-}
+@media screen and (max-width: 768px) {
+  .item-img {
+    width: 100%;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
 
+  .item-info {
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}

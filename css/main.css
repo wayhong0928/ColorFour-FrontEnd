@@ -179,7 +179,7 @@ header {
 }
 
 /* adjust the search input box width */
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .nav input[type="search"] {
     width: 200px;
   }
