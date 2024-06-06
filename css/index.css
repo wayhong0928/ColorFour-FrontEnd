@@ -169,7 +169,7 @@
   left: 50px;
   width: 60%;
   height: 100%;
-  border: 3px solid #dbcaba;
+  border: 3px solid #FBF6F3;
   border-radius: 10px;
   z-index: -1;
 }
@@ -216,7 +216,7 @@
   width: calc(100% + 40px);
   max-width: none;
   height: calc(100% + 40px);
-  background-color: #8d8185;
+  background-color: #FBF6F3;
   z-index: -1;
   border-radius: 10px;
 }

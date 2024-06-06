@@ -47,3 +47,16 @@
       width: 25%;
   }
 }
+
+/* 全局字體顏色，例如深灰色 */
+.container {
+  color: #86797D;
+}
+
+.form-select {
+  color: #8d8185;
+}
+
+.btn {
+  color: #8d8185;
+}
