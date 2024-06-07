@@ -1,35 +1,35 @@
 .wrap{
-    padding: 10px 0;
+  padding: 10px 0;
 }
 
 .bread{
-    width: 90%;
-    margin: auto;
-    display: flex;
+  width: 90%;
+  margin: auto;
+  display: flex;
 }
 
 .bread li{
-    padding: 0 20px;
-    list-style: none;
+  padding: 0 20px;
+  list-style: none;
 }
 
 .bread li + li{
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .bread li + li:before{
-    content: '>';
-    color: blue;
-    margin-right: 20px;
+  content: '>';
+  color: blue;
+  margin-right: 20px;
 }
 
 .bread a{
-    text-decoration: none;
-    color: #333;
+  text-decoration: none;
+  color: #333;
 }
 
 .container {
-  max-width: 1200px;
+  width: 80%;
   min-height: 400px;
   display: flex;
   flex-wrap: wrap;
@@ -43,15 +43,18 @@
 }
 
 .item-img {
-  width: 50%; 
+  width: 45%; 
+  height: 45%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: center; 
-  position: relative; 
-  z-index: 1; 
+  margin-right: 0px;
 }
+
 .item-img img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
   position: relative;
   flex-direction: column;
   align-items: center;
@@ -61,10 +64,11 @@
 
 .item-info {
   width: 50%;
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  align-items: start; /* 確保文字置中 */
+  align-items: start; 
 }
 
 .item-info h1,
@@ -95,15 +99,14 @@
 /* RWD設計 */
 @media screen and (max-width: 768px) {
   .item-img {
-    width: 100%;
+    width: 90%;
     flex-wrap: wrap;
-    margin-right: 20px;
     margin-bottom: 0;
   }
 
   .item-info {
-    width: 100%;
+    width: 90%;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
   }
 }

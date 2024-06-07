@@ -17,30 +17,33 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Noto Sans TC', 'Noto Sans', sans-serif;
+  font-weight: 500;
 }
 
-html, body {
+html{
   width: 100%;
+  height: 100%;
 }
 
 body {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: var(--primary-bg-color);
-  color: var(--primary-text-color);
 }
 
 /* Header and navigation bar */
 header {
   width: 100%;
+  position: fixed;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  z-index: 100;
 }
 
 .nav {
-  min-width: 100%;
-  position: fixed;
-  top: 0;
+  width: 100%;
+  display: flex;
   background-color: var(--header-footer-bg-color);
   color: white;
   padding: 10px 0;
@@ -48,52 +51,14 @@ header {
   z-index: 20;
 }
 
-.nav form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-}
-
-.search-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.search-container .search-icon {
-  position: absolute;
-  left: 10px;
-  width: 20px;
-  height: 20px;
-  color: var(--search-icon-color);
-}
-
-.nav input[type="search"] {
-  padding: 10px 15px 10px 35px;
-  font-size: 16px;
-  border: none;
-  border-radius: 20px;
-  width: 250px;
-  transition: width 0.4s ease-in-out;
-}
-
-.nav input[type="search"]:focus {
-  width: 300px;
-  outline: none;
-}
-
 .nav button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 16px;
-  margin-left: 10px;
+  width: 90%;
+  display: flex;
+  justify-content: end;
+  background-color: transparent;
+  border-style: none;
 }
 
-.nav button:hover {
-  background-color: var(--button-hover-bg-color);
-}
 /* Sidebar */
 .sidebar {
   width: 200px;
@@ -142,16 +107,21 @@ header {
   text-decoration: underline;
 }
 
+main {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
 /* Footer */
 .footer {
+  width: 100%;
   position: fixed;
   bottom: 0;
-  width: 100%;
   background-color: var(--header-footer-bg-color);
   color: white;
   padding: 10px 0;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 100;
   text-align: center;
 }
 
@@ -176,11 +146,4 @@ header {
 
 .footer-col a img {
   vertical-align: middle;
-}
-
-/* adjust the search input box width */
-@media (max-width: 768px) {
-  .nav input[type="search"] {
-    width: 200px;
-  }
 }

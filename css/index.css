@@ -1,4 +1,3 @@
-/*內容區*/
 .banner {
   max-width: 90%;  
   margin: auto;
@@ -13,7 +12,6 @@
   border-radius: 20px;
   overflow: hidden;
   padding: 20px;
-  margin-top:10%
 }
 
 .banner-text {
@@ -75,8 +73,7 @@
 /* 三個功能區*/
 
 .content {
-  margin-right: 220px; /* 根據側邊欄寬度調整內容區域的邊距 */
-  /* 添加其他內容的樣式 */
+  margin-right: 220px; 
 }
 
 .content {
@@ -85,8 +82,8 @@
   align-items: center;
   margin-top: 60px;
   padding-bottom: 60px;
-  width: calc(100% - 200px); /* 预留侧边栏的宽度 */
-  margin: auto; /* 侧边栏的宽度 */
+  width: calc(100% - 200px);
+  margin: auto; 
 }
 
 .content-box {
@@ -98,18 +95,17 @@
   align-items: flex-start;
   min-width:250px;
   max-width: 1200px;
-  padding-bottom: 20px; /* 在底部添加填充以容纳水平线 */
+  padding-bottom: 20px;
   margin: auto;
 }
 
-/* 添加水平线 */
 .content-box::after {
   content: "";
   display: block;
   width: 100%;
   height: 1px;
-  background-color: #ccc; /* 根据需要调整线条颜色 */
-  margin-top: 20px; /* 调整线条上方的间距 */
+  background-color: #ccc; 
+  margin-top: 20px; 
 }
 
 .image-text-pair {
@@ -117,17 +113,17 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 2px solid #ccc; /* 边框 */
-  padding: 20px; /* 内距 */
-  border-radius: 10px; /* 圆角 */
-  max-width: 300px; /* 调整方框的最大宽度 */
-  background-color: white; /* 背景色，确保圆角对齐 */
+  border: 2px solid #ccc; 
+  padding: 20px; 
+  border-radius: 10px; 
+  max-width: 300px;
+  background-color: white; 
 }
 
 .image img {
-  width: 100%; /* 调整图片的宽度 */
-  height: auto; /* 根据宽度自动调整高度 */
-  border-radius: 10px; /* 确保图片圆角 */
+  width: 100%; 
+  height: auto; 
+  border-radius: 10px; 
   margin-bottom: 10px;
 }
 

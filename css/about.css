@@ -1,141 +1,155 @@
-*{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-/* 將header設置為背景圖片 */
 .head {
-    background-image: url('../img/advertise.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 500px; /* 你可以根據需要調整這個高度 */
-    width: 100%;
+	background-image: url('../img/advertise.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 500px;
+	width: 100%;
+	border-radius: 20px;
 }
 
-.wrap{
-    margin: 100px 0;
+.head img {
+	width: 100%;
+	height: auto;
+	border-radius: 20px;
 }
 
-/* 確保 .wrap 和 .w1 部分有適當的設計來適應螢幕大小 */
-.wrap, .w1 {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ebecec; /* 這個背景顏色可以根據需要調整 */
-    border-radius: 10px;
-    max-width: 1200px; /* 限制最大寬度，確保在大螢幕上不會太寬 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
+@media (max-width: 992px) {
+  .head {
+    height: 300px; 
+  }
+}
+
+@media (max-width: 375px) {
+  .head {
+    height: 200px; /* 手機視窗高度調整 */
+  }
+}
+
+/* 背景介紹與動機區塊 */
+.wrap {
+	margin: 20px auto;
+	padding: 20px;
+	background-color: #ebecec; 
+	border-radius: 10px;
+	width: 95%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
-    .wrap, .w1 {
-        margin: 10px auto;
-        padding: 10px;
-    }
+	.wrap {
+		margin: 10px auto;
+		padding: 10px;
+	}
 }
 
-.con{
-    width: 1200px;
-    margin: auto;
-    display: flex;
+.con {
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1200px;
 }
 
-.con h1{
-    width: 200px;
-    flex-shrink: 0;
-    box-sizing: border-box;
-    order: 1;
-    font-size: 70px;
-    padding-left: 15px;
-    position: relative;
+.con h1 {
+	width: 200px;
+	flex-shrink: 0;
+	font-size: 10px;
+	box-sizing: border-box;
+	font-size: 2.5rem; 
+	padding-left: 15px;
+	position: relative;
 }
 
-.con h1::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150px;
-    height: 150px;
-    border:15px solid #a00;
-    transform:rotate(10deg); 
-    z-index:-1;
+/* 
+.con h1::before, .con h1::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150px;
+	height: 150px;
+	border: 15px solid #a00;
+	transform: rotate(10deg);
+	z-index: -1;
 }
 
-.con h1::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150px;
-    height: 150px;
-    border:15px solid #a00;
-    transform:rotate(20deg); 
-    z-index:-1;
-}
-
-.con .txt{
-    width: 800px;
-    flex-shrink: 0;
-    box-sizing: border-box;
-    column-count: 2;
-    column-gap: 30px;
-    padding: 15px;
-    box-shadow: 0 0 30px #ccc;
-}
-
-.con .txt p{
-    margin-bottom: 1em;
-}
-
-.con .txt p:first-child::first-letter{
-    font-size: 60px;
-    float:left ;
-    padding-right: 10px;
-}
+.con h1::after {
+	transform: rotate(20deg);
+} */
 
 
-.w1{
-    margin: 100px 0;
+.txt {
+	width: calc(100% - 200px); 
+	flex-shrink: 0;
+	box-sizing: border-box;
+	column-count: 2;
+	column-gap: 30px;
+	padding: 15px;
+	box-shadow: 0 0 30px #ccc;
 }
 
-.con1{
-    width: 1200px;
-    margin: auto;
-    display: flex;
+.txt p {
+	margin-bottom: 1em
 }
 
-.con1 h1{
-    width: 200px;
-    flex-shrink: 0;
-    box-sizing: border-box;
-    font-size: 70px;
-    padding-left: 15px;
-    color: #aaa;
-    position: relative;
-    transform: rotate(90deg);
-    left: 200px;
-    transform-origin: left top;
+.txt p:first-child::first-letter {
+	font-size: 60px;
+	float: left;
+	padding-right: 10px;
 }
 
-.con1 .t{
-    width: 800px;
-    flex-shrink: 0;
-    box-sizing: border-box;
-    column-count: 2;
-    column-gap: 30px;
-    padding: 15px;
-    box-shadow: 0 0 30px #ccc;
+/* 圖片與文字配對區塊 */
+.image-text-pair {
+	width: 95%;
+	margin: 20px auto;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 2rem;
 }
 
-.con1 .t p{
-    margin-bottom: 1em;
+.image {
+	flex: 1;
+	max-width: 600px;
+	margin-right: 1rem;
+	transform: translateZ(0);
 }
- 
-.con1 .t p:first-child::first-letter{
-    font-size: 60px;
-    float:left ;
-    padding-right: 10px;
+
+.image img {
+	width: 100%;
+	height: auto;
+	border-radius: 0.25rem;
+}
+
+.banner-text {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem;
+	background-color: #ffffff;
+	border: 1px solid #dee2e6;
+	border-radius: 0.25rem;
+}
+
+@media (max-width: 768px) {
+	.image-text-pair {
+			flex-direction: column;
+	}
+	.image {
+			margin-right: 0;
+			margin-bottom: 1rem;
+	}
+}
+
+@media (max-width: 1200px) {
+	.con, .con1, .txt, .t {
+		width: 100%;
+	}
+	.con h1, .con1 h1 {
+		font-size: 2rem;
+	}
+	.txt, .t {
+		column-count: 1;
+	}
 }
