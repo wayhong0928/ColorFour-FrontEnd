@@ -99,7 +99,7 @@
             <div class="col-md-6 d-flex flex-column justify-content-center mx-auto">
                 <h2>穿搭建議</h2>
                 <p>獲得適合你的穿搭建議。</p>
-                <a href="templates/suggest.html" class="btn btn-primary">前往</a>
+                <a href="templates/suggest_index.html" class="btn btn-primary">前往</a>
             </div>
             <div class="col-md-6 position-relative" style="order: 1;">
                 <div class="image-container">
@@ -134,10 +134,20 @@
         </div>
       </div>
     </footer>
+    <script>
+      const sidebar = document.querySelector(".sidebar");
+      const sidebarToggle = document.getElementById("sidebar-toggle");
 
+      if (sidebar && sidebarToggle) {
+        sidebarToggle.addEventListener("click", function () {
+          sidebar.classList.toggle("show");
+        });
+      } else {
+        console.error("Sidebar or toggle button not found.");
+      }
+    </script>
     <!-- Bootstrap JavaScript Libraries -->
-    <script src="js/bootstrap.min..js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>
-    <script defer src="js/main.js"></script>
   </body>
 </html>

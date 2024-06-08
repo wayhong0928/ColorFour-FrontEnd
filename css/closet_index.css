@@ -1,3 +1,11 @@
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 100px auto;
+  display: flex;
+  flex-direction: column;
+}
+
 #wardrobe-list .card {
   margin-bottom: 1.5em;
 }

@@ -1,5 +1,9 @@
-.wrap{
-  padding: 10px 0;
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 100px auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .bread{
@@ -29,7 +33,6 @@
 }
 
 .container {
-  width: 80%;
   min-height: 400px;
   display: flex;
   flex-wrap: wrap;

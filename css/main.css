@@ -85,10 +85,9 @@ header {
 }
 
 .member-photo {
-  width: 150px;
-  height: auto;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  display: block;
   margin: 20px auto;
 }
 
@@ -108,8 +107,9 @@ header {
 }
 
 main {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  width: 90%;
+  margin: 100px auto 100px auto;
+  position: relative;
 }
 
 /* Footer */

@@ -1,0 +1,24 @@
+.card-img-top {
+  width: 60%;
+  height: 60%;
+  border-radius: 20px;
+  margin: 20px auto;
+}
+.row .card {
+  width: 45%;
+  margin: 0 auto;
+  display: flex;
+  margin: 20px;
+}
+.card-body {
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width:768px) {
+  .row .card {
+    width: 90%;
+    margin: 20px auto;
+  }
+}

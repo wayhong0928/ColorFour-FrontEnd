@@ -1,13 +1,19 @@
+.main-content {
+  width: 90%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .post {
-  margin: 20px auto;
-  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   max-width: 600px;
   background-color: #fff;
   color: rgb(8, 8, 8);
-  width: 100%;
-  box-sizing: border-box;
   text-align: left; 
 }
 
