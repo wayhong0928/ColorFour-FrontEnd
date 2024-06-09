@@ -138,6 +138,10 @@ main {
   border: #f9d9ca;
 }
 
+.zone{
+  padding: 10px;
+}
+
 /* Footer */
 .footer {
   width: 100%;
