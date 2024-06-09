@@ -1,55 +1,51 @@
 .banner {
   width: 90%;
   margin: auto;
-  height: 400px;
+  max-height: 600px;
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  background-size: cover;
-  background-position: center;
   color: #fff;
   border-radius: 20px;
-  padding: 20px;
+}
+
+.banner-background {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.banner-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#undersrand {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+}  
+#undersrand a {
+  margin-left: 5%;
+  margin-bottom: 5%;
 }
 
 .banner-text {
+  position: relative;
+  width: 100%;
+  height: 100%;
   z-index: 1;
   color: #917b56;
   text-shadow: 2px 2px 4px rgba(127, 125, 125, 0.4);
 }
-
-.banner-text h3 {
-  font-size: 25px;
-  border-bottom: 1px solid #917b56;
-  font-weight: 900;
-  padding-bottom: 0.3em;
-  margin-bottom: 0.3em;
-}
-
-.banner-text h1 {
-  font-size: 40px;
-  color: #fff;
-  border-bottom: 1px solid #fff;
-  font-weight: 900;
-  padding-bottom: 0.3em;
-  margin-bottom: 0.3em;
-}
-
-.banner-text p {
-  font-size: 16px;
-  font-weight: 300;
-}
-
-#title {
-  background: linear-gradient(115deg, rgba(225, 166, 161, 0.5) 50%, rgba(235, 233, 233, 0.5) 50%),
-    url("/img/advertise_1.png") no-repeat center center;
-}
-
-#title p {
-  color: white;
-}
-
 /* 三個功能區*/
 
 .content {
