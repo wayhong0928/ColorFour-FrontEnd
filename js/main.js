@@ -36,10 +36,9 @@ function initSidebar() {
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-
   await loadTemplate("header", `header.html`);
   await loadTemplate("footer", `footer.html`);
-  
+
   initSidebar();
 });
 // end of loading header, footer and sidebar-toggle

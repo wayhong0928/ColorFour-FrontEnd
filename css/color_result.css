@@ -1,3 +1,6 @@
+main.container {
+  margin: 100px auto;
+}
 
 .img-fluid {
   margin-right: 7%;
@@ -20,24 +23,24 @@ img {
 
 @media (min-width: 768px) {
   h2.featurette-heading {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   p.lead {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .featurette {
-      display: flex;
-      align-items: center;
+    display: flex;
+    align-items: center;
   }
 
   .featurette:nth-child(odd) .col-md-7 {
-      order: 2;
+    order: 2;
   }
 
   .featurette:nth-child(odd) .col-md-5 {
-      order: 1;
+    order: 1;
   }
 }
 
@@ -49,7 +52,6 @@ img {
   align-items: center;
   padding-bottom: 15px;
 }
-
 
 .text-center::after {
   content: "";

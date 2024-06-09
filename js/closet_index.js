@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {name: "風衣", category: "coat", brand: "品牌B", price: 180, image: "https://picsum.photos/300/200?random=8", link: "closet_detail.html?item=trench"},
     {name: "連帽衫", category: "top", brand: "品牌C", price: 130, image: "https://picsum.photos/300/200?random=9", link: "closet_detail.html?item=hoodie"},
     {name: "T恤", category: "top", brand: "品牌E", price: 50, image: "https://picsum.photos/300/200?random=12", link: "closet_detail.html?item=tshirt"},
-    {name: "針織衫", category: "top", brand: "GU", price: 90, image: "", link: "closet_detail.html?item=sweater"},
+    {name: "針織衫", category: "top", brand: "GU", price: 90, image: "https://picsum.photos/300/200?random=1", link: "closet_detail.html?item=sweater"},
     {name: "皮帶", category: "accessories", brand: "品牌F", price: 40, image: "https://picsum.photos/300/200?random=13", link: "closet_detail.html?item=belt"},
     {name: "運動褲", category: "bottom", brand: "品牌G", price: 60, image: "https://picsum.photos/300/200?random=14", link: "closet_detail.html?item=sportspants"},
     {name: "棒球帽", category: "accessories", brand: "品牌H", price: 30, image: "https://picsum.photos/300/200?random=15", link: "closet_detail.html?item=cap"},

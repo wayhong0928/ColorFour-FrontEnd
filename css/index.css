@@ -32,7 +32,8 @@
   flex-direction: column;
   justify-content: end;
   align-items: start;
-}  
+}
+
 #undersrand a {
   margin-left: 5%;
   margin-bottom: 5%;
@@ -55,7 +56,7 @@
   align-items: center;
   margin-top: 60px;
   padding-bottom: 60px;
-  margin: auto; 
+  margin: auto;
 }
 
 .content-box {
@@ -72,8 +73,8 @@
   display: block;
   width: 100%;
   height: 1px;
-  background-color: #ccc; 
-  margin-top: 20px; 
+  background-color: #ccc;
+  margin-top: 20px;
 }
 
 .image-text-pair {
@@ -83,47 +84,50 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 2px solid #ccc; 
-  padding: 20px; 
-  border-radius: 10px; 
-  background-color: white; 
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .image img {
-  width: 100%; 
-  height: auto; 
-  border-radius: 10px; 
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
   margin-bottom: 10px;
 }
 
 .text {
-  max-width: 200px; /* 调整文本的最大宽度 */
+  max-width: 200px;
   margin-bottom: 20px;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .image-text-pair {
     width: 40%;
     margin: 20px;
   }
 }
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .image-text-pair {
     width: 100%;
     margin: 20px;
   }
 }
 
-
 /*下排三*/
 .image-container {
   position: relative;
   display: inline-block;
+  max-width: 100%; /* 確保圖片容器不超出畫面寬度 */
+  overflow: hidden; /* 隱藏超出範圍的內容 */
 }
 
 .image-container img {
   display: block;
   border-radius: 10px;
+  max-width: 100%; /* 確保圖片不超出容器寬度 */
+  height: auto; /* 保持圖片比例 */
 }
 
 .image-container .overlay1,
@@ -131,6 +135,7 @@
   position: absolute;
   z-index: -1;
   border-radius: 10px;
+  max-width: 100%; /* 確保疊加層不超出容器寬度 */
 }
 
 .image-container .overlay1 {
@@ -148,43 +153,44 @@
   left: 50px;
   width: 60%;
   height: 100%;
-  border: 3px solid #FBF6F3;
+  border: 3px solid #fbf6f3;
   border-radius: 10px;
   z-index: -1;
+  max-width: 100%; /* 確保疊加層不超出容器寬度 */
 }
 
 @media (max-width: 768px) {
   .order-md-2 {
     order: 1 !important;
   }
-  
+
   .image-container .overlay1 {
-    top: 140px; /* 调整为你需要的值 */
+    top: 140px;
   }
+
   .image-container .overlay1::after {
-    top: -200px; /* 调整为你需要的值 */
+    top: -200px;
   }
 
   .col-md-6.order-md-2.d-flex.flex-column.justify-content-center.mx-auto {
     order: 2;
-    margin-top: 80px; /* 确保在移动设备上有足够的空隙 */
-    margin-bottom: 20px; /* 增加下方间距，避免覆盖图片 */
+    margin-top: 80px;
+    margin-bottom: 20px;
   }
 }
 
 .image-container .overlay2 {
-  position: absolute;
   top: -50px;
   right: -30px;
-  width: 800px;
+  width: 100%;
   height: 65%;
   background-color: #c6c6bc;
 }
 
 @media (max-width: 768px) {
   .col-md-6.d-flex.flex-column.justify-content-center.mx-auto {
-    order: 2 !important; /* 移至下方 */
-    margin-top: 20px; /* 往下位移 */
+    order: 2 !important;
+    margin-top: 20px;
   }
 }
 
@@ -193,31 +199,30 @@
   top: -20px;
   left: -20px;
   width: calc(100% + 40px);
-  max-width: none;
   height: calc(100% + 40px);
-  background-color: #FBF6F3;
+  background-color: #fbf6f3;
   z-index: -1;
   border-radius: 10px;
+  max-width: 100%;
 }
 
 .extra-margin {
-  margin-top: 100px; /* 调整此值以增加行之间的间距 */
+  margin-top: 100px;
 }
 
 @media (max-width: 768px) {
   .extra-margin {
-    margin-top: 50px; /* 在小屏幕上减少间距 */
+    margin-top: 50px;
   }
 
   .col-md-6.order-md-2.d-flex.flex-column.justify-content-center.mx-auto.adjusted {
-    margin-top: 50px; /* 确保在移动设备上有足够的空隙 */
+    margin-top: 50px;
   }
 
   .col-md-5.order-md-1.position-relative {
-    margin-bottom: 20px; /* 增加下方间距，确保空隙一致 */
+    margin-bottom: 20px;
   }
 }
-
 
 h2.featurette-heading {
   font-size: 2rem;
@@ -230,7 +235,6 @@ p.lead {
   margin-bottom: 1.5rem;
   color: #555;
 }
-
 
 img {
   max-width: 100%;

@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>你的穿搭造型師</title>
+    <title>ColorFour</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Bootstrap CSS v5.2.1 -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/closet_detail.css">
+    <link rel="stylesheet" href="../css/closet_detail.css" />
   </head>
 
   <body>
     <div id="header"></div>
 
     <main>
-      <div class="wrap">
-        <ol class="bread">
-          <li><a href="closet_index.html">衣櫃總覽</a></li>
-          <li><a href="#">詳細介紹</a></li>
-          <button class="btn btn-outline-secondary" style="margin-left: 20px; margin-bottom: 10px">編輯單品</button>
-        </ol>
+      <div class="item-info-wrap">
+        <button class="btn btn-outline-secondary edit-button">編輯單品</button>
       </div>
       <section class="container">
+        <!-- <div class="item-info-wrap">
+          <ol class="bread">
+            <li><a href="closet_index.html">衣櫃總覽</a></li>
+            <li><a href="#">詳細介紹</a></li>
+          </ol>
+          <button class="btn btn-outline-secondary edit-button">編輯單品</button>
+        </div> -->
         <div class="item-img">
-          <img src="https://via.placeholder.com/150" alt="服飾圖片" id="itemImage">
+          <img src="https://via.placeholder.com/150" alt="服飾圖片" id="itemImage" />
         </div>
         <div class="item-info">
           <h1 id="itemName">Item Name</h1>
           <p id="itemBrand">Brand Name</p>
-          <p  id="itemPrice">$100</p>
-          <p class="hashtag" id="itemHashtag">#T恤 &nbsp;&nbsp; #夏天 &nbsp;&nbsp; #休閒 &nbsp;&nbsp; #百搭</p>
+          <p id="itemPrice">$100</p>
+          <p class="hashtag" id="itemHashtag">種類：#上衣 &nbsp;&nbsp; #短袖T恤</p>
+          <p class="hashtag" id="itemHashtag">標籤：#春天 &nbsp;&nbsp; #夏天 &nbsp;&nbsp; #休閒 &nbsp;&nbsp; #百搭</p>
           <p class="added-date" id="itemAddedDate">Added Date</p>
         </div>
       </section>
-  </main>
-  
-  <div id="footer"></div>
+    </main>
+
+    <div id="footer"></div>
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="../js/bootstrap.min.js"></script>

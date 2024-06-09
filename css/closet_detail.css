@@ -1,68 +1,72 @@
-main {
-  width: 90%;
-  max-width: 1200px;
-  margin: 100px auto 100px auto;
+.bread {
   display: flex;
-  flex-direction: column;
-}
-
-.bread{
-  width: 90%;
-  margin: auto;
-  display: flex;
-}
-
-.bread li{
-  padding: 0 20px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-.bread li + li{
+.bread li {
+  padding: 0 20px;
+}
+
+.bread li + li {
   padding-left: 0;
 }
 
-.bread li + li:before{
-  content: '>';
-  color: blue;
+.bread li + li:before {
+  content: ">";
+  color: #333;
   margin-right: 20px;
 }
 
-.bread a{
+.bread a {
   text-decoration: none;
   color: #333;
 }
 
+main button {
+  width: 20%;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
 .container {
+  width: 90%;
   min-height: 400px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center; 
-  background-color: #e9e8e8;
+  justify-content: center;
+  background-color: #ffffff;
+  border: #333333 1px solid;
+  box-shadow: #999999 3px 3px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 20px;
   position: relative;
 }
 
+.item-info-wrap {
+  width: 90%;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  margin-bottom: 20px;
+}
+
 .item-img {
-  width: 45%; 
-  height: 45%;
+  width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 0px;
 }
 
 .item-img img {
   width: 100%;
   height: 100%;
-  margin: auto;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
   border-radius: 20px;
+  object-fit: cover;
 }
 
 .item-info {
@@ -70,46 +74,59 @@ main {
   margin-left: 20px;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  align-items: start; 
+  text-align: start;
+  align-items: flex-start;
 }
 
 .item-info h1,
 .item-info p {
-    margin: 5px 0; /* 調整間距 */
+  margin: 5px 0;
 }
 
 .item-info h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 .item-info p {
-    font-size: 1rem;
-    margin-bottom: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
 .item-info .price {
-    font-size: 1.5rem;
-    color: #333;
+  font-size: 1.5rem;
+  color: #333;
 }
 
 .item-info .added-date {
-    font-size: 1rem;
-    color: #777;
+  font-size: 1rem;
+  color: #777;
 }
 
-/* RWD設計 */
 @media screen and (max-width: 768px) {
   .item-img {
     width: 90%;
-    flex-wrap: wrap;
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 
   .item-info {
     width: 90%;
-    flex-wrap: wrap;
+    margin-left: 0;
+  }
+  .item-info h1 {
+    align-items: center;
+  }
+
+  main button {
+    width: 30%;
+  }
+
+  /* .item-info-wrap {
+    flex-direction: column;
     align-items: flex-start;
   }
+
+  .edit-button {
+    align-self: flex-end;
+  } */
 }
