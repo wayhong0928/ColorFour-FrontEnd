@@ -49,7 +49,7 @@
 }
 
 .btn-secondary:hover {
-  background-color: #f9d9ca; /* Change background color on hover */
+  background-color: #f9d9ca; 
   border: #f9d9ca;
 }
 
@@ -59,15 +59,15 @@
   }
 
   .image-container .overlay1 {
-    top: 140px; /* 调整为你需要的值 */
+    top: 140px; 
   }
   .image-container .overlay1::after {
-    top: -200px; /* 调整为你需要的值 */
+    top: -200px; 
   }
 
   .col-md-6.order-md-2.d-flex.flex-column.justify-content-center.mx-auto {
     order: 2;
-    margin-top: 80px; /* 确保在移动设备上有足够的空隙 */
-    margin-bottom: 20px; /* 增加下方间距，避免覆盖图片 */
+    margin-top: 80px; 
+    margin-bottom: 20px; 
   }
 }
