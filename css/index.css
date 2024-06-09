@@ -1,5 +1,5 @@
 .banner {
-  max-width: 90%;  
+  width: 90%;
   margin: auto;
   height: 400px;
   position: relative;
@@ -10,7 +10,6 @@
   background-position: center;
   color: #fff;
   border-radius: 20px;
-  overflow: hidden;
   padding: 20px;
 }
 
@@ -42,25 +41,6 @@
   font-weight: 300;
 }
 
-.btn-primary {
-  background-color: #e6b5ae;
-  border-color: #e6b5ae;
-  border-radius: 20px;
-  padding: 5px 10px;
-  text-decoration: none;
-  color: #fff;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #f9d9ca; /* Change background color on hover */
-  border: #f9d9ca;
-}
-
 #title {
   background: linear-gradient(115deg, rgba(225, 166, 161, 0.5) 50%, rgba(235, 233, 233, 0.5) 50%),
     url("/img/advertise_1.png") no-repeat center center;
@@ -73,30 +53,22 @@
 /* 三個功能區*/
 
 .content {
-  margin-right: 220px; 
-}
-
-.content {
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 60px;
   padding-bottom: 60px;
-  width: calc(100% - 200px);
   margin: auto; 
 }
 
 .content-box {
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
-  align-items: flex-start;
-  min-width:250px;
-  max-width: 1200px;
   padding-bottom: 20px;
-  margin: auto;
 }
 
 .content-box::after {
@@ -109,6 +81,8 @@
 }
 
 .image-text-pair {
+  width: 30%;
+  margin: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,7 +90,6 @@
   border: 2px solid #ccc; 
   padding: 20px; 
   border-radius: 10px; 
-  max-width: 300px;
   background-color: white; 
 }
 
@@ -131,6 +104,20 @@
   max-width: 200px; /* 调整文本的最大宽度 */
   margin-bottom: 20px;
 }
+
+@media (max-width:768px) {
+  .image-text-pair {
+    width: 40%;
+    margin: 20px;
+  }
+}
+@media (max-width:500px) {
+  .image-text-pair {
+    width: 100%;
+    margin: 20px;
+  }
+}
+
 
 /*下排三*/
 .image-container {
