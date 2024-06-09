@@ -1,9 +1,3 @@
-header,
-footer {
-  z-index: 2;
-  position: relative;
-}
-
 .image-container {
   position: relative;
   display: inline-block;
