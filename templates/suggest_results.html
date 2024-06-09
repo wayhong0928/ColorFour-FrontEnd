@@ -6,12 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/suggest_results.css" />
-    <style>
-      .card {
-        margin-bottom: 20px;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/suggest_result.css" />
   </head>
 
   <body>
@@ -20,49 +15,46 @@
     <main class="container">
       <div class="row my-4">
         <div class="col-12">
-          <h3>推薦結果</h3>
+          <!-- 這裡要自動帶入表單標題  title + 推薦結果 -->
+          <h3>表演服推薦結果</h3>
         </div>
       </div>
       <div class="row">
-        <div class="col-4">
+        <div class="col-12 col-md-4 mb-3">
           <div class="card">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="推薦1" />
-            <div class="card-body">
-              <p class="card-text">推薦內容1</p>
-              <button class="btn btn-primary save-button">保存</button>
+            <img src="../img/suggest_01.png" class="card-img-top" alt="推薦1" />
+            <div class="card-body text-center">
+              <button class="btn btn-primary save-button">選擇</button>
             </div>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-12 col-md-4 mb-3">
           <div class="card">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="推薦2" />
-            <div class="card-body">
-              <p class="card-text">推薦內容2</p>
-              <button class="btn btn-primary save-button">保存</button>
+            <img src="../img/suggest_02.png" class="card-img-top" alt="推薦2" />
+            <div class="card-body text-center">
+              <button class="btn btn-primary save-button">選擇</button>
             </div>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-12 col-md-4 mb-3">
           <div class="card">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="推薦3" />
-            <div class="card-body">
-              <p class="card-text">推薦內容3</p>
-              <button class="btn btn-primary save-button">保存</button>
+            <img src="https://picsum.photos/300/200?random=1" class="card-img-top" alt="推薦3" />
+            <div class="card-body text-center">
+              <button class="btn btn-primary save-button">選擇</button>
             </div>
           </div>
         </div>
       </div>
       <div class="row my-4">
         <div class="col-12 text-center">
-          <a href="suggest_index.html" class="btn btn-secondary">返回首頁</a>
+          <a href="suggest_index.html" class="btn btn-primary submit-button">確認送出</a>
         </div>
       </div>
     </main>
-    <div class="zone"></div>
     <div id="footer"></div>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/main.js"></script>
-    <script defer src="../js/suggest_results.js"></script>
+    <script defer src="../js/suggest_result.js"></script>
   </body>
 </html>
