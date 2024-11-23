@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>上傳照片，進行建議</title>
+    <link rel="stylesheet" href="../Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Assets/css/main.css" />
+    <link rel="stylesheet" href="../Assets/css/buy_suggest.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <div>
+      <h1>上傳照片，進行建議</h1>
+
+      <!-- 上傳照片區域 -->
+      <div class="upload-section">
+        <label for="file-upload" class="custom-file-upload">上傳照片</label>
+        <input
+          type="file"
+          id="file-upload"
+          accept="image/*"
+          onchange="handleFileUpload(event)"
+        />
+      </div>
+
+      <!-- 顯示上傳的照片 -->
+      <div id="image-preview" class="image-preview" style="display: none;">
+        <h3>預覽</h3>
+        <img id="uploaded-image" src="" alt="Uploaded Image" />
+      </div>
+
+      <!-- 提交按鈕 -->
+      <div class="submit-section">
+        <button id="submit-button" disabled>送出</button>
+        <button class="back-button" onclick="goBack()">返回</button>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script src="../Assets/js/bootstrap.min.js"></script>
+    <script src="../Assets/js/main.js"></script>
+    <script src="../Assets/js/buy_suggest.js"></script>
+  </body>
+</html>
+

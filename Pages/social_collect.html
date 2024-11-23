@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>個人總覽</title>
+    <link rel="stylesheet" href="../Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Assets/css/main.css" />
+    <link rel="stylesheet" href="../Assets/css/social_collect.css" />
+  </head>
+  <body>
+    <div>
+      <div id="header"></div>
+      <main class="main-content container">
+        <div class="left-sidebar">
+          <div class="icon-search">
+            <img src="../Assets/image/search_icon.png" alt="Search Icon" />
+            <input type="text" placeholder="search" />
+          </div>
+
+          <div class="icon-link">
+            <a href="social_index.html">
+              <img src="../Assets/image/social_home_icon.png" alt="Home Icon" />
+              <span>社群平台首頁</span>
+            </a>
+          </div>
+
+          <div class="icon-link">
+            <a href="social_collect.html">
+              <img src="../Assets/image/like_icon.png" alt="Saved Posts Icon" />
+              <span>收藏貼文</span>
+            </a>
+          </div>
+
+          <div class="icon-link">
+            <a href="social_follow_list.html">
+              <img src="../Assets/image/followers_icon.png" alt="Overview Icon" />
+              <span>追蹤總覽</span>
+            </a>
+          </div>
+        </div>
+
+        <div id="saved-posts-container" class="content">
+          <h2 class="collect">我的收藏</h2>
+          <div id="postsList"></div>
+          <p id="noPostsMessage" class="collect-null" style="display:none;">尚未收藏任何貼文</p>
+        </div>
+      </main>
+
+      <div id="footer"></div>
+
+      <script src="../Assets/js/bootstrap.min.js"></script>
+      <script src="../Assets/js/main.js"></script>
+      <script src="../Assets/js/social_collect.js"></script>
+    </div>
+  </body>
+</html>
+

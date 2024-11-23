@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>篩選與排序</title>
+    <link rel="stylesheet" href="../Assets/css/Wardrobe_FilterAndSort.css" />
+  </head>
+  <body>
+    <main>
+      <div class="filter-sort">
+        <h2 class="filter-title">篩選</h2>
+
+        <label for="category" class="form-label">分類:</label>
+        <select id="category" class="form-select">
+          <option value="all">全部</option>
+          <option value="clothing">服飾</option>
+          <option value="shoes">鞋子</option>
+        </select>
+
+        <label for="brand" class="form-label">品牌:</label>
+        <select id="brand" class="form-select">
+          <option value="all">全部</option>
+          <option value="brand-1">品牌 1</option>
+          <option value="brand-2">品牌 2</option>
+          <option value="brand-3">品牌 3</option>
+        </select>
+
+        <label for="sort-by" class="form-label">排序方式:</label>
+        <select id="sort-by" class="form-select">
+          <option value="newest">新增時間 (先到後)</option>
+          <option value="oldest">新增時間 (後到先)</option>
+          <option value="brand">品牌名稱</option>
+          <option value="price-low-high">價格 (低到高)</option>
+          <option value="price-high-low">價格 (高到低)</option>
+        </select>
+
+        <label for="favorites" class="form-label">我的最愛:</label>
+        <select id="favorites" class="form-select">
+          <option value="all">無</option>
+          <option value="favorites">我的最愛</option>
+        </select>
+      </div>
+    </main>
+
+    <script src="../Assets/js/Wardrobe_FilterAndSort.js"></script>
+  </body>
+</html>

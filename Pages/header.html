@@ -1,8 +1,8 @@
 <header class="header">
   <div class="nav">
-    <img class="nav-text" src="../img/colorfour_text.png" alt="colorfour" />
+    <img class="nav-text" src="../Assets/image/colorfour_text.png" alt="colorfour" />
     <button href="javascript:void(0);" id="sidebar-toggle">
-      <img src="../img/menu_button_icon.png" class="zoom" style="width: 45px; height: 50px" />
+      <img src="../Assets/image/menu_button_icon.png" class="zoom" style="width: 45px; height: 50px" />
     </button>
   </div>
   <aside class="sidebar">
@@ -23,4 +23,43 @@
       <a href="contact.html">聯繫客服</a>
     </div>
   </aside>
+
+  <style>
+    .header {
+      height: 70px;
+      background-color: var(--header-footer-bg-color) !important;
+    }
+  
+    .nav-text {
+      height: 50px;
+      margin: 0 auto;
+    }
+  
+    .member-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  
+    .sidebar-divider {
+      border: 0;
+      height: 1px;
+      margin: 20px 0;
+      background-color: var(--divider-color);
+    }
+  
+    .sidebar.show {
+      display: block;
+    }
+  
+    .sidebar {
+      display: none;
+      position: fixed;
+      top: 70px;
+      right: 0;
+      height: calc(100% - 70px);
+      overflow-y: auto;
+      z-index: 10;
+    }
+  </style>
 </header>

@@ -1,110 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/index.css" />
-
-    <title>你的穿搭造型師</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Assets/css/main.css" />
+    <link rel="stylesheet" href="Assets/css/index.css" />
   </head>
   <body>
     <div id="header"></div>
-    <main class="container">
-      <section class="banner">
+    <div class="container">
+      <!-- 橫幅 -->
+      <section class="banner mb-5">
         <div class="banner-background">
-          <img src="img/index_banner.jpg" alt="index_banner" class="banner-image" />
+          <img
+            src="Assets/image/index_banner.png"
+            alt="index_banner"
+            class="banner-image img-fluid"
+          />
         </div>
-        <div class="banner-text" id="undersrand">
-          <a href="templates/about.html" class="btn btn-primary">了解更多</a>
+        <div class="banner-text" id="understand">
+          <a href="about.html" class="btn btn-main">了解更多</a>
         </div>
       </section>
-      <div class="spacer"></div>
+
+      <!-- 主要內容 -->
       <div class="content">
         <div class="content-box">
-          <div class="image-text-pair">
-            <div class="image">
-              <img src="img/makeup.png" alt="Image 2" />
-            </div>
-            <div class="banner-text container">
-              <h3>我的氣色</h3>
-              <p>判斷你的四季型色彩及推薦。</p>
-              <a href="templates/color_index.html" class="btn btn-primary">前往</a>
-            </div>
-          </div>
-          <div class="image-text-pair">
-            <div class="image">
-              <img src="img/community.png" alt="Image 3" />
-            </div>
-            <div class="banner-text container">
-              <h3>社群互動</h3>
-              <p>與其他使用者分享穿搭經驗。</p>
-              <a href="templates/social_index.html" class="btn btn-primary">前往</a>
+          <!-- 第一張卡片 -->
+          <div class="image-text-pair card m-3">
+            <img src="Assets/image/makeup.png" alt="Image 2" class="card-img-top" />
+            <div class="card-body text-center">
+              <h3 class="card-title">我的氣色</h3>
+              <p class="card-text">判斷你的四季型色彩及推薦。</p>
+              <a href="color_index.html" class="btn btn-main">前往</a>
             </div>
           </div>
-          <div class="image-text-pair">
-            <div class="image">
-              <img src="img/To_do_list.png" alt="Image 4" />
+          <!-- 第二張卡片 -->
+          <div class="image-text-pair card m-3">
+            <img
+              src="Assets/image/community.png"
+              alt="Image 3"
+              class="card-img-top"
+            />
+            <div class="card-body text-center">
+              <h3 class="card-title">社群互動</h3>
+              <p class="card-text">與其他使用者分享穿搭經驗。</p>
+              <a href="social_index.html" class="btn btn-main">前往</a>
             </div>
-            <div class="banner-text container">
-              <h3>日程安排</h3>
-              <p>將穿搭推薦納入你的行程表。</p>
-              <a href="templates/todo_index.html" class="btn btn-primary">前往</a>
+          </div>
+          <!-- 第三張卡片 -->
+          <div class="image-text-pair card m-3">
+            <img
+              src="Assets/image/To_do_list.png"
+              alt="Image 4"
+              class="card-img-top"
+            />
+            <div class="card-body text-center">
+              <h3 class="card-title">日程安排</h3>
+              <p class="card-text">將穿搭推薦納入你的行程表。</p>
+              <a href="todo_index.html" class="btn btn-main">前往</a>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- 更多內容區 -->
       <section class="container my-5">
+        <!-- 第一區 -->
         <div class="row mb-4">
-          <div class="col-md-6 order-md-2 d-flex flex-column justify-content-center mx-auto" style="order: 2">
+          <div class="col-md-6 order-md-2 d-flex flex-column justify-content-center mx-auto">
             <h2>線上衣櫃</h2>
             <p>把你的實體衣櫃搬到線上，方便管理。</p>
-            <a href="templates/closet_index.html" class="btn btn-primary">前往</a>
+            <a href="closet_index.html" class="btn btn-main">前往</a>
           </div>
           <div class="col-md-6 order-md-1 position-relative">
             <div class="image-container">
-              <img src="img/closet.png" class="img-fluid rounded" alt="線上衣櫃" />
+              <img
+                src="Assets/image/closet.png"
+                class="img-fluid rounded"
+                alt="線上衣櫃"
+              />
               <div class="overlay1"></div>
             </div>
           </div>
         </div>
         <div style="height: 100px"></div>
+        <!-- 第二區 -->
         <div class="row mb-4 extra-margin">
           <div class="col-md-6 d-flex flex-column justify-content-center mx-auto">
             <h2>穿搭建議</h2>
             <p>獲得適合你的穿搭建議。</p>
-            <a href="templates/suggest_index.html" class="btn btn-primary">前往</a>
+            <a href="suggest_index.html" class="btn btn-main">前往</a>
           </div>
-          <div class="col-md-6 position-relative" style="order: 1">
+          <div class="col-md-6 position-relative">
             <div class="image-container">
-              <img src="img/outfit.png" class="img-fluid rounded" alt="穿搭建議" />
+              <img
+                src="Assets/image/outfit.png"
+                class="img-fluid rounded"
+                alt="穿搭建議"
+              />
               <div class="overlay2"></div>
             </div>
           </div>
         </div>
+        <!-- 第三區 -->
         <div class="row mb-4 extra-margin position-relative">
           <div class="overlay3"></div>
-          <div class="col-md-6 order-md-2 d-flex flex-column justify-content-center mx-auto adjusted" style="order: 1">
+          <div
+            class="col-md-6 order-md-2 d-flex flex-column justify-content-center mx-auto adjusted"
+          >
             <h2>採購建議</h2>
             <p>判斷你的衣櫃有無重複衣物並提供採購建議。</p>
-            <a href="templates/buy.html" class="btn btn-primary">前往</a>
+            <a href="buy_index.html" class="btn btn-main">前往</a>
           </div>
           <div class="col-md-5 order-md-1 position-relative">
             <div class="image-container">
-              <img src="img/advice.png" class="img-fluid rounded" alt="採購建議" />
+              <img
+                src="Assets/image/advice.png"
+                class="img-fluid rounded"
+                alt="採購建議"
+              />
             </div>
           </div>
         </div>
       </section>
-    </main>
-    <div class="zone"></div>
+    </div>
     <div id="footer"></div>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script defer src="js/load_index.js"></script>
+    <script src="Assets/js/bootstrap.min.js"></script>
+    <script src="Assets/js/popper.min.js"></script>
+    <script defer src="Assets/js/load_index.js"></script>
   </body>
 </html>

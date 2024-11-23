@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登入頁面</title>
+    <link rel="stylesheet" href="../Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Assets/css/main.css" />
+    <style>
+      .login-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-height: 100vh;
+        background-color: var(--primary-bg-color);
+      }
+
+      .login-title {
+        font-size: 2rem;
+        color: var(--primary-text-color);
+        margin-bottom: 2rem;
+      }
+
+      .btn-main {
+        background-color: #06c755 !important;
+        border-color: #06c755;
+        border-radius: 20px;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s, border-color 0.3s;
+        margin-bottom: 1rem;
+      }
+
+      .btn-main:hover {
+        background-color: var(--button-hover-bg-color);
+        border-color: var(--button-hover-bg-color);
+      }
+
+      .btn-main img {
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+
+      .google-button {
+        background-color: #4285f4 !important;
+        border-color: #4285f4;
+      }
+
+      .google-button:hover {
+        background-color: #357ae8;
+        border-color: #357ae8;
+      }
+
+      .error {
+        color: red;
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <!-- Google 登入按鈕 -->
+      <button class="btn-main google-button" id="google-login-button">
+        <img src="../Assets/img/web_light_rd_na@1x.png" alt="Google Logo" />
+        使用 Google 登入
+      </button>
+
+      <!-- LINE 登入按鈕 -->
+      <button class="btn-main line-button" id="line-login-button">
+        <img src="../Assets/img/line_44.png" alt="LINE Logo" />
+        使用 LINE 登入
+      </button>
+
+      <!-- 提示文字 -->
+      <p>登入後會取得用戶 Email 等個人資訊作為會員個人資訊使用。</p>
+
+      <!-- 錯誤消息顯示 -->
+      <div id="error-message" class="error" style="display: none;">錯誤：請稍後再試</div>
+    </div>
+
+    <script src="../Assets/js/bootstrap.min.js"></script>
+    <script src="../Assets/js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const googleLoginButton = document.getElementById("google-login-button");
+        const lineLoginButton = document.getElementById("line-login-button");
+        const errorMessage = document.getElementById("error-message");
+
+        let isLoggingIn = false;
+
+        // Google 登入
+        googleLoginButton.addEventListener("click", function () {
+          if (isLoggingIn) return;
+          isLoggingIn = true;
+
+          try {
+            const googleAuthUrl = "https://accounts.google.com/o/oauth2/v2/auth";
+            const params = {
+              response_type: "code",
+              client_id: "GOOGLE_CLIENT_ID", // 替換為實際的 Client ID
+              redirect_uri: "YOUR_REDIRECT_URL", // 替換為實際的 Redirect URI
+              scope: "openid email profile",
+              access_type: "offline",
+              prompt: "consent",
+              state: "google",
+            };
+            const urlParams = new URLSearchParams(params).toString();
+            window.location.href = `${googleAuthUrl}?${urlParams}`;
+          } catch (error) {
+            errorMessage.style.display = "block";
+            errorMessage.innerText = "Google 登入失敗，請稍後再試。";
+          } finally {
+            isLoggingIn = false;
+          }
+        });
+
+        // LINE 登入
+        lineLoginButton.addEventListener("click", function () {
+          if (isLoggingIn) return;
+          isLoggingIn = true;
+
+          try {
+            const lineAuthUrl = "https://access.line.me/oauth2/v2.1/authorize";
+            const params = {
+              response_type: "code",
+              client_id: "LINE_CLIENT_ID", // 替換為實際的 Client ID
+              redirect_uri: "YOUR_REDIRECT_URL", // 替換為實際的 Redirect URI
+              scope: "profile openid email",
+              state: "line",
+            };
+            const urlParams = new URLSearchParams(params).toString();
+            window.location.href = `${lineAuthUrl}?${urlParams}`;
+          } catch (error) {
+            errorMessage.style.display = "block";
+            errorMessage.innerText = "LINE 登入失敗，請稍後再試。";
+          } finally {
+            isLoggingIn = false;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

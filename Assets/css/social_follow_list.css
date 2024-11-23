@@ -1,0 +1,169 @@
+/* 麵包屑樣式 */
+.breadcrumb {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: 5px;
+  padding: 10px 60px; /* 上下左右間距 */
+  margin-top: 100px; /* 增加 margin-top 以避免被 header 擋住 */
+}
+
+.breadcrumb-item {
+  display: inline;
+  font-size: 1rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  color: #333; /* 分隔符號顏色 */
+  margin: 0 10px; /* 分隔符的間距 */
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: #333; /* 設定麵包屑鏈接顏色 */
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline; /* 滑鼠懸停時顯示下劃線 */
+}
+
+.breadcrumb-item.active {
+  color: #6c757d; /* 當前頁面的顏色 */
+}
+
+/* 主內容區 */
+.main-content {
+  width: 90%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px; /* 增加 margin-top 以確保不被 header 擋住 */
+}
+
+.post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.follow_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: var(--primary-bg-color);
+  color: #917b56;
+  margin-bottom: 30px;
+}
+
+.follower-row {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.follower-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.follower-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.follower-name {
+  font-size: 1.2em;
+  color: #333;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.follower-name:hover {
+  text-decoration: underline;
+}
+
+.follow-button {
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+.unfollow-icon {
+  border-radius: 20px;
+  padding: 1px 5px;
+}
+
+/* Resizing for small screens */
+@media (max-width: 1020px) {
+  .breadcrumb {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .main-content {
+    margin-top: 90px;
+  }
+
+  .left-sidebar .icon-search {
+    display: none;
+  }
+
+  .left-sidebar .icon-link {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .left-sidebar .icon-link span {
+    display: none;
+  }
+
+  .left-sidebar .icon-link img {
+    margin-right: 0;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.left-sidebar .icon-search input {
+  width: 100px; /* Set the width of the search box */
+  height: 30px; /* Set the height of the search box */
+  padding: 5px; /* Adjust padding */
+  font-size: 14px; /* Adjust font size */
+  border-radius: 10px; /* Adjust border radius */
+  border: 1px solid #ccc; /* Set border */
+}
+
+/* Adjust search box size on small screens */
+@media (max-width: 768px) {
+  .left-sidebar .icon-search input {
+    width: 100px; /* Adjust width for small screens */
+    height: 25px; /* Adjust height for small screens */
+    font-size: 12px; /* Adjust font size for small screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .follower-info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .follower-actions {
+    display: flex;
+    align-items: center;
+  }
+}
