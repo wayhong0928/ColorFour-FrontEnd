@@ -1,0 +1,49 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.5rem;
+  }
+  
+  .col-12,
+  .col-sm-6,
+  .col-md-4,
+  .col-lg-3 {
+    padding: 0 0.5rem;
+    margin-bottom: 1.5em;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-title {
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+  
+  .card-title a {
+    color: black;
+    text-decoration: none; /* 移除底線 */
+  }
+  
+  .card-title a:hover {
+    color: black;
+    text-decoration: none; /* 保持無底線 */
+  }
+  
+  .form-check {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  

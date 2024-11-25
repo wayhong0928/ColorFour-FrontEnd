@@ -1,18 +1,19 @@
 .banner {
   width: 90%;
-  margin: auto;
-  max-height: 600px;
+  max-height: 90%;
+  margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #fff;
   border-radius: 20px;
+  overflow: hidden;
 }
 
 .banner-background {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,20 +22,23 @@
 }
 
 .banner-image {
-  position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
+  object-fit: cover; /* 保持圖片比例並填滿容器 */
 }
 
-#undersrand {
+#understand {
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  align-items: start;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
 }
 
-#undersrand a {
+#understand a {
   margin-left: 5%;
   margin-bottom: 5%;
 }
@@ -47,10 +51,10 @@
   color: #917b56;
   text-shadow: 2px 2px 4px rgba(127, 125, 125, 0.4);
 }
-/* 三個功能區*/
 
+/* 三個功能區 */
 .content {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,6 +112,7 @@
     margin: 20px;
   }
 }
+
 @media (max-width: 500px) {
   .image-text-pair {
     width: 100%;
@@ -115,7 +120,7 @@
   }
 }
 
-/*下排三*/
+/* 下排三 */
 .image-container {
   position: relative;
   display: inline-block;
@@ -197,7 +202,6 @@
 .row .overlay3 {
   position: absolute;
   top: -20px;
-  left: -20px;
   width: calc(100% + 40px);
   height: calc(100% + 40px);
   background-color: #fbf6f3;

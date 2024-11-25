@@ -1,25 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ColorFour</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/social_index.css" />
+    <title>ColorFour 社群平台</title>
+    <link rel="stylesheet" href="../Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Assets/css/main.css" />
+    <link rel="stylesheet" href="../Assets/css/social_index.css" />
   </head>
   <body>
+    <!-- 頂部導覽欄 -->
     <div id="header"></div>
-    <main class="main-content container">
-      <div id="post-container"></div>
+
+    <!-- 主內容區域 -->
+    <main class="main-content container d-flex">
+      <!-- 左側功能欄 -->
+      <div class="left-sidebar">
+        <!-- 搜尋框 -->
+        <div class="icon-search">
+          <img src="../Assets/image/search_icon.png" alt="Search Icon" class="search-icon" />
+          <input type="text" placeholder="search" class="search-input" />
+        </div>
+
+        <!-- 功能按鈕 -->
+        <div class="icon-link">
+          <a href="social_index.html">
+            <img src="../Assets/image/social_home_icon.png" alt="Home Icon" />
+            <span>社群平台首頁</span>
+          </a>
+        </div>
+        <div class="icon-link">
+          <a href="social_collect.html">
+            <img src="../Assets/image/like_icon.png" alt="Saved Posts Icon" />
+            <span>收藏貼文</span>
+          </a>
+        </div>
+        <div class="icon-link">
+          <a href="social_follow_list.html">
+            <img src="../Assets/image/followers_icon.png" alt="Overview Icon" />
+            <span>追蹤總覽</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 貼文內容區 -->
+      <div id="post-container" class="content flex-grow-1">
+        <!-- 貼文由 JavaScript 動態渲染 -->
+      </div>
     </main>
-    <div class="zone"></div>
+
+    <!-- 頁腳 -->
     <div id="footer"></div>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script defer src="../js/main.js"></script>
-    <script src="../js/social_index.js"></script>
+
+    <!-- 必要腳本 -->
+    <script src="../Assets/js/bootstrap.min.js"></script>
+    <script src="../Assets/js/popper.min.js"></script>
+    <script src="../Assets/js/main.js"></script>
+    <script src="../Assets/js/social_index.js"></script>
   </body>
 </html>
+
+
+

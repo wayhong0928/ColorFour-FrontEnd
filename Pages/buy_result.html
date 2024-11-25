@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>建議結果</title>
+  <link rel="stylesheet" href="../Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Assets/css/main.css" />
+    <link rel="stylesheet" href="../Assets/css/buy_result.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div>
+    <h1>建議結果</h1>
+
+    <!-- 建議結果顯示 -->
+    <div class="result-section">
+      <div class="percentage">
+        <div>
+          <p>偏好程度</p>
+          <p class="percentage-value">70%</p>
+        </div>
+        <div>
+          <p>相似程度</p>
+          <p class="percentage-value">40%</p>
+        </div>
+      </div>
+      <div class="image-section">
+        <img src="example.jpg" alt="Suggested item" />
+      </div>
+    </div>
+    <div class="again">
+      <button class="back-button" @click="again">重新上傳</button>
+    </div>
+
+    <!-- 推薦服飾區域 -->
+    <div class="recommend-section">
+      <h2>推薦服飾</h2>
+      <div class="items">
+        <!-- 重複元素 -->
+        <div class="item" v-for="item in items" :key="item.id">
+          <img :src="item.image" :alt="item.name" />
+          <p>{{ item.name }}</p>
+          <p>{{ item.price }}</p>
+          <button class="btn btn-outline-secondary" @click="goToDetail(item.id)">詳細介紹</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"></div>
+<script src="../Assets/js/bootstrap.min.js"></script>
+<script src="../Assets/js/buy_result.js"></script>
+<script src="../Assets/js/main.js"></script>
+</body>
+</html>

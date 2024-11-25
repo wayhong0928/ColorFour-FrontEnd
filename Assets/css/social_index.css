@@ -82,6 +82,10 @@
   background-color: #f0f0f0;
 }
 
+.follow-button {
+  margin-right: 20px;
+}
+
 .post img {
   display: block;
   margin: 0 auto;
@@ -142,6 +146,47 @@
   margin-top: 10px;
 }
 
+.comment-section button {
+  background-color: #f0a9a9;
+  color: white; /* 白色文字 */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-section button:hover {
+  background-color: #e09393; /* 當鼠標懸停時，顏色變深 */
+}
+
+.comment-avatar {
+  width: 40px; /* 增加頭像大小 */
+  height: 40px; /* 同樣增加高度來匹配寬度 */
+  border-radius: 50%;
+  margin-right: 10px; /* 調整頭像和文字之間的距離 */
+}
+
+.comment-content {
+  display: flex;
+  flex-direction: row; /* 確保是水平排列 */
+  align-items: flex-start; /* 頭像和文字對齊 */
+  justify-content: flex-start; /* 確保所有內容靠左 */
+  text-align: left; /* 留言內容靠左對齊 */
+  margin-bottom: 10px; /* 調整上下間距 */
+  width: 100%; /* 確保內容不溢出 */
+}
+
+.comment-content div {
+  flex: 1; /* 讓留言內容占據剩餘空間 */
+}
+
+.comment-text {
+  text-align: left; /* 留言文字靠左對齊 */
+  margin: 0; /* 去掉多餘的上下間距 */
+  white-space: pre-wrap; /* 保持換行格式 */
+}
+
 @media screen and (max-width: 800px) {
   .slider {
     margin: 20px auto;
@@ -159,5 +204,102 @@
 
   .post-actions button {
     padding: 5px 10px;
+  }
+}
+
+/* 確保左側邊欄在大屏幕時顯示 */
+.left-sidebar {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  height: calc(100% - 120px);
+  overflow-y: auto;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.left-sidebar .icon-search,
+.left-sidebar .icon-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.left-sidebar .icon-search img,
+.left-sidebar .icon-link img {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  transition: all 0.3s ease;
+}
+
+.left-sidebar .icon-search input {
+  flex: 1;
+}
+
+.left-sidebar .icon-link a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* 小屏幕樣式 */
+@media (max-width: 1020px) {
+  .left-sidebar {
+    width: 100%;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: var(--header-footer-bg-color);
+  }
+
+  .main-content {
+    margin-top: 90px;
+  }
+
+  .left-sidebar .icon-search {
+    display: none; /* 隱藏搜索欄位 */
+  }
+
+  .left-sidebar .icon-link {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .left-sidebar .icon-link span {
+    display: none; /* 隱藏文字 */
+  }
+
+  .left-sidebar .icon-link img {
+    margin-right: 0;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.left-sidebar .icon-search input {
+  width: 100px; /* 設置搜索框的寬度 */
+  height: 30px; /* 設置搜索框的高度 */
+  padding: 5px; /* 調整內邊距 */
+  font-size: 14px; /* 調整字體大小 */
+  border-radius: 10px; /* 調整圓角 */
+  border: 1px solid #ccc; /* 設置邊框 */
+}
+
+/* 在小屏幕時也可以相應調整搜索框大小 */
+@media (max-width: 768px) {
+  .left-sidebar .icon-search input {
+    width: 100px; /* 調整小屏幕時的寬度 */
+    height: 25px; /* 調整小屏幕時的高度 */
+    font-size: 12px; /* 調整小屏幕時的字體大小 */
   }
 }

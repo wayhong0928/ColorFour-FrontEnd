@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>編輯貼文</title>
+    <link rel="stylesheet" href="../Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Assets/css/main.css" />
+    <link rel="stylesheet" href="../Assets/css/social_edit.css" />
+  </head>
+  <body>
+    <div>
+      <div id="header"></div>
+      <main class="main-content container">
+        <div class="left-sidebar">
+          <div class="icon-search">
+            <img src="../Assets/image/search_icon.png" alt="Search Icon" class="search-icon" />
+            <input type="text" placeholder="search" class="search-input" />
+          </div>
+
+          <div class="icon-link">
+            <a href="social_index.html">
+              <img src="../Assets/image/social_home_icon.png" alt="Home Icon" />
+              <span>社群平台首頁</span>
+            </a>
+          </div>
+        </div>
+
+        <div id="edit-post-container" class="content">
+          <div class="edit-post mb-5">
+            <h2 class="edit-post-title">修改貼文</h2>
+            <form id="editPostForm">
+              <div class="form-group mb-3">
+                <label for="postDescription">貼文描述</label>
+                <textarea id="postDescription" class="form-control" rows="4" placeholder="輸入貼文描述..."></textarea>
+              </div>
+              <div class="form-group mb-3">
+                <label for="postLocation">地點</label>
+                <input type="text" id="postLocation" class="form-control" placeholder="輸入地點" />
+              </div>
+              <div class="form-group mb-3">
+                <label for="postTime">時間</label>
+                <input type="datetime-local" id="postTime" class="form-control" />
+              </div>
+              <div class="form-group mb-3">
+                <label for="postImage">貼文圖片</label>
+                <input type="file" id="postImage" class="form-control-file" />
+                <img id="previewImage" src="" alt="Image preview" style="max-width: 100%; margin-top: 10px;" />
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">保存變更</button>
+                <a href="social_index.html" class="btn btn-secondary ms-3">取消</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+
+      <div id="footer"></div>
+      <script src="../Assets/js/bootstrap.min.js"></script>
+      <script src="../Assets/js/main.js"></script>
+      <script src="../Assets/js/social_edit.js"></script>
+    </div>
+  </body>
+</html>
+

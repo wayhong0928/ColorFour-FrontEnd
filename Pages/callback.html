@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登入回調處理</title>
+    <link rel="stylesheet" href="../Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Assets/css/main.css" />
+    <style>
+      .error {
+        color: red;
+        font-weight: bold;
+      }
+
+      .loading {
+        font-size: 1.2rem;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="callback-container">
+      <p id="loading-text" class="loading">正在處理登入，請稍候...</p>
+      <p id="error-message" class="error" style="display: none;"></p>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async function () {
+        const loadingText = document.getElementById("loading-text");
+        const errorMessage = document.getElementById("error-message");
+
+        // 獲取 URL 中的 code 和 state 參數
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get("code");
+        const state = urlParams.get("state");
+
+        if (!code) {
+          // 如果沒有 code，顯示錯誤信息
+          loadingText.style.display = "none";
+          errorMessage.style.display = "block";
+          errorMessage.textContent = "無法取得驗證資訊，請重新嘗試。";
+          return;
+        }
+
+        try {
+          // 模擬發送登入請求
+          console.log("code:", code, "state:", state);
+
+          // 假設有一個模擬的登入 API
+          await fakeLoginApi({ code, provider: state });
+
+          // 登入成功後跳轉至首頁
+          window.location.href = "/home.html";
+        } catch (error) {
+          console.error("登入失敗:", error);
+
+          // 處理不同錯誤情況
+          loadingText.style.display = "none";
+          errorMessage.style.display = "block";
+
+          if (error.message === "internal_server_error") {
+            errorMessage.textContent = "服務器內部錯誤，請稍後再試。";
+          } else if (error.message === "unknown_provider") {
+            errorMessage.textContent = "無效的登入提供者，請重新嘗試。";
+          } else {
+            errorMessage.textContent = "登入失敗，請重新嘗試。";
+          }
+        }
+      });
+
+      // 模擬登入 API
+      async function fakeLoginApi({ code, provider }) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (provider === "google" || provider === "line") {
+              resolve("登入成功");
+            } else {
+              reject(new Error("unknown_provider"));
+            }
+          }, 2000);
+        });
+      }
+    </script>
+  </body>
+</html>
