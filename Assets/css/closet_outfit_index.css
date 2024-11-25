@@ -1,0 +1,35 @@
+.container {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.row .card {
+  width: 45%;
+  margin: 30px auto;
+  display: flex;
+}
+
+.card-body {
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-info-wrap .btn {
+  margin-right: 10px;
+}
+
+.form-check {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .row .card {
+    width: 90%;
+    margin: 20px auto;
+  }
+}

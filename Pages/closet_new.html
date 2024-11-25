@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ColorFour</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="/Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Assets/css/main.css" />
+    <link rel="stylesheet" href="/Assets/css/closet_new.css" />
+  </head>
+  <body>
+      <!-- 引入 Header -->
+      <div id="header"></div>
+      <main>
+        <div class="container mt-5">
+          <h1>新增單品</h1>
+          <form id="itemForm">
+            <div class="mb-3">
+              <label for="itemName" class="form-label">商品名稱</label>
+              <input type="text" id="itemName" class="form-control" placeholder="輸入商品名稱" required />
+            </div>
+      
+            <div class="mb-3">
+              <label for="itemType" class="form-label">選擇類型:</label>
+              <select id="itemType" class="form-control" required>
+                <option value="">請選擇</option>
+                <option value="服飾">服飾</option>
+                <option value="鞋子">鞋子</option>
+              </select>
+            </div>
+      
+            <!-- 服飾類別 -->
+            <div id="clothingCategories" style="display: none;">
+              <div class="mb-3">
+                <label for="mainCategory" class="form-label">服飾主要類別:</label>
+                <select id="mainCategory" class="form-control" required></select>
+              </div>
+              <div class="mb-3">
+                <label for="subCategory" class="form-label">服飾次要類別:</label>
+                <select id="subCategory" class="form-control" required></select>
+              </div>
+            </div>
+      
+            <!-- 鞋子類別 -->
+            <div id="shoeCategories" style="display: none;">
+              <div class="mb-3">
+                <label for="shoeCategory" class="form-label">鞋子主要類別:</label>
+                <select id="shoeCategory" class="form-control" required></select>
+              </div>
+              <div class="mb-3">
+                <label for="shoeSubCategory" class="form-label">鞋子次要類別:</label>
+                <select id="shoeSubCategory" class="form-control" required></select>
+              </div>
+            </div>
+      
+            <div class="mb-3">
+              <label for="itemBrand" class="form-label">品牌</label>
+              <select id="itemBrand" class="form-control" required></select>
+            </div>
+      
+            <div class="mb-3">
+              <label for="itemColor" class="form-label">顏色</label>
+              <select id="itemColor" class="form-control" required></select>
+            </div>
+      
+            <div class="mb-3">
+              <label for="itemPrice" class="form-label">價格</label>
+              <input type="number" id="itemPrice" class="form-control" placeholder="輸入價格" required />
+            </div>
+      
+            <div class="mb-3">
+              <label for="occasionTags" class="form-label">場合/目的</label>
+              <div id="occasionTags" class="form-control"></div>
+              <div id="occasionButtons" class="btn-group flex-wrap mt-2"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="purchaseDate" class="form-label">購買日期</label>
+              <input type="date" id="purchaseDate" class="form-control" />
+            </div>
+            
+            <div class="mb-3">
+              <label for="purchaseLocation" class="form-label">購買地點</label>
+              <input type="text" id="purchaseLocation" class="form-control" placeholder="請輸入購買地點" />
+            </div>            
+      
+            <div class="mb-3">
+              <label for="photo" class="form-label">上傳圖片</label>
+              <input type="file" id="photo" class="form-control" accept="image/*" required />
+            </div>
+      
+            <div class="submit-section">
+              <button type="button" class="btn btn-primary">新增單品</button>
+              <button type="button" id="backButton" class="btn btn-outline-secondary">返回</button>
+            </div>
+          </form>
+        </div>
+    </main>
+      <!-- 引入 Footer -->
+      <div id="footer"></div>
+    
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="/Assets/js/bootstrap.min.js"></script>
+    <script src="/Assets/js/popper.min.js"></script>
+    <script defer src="/Assets/js/main.js"></script>
+    <script src="/Assets/js/closet_new.js"></script>
+  </body>
+</html>
