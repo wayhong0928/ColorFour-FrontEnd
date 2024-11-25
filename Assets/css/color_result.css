@@ -1,78 +1,100 @@
-main.container {
-  width: 90%;
-  margin: 100px auto;
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
 }
 
-.featurette {
-  margin-bottom: 2rem;
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  background-color: #f9f9f9;
 }
 
-.spacer {
-  height: 40px;
-  background-color: transparent;
-}
-
-@media (min-width: 768px) {
-  h2.featurette-heading {
-    font-size: 2.5rem;
-  }
-
-  p.lead {
-    font-size: 1.5rem;
-  }
-
-  .featurette {
-    display: flex;
-    align-items: center;
-  }
-
-  .featurette:nth-child(odd) .col-md-7 {
-    order: 2;
-  }
-
-  .featurette:nth-child(odd) .col-md-5 {
-    order: 1;
-  }
-}
-
-.text-center {
-  color: #917b56;
-  text-shadow: 2px 2px 4px rgba(127, 125, 125, 0.4);
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 15px;
-}
-
-.text-center::after {
-  content: "";
-  display: block;
-  width: 93%;
-  height: 1px;
-  background-color: #ccc;
-  margin-top: 15px;
-}
-
-.text-left p {
-  font-size: 16px;
-  font-weight: 350;
-  margin-right: 7%;
+.close-btn {
+  text-decoration: none;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
 }
 
 .container {
-  margin-top: 15px;
-  margin-bottom: 30px;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.color-table {
-  width: 100%;
-  margin: 20px 0;
-  border-collapse: separate;
-  border-spacing: 10px;
-  padding-bottom: 50px;
+.result-container {
+  text-align: center;
 }
-.color-table td {
-  width: 50px;
-  height: 50px;
+
+.result-title {
+  font-size: 1.8rem;
+  color: #917b56;
+  margin-bottom: 1.5rem;
+}
+
+.result-card {
+  background-color: #fefefe;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-image {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
   border-radius: 10px;
+}
+
+.result-card-info {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.result-description {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.confirm-btn,
+.delete-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  background-color: #d4b7a1;
+  color: #fff;
+}
+
+.delete-btn {
+  background-color: #bebebe;
+  color: #fff;
+}
+
+.confirm-btn:hover {
+  background-color: #c9a289;
+}
+
+.delete-btn:hover {
+  background-color: #a0a0a0;
 }
