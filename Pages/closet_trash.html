@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ColorFour</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="/Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Assets/css/main.css" />
+    <link rel="stylesheet" href="/Assets/css/closet_trash.css" />
+  </head>
+  <body>
+    <body>
+      <!-- 引入 Header -->
+      <div id="header"></div>
+    
+      <div>
+        <WardrobeFilterAndSort :brands="brands" />
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div class="item-info-wrap ms-auto">
+            <router-link to="/closet_index" class="btn btn-outline-secondary me-2 mt-2">回衣櫃</router-link>
+            <button @click="restoreItems" class="btn btn-outline-secondary me-2 mt-2">復原</button>
+            <button @click="deleteItems" class="btn btn-outline-danger mt-2">永久刪除</button>
+          </div>
+        </div>
+        <!-- 清單元件 -->
+        <WardrobeList :items="items" :selectedItems="selectedItems" @update:selectedItems="updateSelectedItems" />
+      </div>
+      </main>
+    
+      <!-- 引入 Footer -->
+      <div id="footer"></div>
+    
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="/Assets/js/bootstrap.min.js"></script>
+    <script src="/Assets/js/popper.min.js"></script>
+    <script defer src="/Assets/js/main.js"></script>
+    <script src="/Assets/js/closet_trash.js"></script>
+  </body>
+</html>

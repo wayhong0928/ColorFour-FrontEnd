@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ColorFour</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="/Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Assets/css/main.css" />
+    <link rel="stylesheet" href="/Assets/css/closet_outfit_detail.css" />
+  </head>
+  <body>
+  <main>
+    <nav aria-label="breadcrumb">
+      <ol class="bread">
+        <li><a href="/index.html">首頁</a></li>
+        <li><a href="/Pages/closet_outfit_index.html">穿搭組合總覽</a></li>
+        <li aria-current="page">穿搭組合詳情</li>
+      </ol>
+    </nav>
+
+    <div class="item-info-wrap">
+      <button class="btn btn-outline-secondary edit-button" onclick="toggleEdit()">編輯穿搭</button>
+      <button class="btn btn-outline-danger" onclick="deleteOutfit()">刪除穿搭</button>
+    </div>
+
+    <section class="container">
+      <div class="item-img">
+        <img id="outfit-image" src="" alt="穿搭圖片">
+      </div>
+      <div class="item-info" id="item-info">
+        <h1 id="outfit-name"></h1>
+        <p id="outfit-description"></p>
+        <p class="added-date" id="outfit-date"></p>
+
+        <h5>包含的物品：</h5>
+        <ul id="outfit-items"></ul>
+      </div>
+
+      <div class="edit-form" id="edit-form" style="display: none;">
+        <label>名稱:</label>
+        <input id="edit-name" type="text">
+
+        <label>描述:</label>
+        <input id="edit-description" type="text">
+
+        <button class="btn btn-outline-secondary" onclick="saveEdit()">儲存</button>
+      </div>
+    </section>
+
+    <button class="btn btn-outline-secondary" onclick="goBack()">返回上一頁</button>
+  </main>
+      <!-- 引入 Footer -->
+      <div id="footer"></div>
+    
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="/Assets/js/bootstrap.min.js"></script>
+    <script src="/Assets/js/popper.min.js"></script>
+    <script defer src="/Assets/js/main.js"></script>
+    <script src="/Assets/js/closet_outfit_detail.js"></script>
+  </body>
+</html>

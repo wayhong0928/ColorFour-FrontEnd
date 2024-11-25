@@ -6,46 +6,61 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Bootstrap CSS v5.2.1 -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/closet_detail.css" />
+    <link rel="stylesheet" href="/Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Assets/css/main.css" />
+    <link rel="stylesheet" href="/Assets/css/closet_detail.css" />
   </head>
 
   <body>
     <div id="header"></div>
-
     <main>
       <div class="item-info-wrap">
-        <button class="btn btn-outline-secondary edit-button">編輯單品</button>
+        <button class="btn btn-outline-secondary" id="edit-button">編輯</button>
+        <button class="btn btn-outline-secondary" id="move-to-trash">移置垃圾桶</button>
+        <button class="btn btn-outline-secondary" id="restore-item" style="display: none;">復原</button>
+        <button class="btn btn-outline-danger" id="delete-item" style="display: none;">永久刪除</button>
       </div>
+
       <section class="container">
-        <!-- <div class="item-info-wrap">
-          <ol class="bread">
-            <li><a href="closet_index.html">衣櫃總覽</a></li>
-            <li><a href="#">詳細介紹</a></li>
-          </ol>
-          <button class="btn btn-outline-secondary edit-button">編輯單品</button>
-        </div> -->
-        <div class="item-img">
-          <img src="https://via.placeholder.com/150" alt="服飾圖片" id="itemImage" />
+        <div class="favorite-icon" id="favorite-icon">
+          <img id="favorite-image" src="/Assets/image/未愛.png" alt="未加入最愛">
         </div>
-        <div class="item-info">
-          <h1 id="itemName">Item Name</h1>
-          <p id="itemBrand">Brand Name</p>
-          <p id="itemPrice">$100</p>
-          <p class="hashtag" id="itemHashtag">種類：#上衣 &nbsp;&nbsp; #短袖T恤</p>
-          <p class="hashtag" id="itemHashtag">標籤：#春天 &nbsp;&nbsp; #夏天 &nbsp;&nbsp; #休閒 &nbsp;&nbsp; #百搭</p>
-          <p class="added-date" id="itemAddedDate">Added Date</p>
+        <div class="item-img">
+          <img id="item-image" src="" alt="服飾圖片">
+        </div>
+        <div class="item-info" id="item-info">
+          <h1 id="item-name"></h1>
+          <p id="item-brand"></p>
+          <p id="item-price"></p>
+          <p class="hashtag" id="item-category"></p>
+          <p class="hashtag" id="item-tags"></p>
+          <p class="hashtag" id="item-color"></p>
+          <p class="added-date" id="item-add-date"></p>
+          <p class="edit-date" id="item-edit-date"></p>
+        </div>
+
+        <div class="edit-form" id="edit-form" style="display: none;">
+          <label for="edit-item-name">名稱:</label>
+          <input type="text" id="edit-item-name">
+
+          <label for="edit-item-brand">品牌:</label>
+          <input type="text" id="edit-item-brand">
+
+          <label for="edit-item-price">價格:</label>
+          <input type="number" id="edit-item-price">
+
+          <button class="btn btn-outline-secondary" id="save-edit">儲存</button>
         </div>
       </section>
+
+      <button class="btn btn-outline-secondary" id="go-back">返回</button>
     </main>
-    <div class="zone"></div>
     <div id="footer"></div>
 
     <!-- Bootstrap JavaScript Libraries -->
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script defer src="../js/main.js"></script>
-    <script src="../js/cloeset_detail.js"></script>
+    <script src="/Assets/js/bootstrap.min.js"></script>
+    <script src="/Assets/js/popper.min.js"></script>
+    <script defer src="/Assets/js/main.js"></script>
+    <script src="/Assets/js/closet_detail.js"></script>
   </body>
 </html>

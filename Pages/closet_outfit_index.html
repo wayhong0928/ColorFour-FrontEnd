@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ColorFour</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="/Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Assets/css/main.css" />
+    <link rel="stylesheet" href="/Assets/css/closet_outfit_index.css" />
+  </head>
+  <body>
+      <!-- 引入 Header -->
+      <div id="header"></div>
+      <main>
+      <div>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div class="item-info-wrap ms-auto">
+              <a href="/Pages/closet_index.html" class="btn btn-outline-secondary me-2 mt-2">回衣櫃</a>
+              <a href="/Pages/closet_new_outfit" class="btn btn-outline-secondary me-2 mt-2">新增穿搭組合</a>
+              <button onclick="deleteItems()" class="btn btn-outline-danger mt-2">刪除穿搭組合</button>
+          </div>
+      </div>
+      <div class="row" id="outfit-list">
+          <!-- Cards will be dynamically inserted here -->
+      </div>
+    </main>
+      <!-- 引入 Footer -->
+      <div id="footer"></div>
+    
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="/Assets/js/bootstrap.min.js"></script>
+    <script src="/Assets/js/popper.min.js"></script>
+    <script defer src="/Assets/js/main.js"></script>
+    <script src="/Assets/js/closet_outfit_index.js"></script>
+  </body>
+</html>
