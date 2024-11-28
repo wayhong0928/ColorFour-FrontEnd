@@ -1,3 +1,8 @@
+body {
+  padding-top: 70px; /* 根據 header 的高度調整 */
+  margin-bottom: 100px; /* 為 footer 留出空間 */
+}
+
 h1 {
   text-align: center;
   margin: 20px 0;

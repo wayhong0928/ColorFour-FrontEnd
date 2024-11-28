@@ -1,3 +1,8 @@
+body {
+  padding-top: 90px; 
+  padding-bottom: 70px; 
+}
+
 .banner {
   width: 90%;
   max-height: 90%;
@@ -254,6 +259,21 @@ img {
   height: 40px;
   background-color: transparent;
 }
+
+.btn-main {
+  background-color: var(--button-bg-color) !important;
+  border-color: var(--button-bg-color);
+  border-radius: 20px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
 
 @media (min-width: 768px) {
   h2.featurette-heading {
