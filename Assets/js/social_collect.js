@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // 模擬從 API 獲取的已收藏的貼文數據
   const collectedPosts = [
     {
       id: 1,
-      username: "陳小明",
+      username: "ㄐㄌ不ㄌㄌ",
       avatar: "https://picsum.photos/25?random=1",
       user_id: 1,
-      content: "這是第一篇收藏的貼文，分享了我的日常生活。",
-      media_url: "https://picsum.photos/600/400?random=1",
-      tags: ["生活", "日常", "分享"]
+      content: "宋江真的好帥，又奶又痞的!!",
+      media_url: "../Assets/image/post_05.jpg",
+      tags: ["帥哥穿搭", "日常", "分享"],
+      isFollowing: true,
     },
     {
       id: 2,
@@ -16,17 +16,19 @@ document.addEventListener("DOMContentLoaded", function () {
       avatar: "https://picsum.photos/25?random=2",
       user_id: 2,
       content: "我今天去爬山了，風景真美！",
-      media_url: "https://picsum.photos/600/400?random=2",
-      tags: ["爬山", "自然", "風景"]
+      media_url: "../Assets/image/post_02.jpeg",
+      tags: ["爬山", "自然", "風景"],
+      isFollowing: false,
     },
     {
       id: 3,
-      username: "王大強",
+      username: "老大永遠帥",
       avatar: "https://picsum.photos/25?random=3",
       user_id: 3,
-      content: "今天吃了超好吃的火鍋，推薦大家來嘗試！",
-      media_url: "https://picsum.photos/600/400?random=3",
-      tags: ["美食", "火鍋"]
+      content: "今天去看五月天演唱會，超讚！",
+      media_url: "../Assets/image/post_06.jpg",
+      tags: ["演唱會", "夏季型","型男風"],
+      isFollowing: true,
     },
   ];
 
@@ -44,9 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="${post.avatar}" alt="User Avatar" class="post-avatar rounded-circle" />
             <span class="post-username ms-2">${post.username}</span>
           </div>
-          <button class="btn btn-outline-primary" onclick="handleToggleFollow(${post.user_id})">
-            追蹤
-          </button>
+          ${
+            post.isFollowing !== null
+              ? `<button class="btn btn-outline-secondary follow-button me-3" onclick="toggleFollow(${post.id})">
+                   ${post.isFollowing ? "已追蹤" : "追蹤"}
+                 </button>`
+              : ""
+          }
         </div>
 
         <div class="slider_container1 mt-3">
@@ -73,8 +79,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// 假設的追蹤邏輯
-function handleToggleFollow(userId) {
-  alert(`已更新追蹤狀態，User ID: ${userId}`);
-}
+// 切換追蹤狀態
+window.toggleFollow = function (postId) {
+  const post = posts.find((p) => p.id === postId);
+  if (post) {
+    post.isFollowing = !post.isFollowing;
+    alert(`已${post.isFollowing ? "追蹤" : "取消追蹤"}：${post.username}`);
+    renderPosts();
+  }
+};
 

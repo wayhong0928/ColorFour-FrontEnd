@@ -28,9 +28,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f8f9fa;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .title {
@@ -40,7 +38,7 @@
     color: #495057;
   }
   
-  button {
+  .btn btn-outline-secondary back-button button {
     width: auto; /* 讓按鈕的寬度自適應內容 */
     text-align: center; /* 讓按鈕內的字置中 */
     padding: 10px 20px; /* 添加適當的內邊距讓按鈕看起來更大 */
@@ -49,6 +47,10 @@
     justify-content: center; /* 垂直置中 */
   }
   
+  body {
+    padding-top: 70px; /* 根據 header 的高度調整 */
+    margin-bottom: 100px; /* 為 footer 留出空間 */
+  }
   .container {
     width: 90%;
     min-height: 400px;

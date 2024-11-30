@@ -62,19 +62,27 @@
         color: red;
         margin-top: 1rem;
       }
+      body {
+        padding-top: 90px; 
+        padding-bottom: 70px; 
+      }
+      p{
+        padding: 20px;
+      }
     </style>
   </head>
+  <div id="header"></div>
   <body>
     <div class="login-container">
       <!-- Google 登入按鈕 -->
       <button class="btn-main google-button" id="google-login-button">
-        <img src="../Assets/img/web_light_rd_na@1x.png" alt="Google Logo" />
+        <img src="../Assets/image/web_light_rd_na@1x.png" alt="Google Logo" />
         使用 Google 登入
       </button>
 
       <!-- LINE 登入按鈕 -->
       <button class="btn-main line-button" id="line-login-button">
-        <img src="../Assets/img/line_44.png" alt="LINE Logo" />
+        <img src="../Assets/image/line_44.png" alt="LINE Logo" />
         使用 LINE 登入
       </button>
 
@@ -84,6 +92,7 @@
       <!-- 錯誤消息顯示 -->
       <div id="error-message" class="error" style="display: none;">錯誤：請稍後再試</div>
     </div>
+    <div id="footer"></div>
 
     <script src="../Assets/js/bootstrap.min.js"></script>
     <script src="../Assets/js/main.js"></script>

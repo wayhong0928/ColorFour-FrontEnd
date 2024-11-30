@@ -6,8 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "白T萬歲",
       category: "t-shirt",
       brand: "UNIQLO",
-      price: 150,
-      addedDate: "2024/06/01",
+      price: 200,
       image: "../Assets/image/Uniqlo_white_Tshirt.png",
       tags: ["春天", "夏天", "休閒", "百搭"],
     },
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "dress",
       brand: "GU",
       price: 100,
-      addedDate: "2024/06/02",
       image: "../Assets/image/closet_02.png",
       tags: ["春天", "夏天"],
     },
@@ -27,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "bottom",
       brand: "GU",
       price: 70,
-      addedDate: "2024/06/03",
       image: "../Assets/image/closet_03.png",
       tags: ["春天", "夏天"],
     },
@@ -37,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "bottom",
       brand: "UNIQLO",
       price: 220,
-      addedDate: "2024/06/04",
       image: "../Assets/image/closet_04.png",
       tags: ["秋天", "冬天"],
     },
@@ -47,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "shoes",
       brand: "無印",
       price: 80,
-      addedDate: "2024/06/05",
       image: "../Assets/image/closet_05.png",
       tags: ["春天", "夏天"],
     },
@@ -72,9 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
       .join(" ")}`;
     document.getElementById("item-added-date").innerText = `加入日期: ${item.addedDate}`;
   }
-
-  // 返回按鈕功能
-  window.goBack = function () {
-    window.history.back(); // 返回上一頁
-  };
 });
+// 返回按鈕功能
+window.goBack = function () {
+  window.history.back(); // 返回上一頁
+};

@@ -36,8 +36,8 @@ function initSidebar() {
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-  await loadTemplate("header", `templates/header_index.html`);
-  await loadTemplate("footer", `templates/footer_index.html`);
+  await loadTemplate("header", `header.html`);
+  await loadTemplate("footer", `footer.html`);
 
   initSidebar();
 });
