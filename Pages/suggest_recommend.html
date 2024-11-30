@@ -4,141 +4,58 @@
     <title>ColorFour</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/suggest_recommend.css" />
+    <link rel="stylesheet" href="/Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Assets/css/main.css" />
+    <link rel="stylesheet" href="/Assets/css/suggest_recommend.css" />
   </head>
-
   <body>
     <div id="header"></div>
     <main class="container">
       <div class="row my-4">
         <div class="col-12">
-          <h2 style="width: 100%; text-align: center; margin-bottom: 20px; margin-top: -20px">請選擇智慧穿搭推薦選項</h2>
-          <form id="suggest-form" action="suggest_results.html">
+          <h2 class="text-center my-3">請選擇智慧穿搭推薦選項</h2>
+          <form id="recommendForm">
             <div class="mb-3">
               <label for="title" class="form-label">推薦穿搭名稱</label>
-              <input type="text" class="form-control" id="title" name="title" required />
+              <input type="text" class="form-control" id="title" required />
             </div>
             <div class="mb-3">
               <label for="location" class="form-label">目的地（將會自動抓取天氣資訊）</label>
-              <input type="text" class="form-control" id="location" name="location" required />
+              <input type="text" class="form-control" id="location" required />
             </div>
             <div class="mb-3">
               <label for="occasion" class="form-label">場合/目的</label>
-              <div id="occasion-tags" class="border p-3 mb-3">
-                <!-- Selected tags will be added here -->
-              </div>
-              <div id="occasion" class="btn-group flex-wrap" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-outline-secondary m-1">春天</button>
-                <button type="button" class="btn btn-outline-secondary m-1">夏天</button>
-                <button type="button" class="btn btn-outline-secondary m-1">秋天</button>
-                <button type="button" class="btn btn-outline-secondary m-1">冬天</button>
-                <button type="button" class="btn btn-outline-secondary m-1">百搭</button>
-                <button type="button" class="btn btn-outline-secondary m-1">休閒</button>
-                <button type="button" class="btn btn-outline-secondary m-1">正式</button>
-                <button type="button" class="btn btn-outline-secondary m-1">報告</button>
-                <button type="button" class="btn btn-outline-secondary m-1">商務</button>
-                <button type="button" class="btn btn-outline-secondary m-1">旅行</button>
-                <button type="button" class="btn btn-outline-secondary m-1">海邊</button>
-                <button type="button" class="btn btn-outline-secondary m-1">山上</button>
-                <button type="button" class="btn btn-outline-secondary m-1">露營</button>
-              </div>
+              <div id="occasionDisplay" class="border p-3 mb-3"></div>
+              <div id="occasion" class="btn-group flex-wrap"></div>
             </div>
             <div class="mb-3">
               <label for="color" class="form-label">我的氣色</label>
-              <div id="color-tags" class="border p-3 mb-3">
-                <!-- Selected tags will be added here -->
-              </div>
-              <div id="color" class="btn-group flex-wrap" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-outline-secondary m-1">素顏</button>
-                <button type="button" class="btn btn-outline-secondary m-1">淡妝</button>
-                <button type="button" class="btn btn-outline-secondary m-1">全妝</button>
-              </div>
+              <div id="colorDisplay" class="border p-3 mb-3"></div>
+              <div id="color" class="btn-group flex-wrap"></div>
             </div>
             <div class="mb-3">
               <label for="want" class="form-label">想要穿搭的服飾種類</label>
-              <div id="want-tags" class="border p-3 mb-3">
-                <!-- Selected tags will be added here -->
-              </div>
-              <div id="want" class="btn-group flex-wrap" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-outline-secondary m-1">上衣</button>
-                <button type="button" class="btn btn-outline-secondary m-1">長袖T恤</button>
-                <button type="button" class="btn btn-outline-secondary m-1">短袖T恤</button>
-                <button type="button" class="btn btn-outline-secondary m-1">無袖上衣</button>
-                <button type="button" class="btn btn-outline-secondary m-1">長袖襯衫</button>
-                <button type="button" class="btn btn-outline-secondary m-1">短袖襯衫</button>
-                <button type="button" class="btn btn-outline-secondary m-1">帽T/大學T</button>
-                <button type="button" class="btn btn-outline-secondary m-1">針織衫</button>
-                <button type="button" class="btn btn-outline-secondary m-1">毛衣</button>
-                <button type="button" class="btn btn-outline-secondary m-1">長裙</button>
-                <button type="button" class="btn btn-outline-secondary m-1">短裙</button>
-                <button type="button" class="btn btn-outline-secondary m-1">連身裙</button>
-                <button type="button" class="btn btn-outline-secondary m-1">吊帶褲</button>
-                <button type="button" class="btn btn-outline-secondary m-1">牛仔褲</button>
-                <button type="button" class="btn btn-outline-secondary m-1">一般長褲</button>
-                <button type="button" class="btn btn-outline-secondary m-1">短褲</button>
-                <button type="button" class="btn btn-outline-secondary m-1">外套</button>
-                <button type="button" class="btn btn-outline-secondary m-1">大衣</button>
-                <button type="button" class="btn btn-outline-secondary m-1">風衣</button>
-                <button type="button" class="btn btn-outline-secondary m-1">皮夾克</button>
-                <button type="button" class="btn btn-outline-secondary m-1">羽絨外套</button>
-                <button type="button" class="btn btn-outline-secondary m-1">洋裝</button>
-                <button type="button" class="btn btn-outline-secondary m-1">禮服</button>
-                <button type="button" class="btn btn-outline-secondary m-1">西裝外套</button>
-                <button type="button" class="btn btn-outline-secondary m-1">西裝褲</button>
-                <button type="button" class="btn btn-outline-secondary m-1">西裝裙</button>
-              </div>
+              <div id="wantDisplay" class="border p-3 mb-3"></div>
+              <div id="want" class="btn-group flex-wrap"></div>
             </div>
             <div class="mb-3">
-              <label for="not-want" class="form-label">不想穿搭的服飾種類</label>
-              <div id="not-want-tags" class="border p-3 mb-3">
-                <!-- Selected tags will be added here -->
-              </div>
-              <div id="not-want" class="btn-group flex-wrap" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-outline-secondary m-1">上衣</button>
-                <button type="button" class="btn btn-outline-secondary m-1">長袖T恤</button>
-                <button type="button" class="btn btn-outline-secondary m-1">短袖T恤</button>
-                <button type="button" class="btn btn-outline-secondary m-1">無袖上衣</button>
-                <button type="button" class="btn btn-outline-secondary m-1">長袖襯衫</button>
-                <button type="button" class="btn btn-outline-secondary m-1">短袖襯衫</button>
-                <button type="button" class="btn btn-outline-secondary m-1">帽T/大學T</button>
-                <button type="button" class="btn btn-outline-secondary m-1">針織衫</button>
-                <button type="button" class="btn btn-outline-secondary m-1">毛衣</button>
-                <button type="button" class="btn btn-outline-secondary m-1">長裙</button>
-                <button type="button" class="btn btn-outline-secondary m-1">短裙</button>
-                <button type="button" class="btn btn-outline-secondary m-1">連身裙</button>
-                <button type="button" class="btn btn-outline-secondary m-1">吊帶褲</button>
-                <button type="button" class="btn btn-outline-secondary m-1">牛仔褲</button>
-                <button type="button" class="btn btn-outline-secondary m-1">一般長褲</button>
-                <button type="button" class="btn btn-outline-secondary m-1">短褲</button>
-                <button type="button" class="btn btn-outline-secondary m-1">外套</button>
-                <button type="button" class="btn btn-outline-secondary m-1">大衣</button>
-                <button type="button" class="btn btn-outline-secondary m-1">風衣</button>
-                <button type="button" class="btn btn-outline-secondary m-1">皮夾克</button>
-                <button type="button" class="btn btn-outline-secondary m-1">羽絨外套</button>
-                <button type="button" class="btn btn-outline-secondary m-1">洋裝</button>
-                <button type="button" class="btn btn-outline-secondary m-1">禮服</button>
-                <button type="button" class="btn btn-outline-secondary m-1">西裝外套</button>
-                <button type="button" class="btn btn-outline-secondary m-1">西裝褲</button>
-                <button type="button" class="btn btn-outline-secondary m-1">西裝裙</button>
-              </div>
+              <label for="notWant" class="form-label">不想穿搭的服飾種類</label>
+              <div id="notWantDisplay" class="border p-3 mb-3"></div>
+              <div id="notWant" class="btn-group flex-wrap"></div>
             </div>
-            <button type="submit" class="btn btn-primary">送出</button>
+            <div class="submit-section">
+              <button type="submit" class="btn btn-primary mb-1">送出</button>
+              <button type="button" id="backButton">返回</button>
+            </div>
           </form>
         </div>
       </div>
     </main>
     <div class="zone"></div>
     <div id="footer"></div>
-    <script defer src="../js/bootstrap.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script defer src="../js/main.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
-    <script defer src="../js/suggest_recommend.js"></script>
+    <script src="/Assets/js/bootstrap.min.js"></script>
+    <script src="/Assets/js/popper.min.js"></script>
+    <script defer src="/Assets/js/main.js"></script>
+    <script src="/Assets/js/suggest_recommend.js"></script>
   </body>
 </html>

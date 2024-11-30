@@ -4,33 +4,34 @@
     <title>ColorFour</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/suggest_index.css" />
-    <style></style>
+    <link rel="stylesheet" href="/Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Assets/css/main.css" />
+    <link rel="stylesheet" href="/Assets/css/suggest_index.css" />
   </head>
-
   <body>
     <div id="header"></div>
+    <nav aria-label="breadcrumb">
+      <ol class="bread">
+        <li><a href="/index.html">首頁</a></li>
+        <li aria-current="page">穿搭推薦總覽</li>
+      </ol>
+    </nav>
+    
     <main class="container">
       <div class="row my-4">
-        <div class="col-12 d-flex justify-content-between align-items-center">
-          <h2>穿搭推薦總覽</h2>
-          <div>
-            <a href="suggest_recommend.html" class="btn btn-outline-secondary">新增推薦</a>
-            <a href="suggest_recommend.html" class="btn btn-outline-secondary">刪除推薦</a>
+        <div class="col-12 d-flex justify-content-between align-items-center mb-3">
+          <div class="item-info-wrap ms-auto">
+            <a href="/Pages/suggest_recommend.html" class="btn btn-outline-secondary mx-2">新增推薦</a>
+            <button id="deleteButton" class="btn btn-outline-secondary mx-2">刪除推薦</button>
           </div>
         </div>
       </div>
-      <div class="row" id="recommendation-list">
-        <!-- 這裡會動態生成推薦穿搭紀錄 -->
-      </div>
+      <div class="row" id="recommendation-list"></div>
     </main>
-    <div class="zone"></div>
     <div id="footer"></div>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script defer src="../js/suggest_index.js"></script>
+    <script src="/Assets/js/bootstrap.min.js"></script>
+    <script src="/Assets/js/popper.min.js"></script>
+    <script defer src="/Assets/js/main.js"></script>
+    <script src="/Assets/js/suggest_index.js"></script>
   </body>
 </html>

@@ -1,17 +1,18 @@
 .container {
   width: 90%;
+  max-width: 1200px;
+  margin: 100px auto;
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
-  margin: 100px auto 100px auto;
 }
 
-.img-fluid {
-  border-radius: 10px;
+.rounded-circle {
+  border-radius: 50%;
 }
 
 .nav-tabs .nav-link {
   color: #333;
+  border-radius: 10px;
 }
 
 .nav-tabs .nav-link.active {
@@ -19,11 +20,18 @@
   font-weight: bold;
 }
 
-.text-center p {
-  font-size: 1.2rem;
-  color: #777;
+.buttons .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.rounded-circle {
-  border-radius: 50%;
+.corner-icon {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  cursor: pointer;
 }

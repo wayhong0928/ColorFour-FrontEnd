@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ColorFour</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="/Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Assets/css/main.css" />
+    <link rel="stylesheet" href="/Assets/css/color_detail.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <main class="container">
+      <div class="row mb-4">
+        <div class="col-md-6 order-md-2 text-left">
+          <div class="text-center">
+            <h3 class="featurette-heading" id="title"></h3>
+            <p>測驗日期：<span id="test-date"></span></p>
+            <div id="description"></div>
+          </div>
+          <div class="text-center retest-button">
+            <button class="btn btn-outline-secondary me-2" id="go-back">返回</button>
+            <button class="btn btn-outline-secondary me-2" id="color_retest">重新測驗</button>
+          </div>
+        </div>
+        <div class="col-md-6 order-md-1">
+          <img id="uploaded-image" class="img-fluid rounded" alt="分析結果圖片" />
+        </div>
+      </div>
+      <section class="text-center">
+        <h3>適合的色彩</h3>
+        <table class="table table-bordered color-table">
+          <tbody id="color-rows"></tbody>
+        </table>
+      </section>
+    </main>
+    <div id="footer"></div>
+    <script src="/Assets/js/bootstrap.min.js"></script>
+    <script src="/Assets/js/popper.min.js"></script>
+    <script defer src="/Assets/js/main.js"></script>
+    <script src="/Assets/js/color_detail.js"></script>
+  </body>
+</html>

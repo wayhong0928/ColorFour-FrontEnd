@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ColorFour</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="/Assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/Assets/css/main.css" />
+  <link rel="stylesheet" href="/Assets/css/color_test_auto.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <div class="container">
+      <section class="form-container my-5">
+        <h2 class="mb-4">自動化色彩測驗</h2>
+  
+        <!-- 名稱選擇區（單選） -->
+        <div class="mb-4">
+          <label for="selected-name" class="form-label">請選擇分析氣色(妝容)</label>
+          <select id="selected-name" class="form-select" required>
+            <option value="" selected>請選擇</option>
+            <option>素顏</option>
+            <option>全妝</option>
+            <option>簡單淡妝</option>
+            <option>派對妝</option>
+            <option>日常妝</option>
+            <option>晚宴妝</option>
+            <option>戶外妝</option>
+            <option>正式場合妝</option>
+            <option>專業妝</option>
+          </select>
+        </div>
+  
+        <!-- 圖片上傳區 -->
+        <div class="mb-4">
+          <label class="form-label">上傳圖片</label>
+          <input type="file" id="image-upload" accept="image/*" class="form-control" />
+          <div id="image-preview" class="image-preview mt-3" style="display: none;">
+            <img id="preview-img" alt="圖片預覽" class="img-fluid rounded" />
+          </div>
+        </div>
+  
+        <!-- 繳交按鈕 -->
+        <div class="d-flex justify-content-between">
+          <a href="/Pages/color_index.html" class="btn btn-outline-secondary">取消</a>
+          <button id="submit-test" class="btn btn-primary">提交測驗</button>
+        </div>
+      </section>
+  
+      <!-- Loading Spinner -->
+      <div id="loading-overlay" class="loading-overlay" style="display: none;">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <script src="/Assets/js/bootstrap.min.js"></script>
+  <script src="/Assets/js/popper.min.js"></script>
+  <script defer src="/Assets/js/main.js"></script>
+  <script src="/Assets/js/color_test_auto.js"></script>
+</body>
+</html>

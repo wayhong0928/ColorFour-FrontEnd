@@ -16,10 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
     ],
   };
 
-  // 填充数据到页面
-  resultTitle.textContent = `${mockResult.testName} 的測驗結果：${mockResult.resultType}`;
-  resultImage.src = mockResult.imageSrc;
-  descriptionText.textContent = mockResult.description;
+ // 填充数据到页面
+ resultTitle.textContent = `${mockResult.testName} 的測驗結果：${mockResult.resultType}`;
+ resultImage.src = mockResult.imageSrc;
+
+ // 将描述用 <br> 拼接
+ descriptionText.innerHTML = mockResult.description.join("<br>");
 
   // 事件处理
   const confirmButton = document.getElementById("confirm-btn");

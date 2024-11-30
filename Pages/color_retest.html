@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ColorFour</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="/Assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/Assets/css/main.css" />
+  <link rel="stylesheet" href="/Assets/css/color_retest.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <div class="container">
+      <nav>
+        <a href="/Pages/color_index.html" class="close-btn" id="close-questionnaire">x</a>
+      </nav>
+      <img src="/Assets/image/face.png" alt="Header Image" class="header-image" />
+      <form id="color-form">
+        <div class="question-container">
+          <!-- Questions will be dynamically inserted here -->
+        </div>
+        <div class="button-container">
+          <button id="prev-button" type="button" style="display: none;">上一題</button>
+          <button id="next-button" type="button">下一題</button>
+          <button id="submit-button" type="submit" style="display: none;">提交</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <script src="/Assets/js/bootstrap.min.js"></script>
+  <script src="/Assets/js/popper.min.js"></script>
+  <script defer src="/Assets/js/main.js"></script>
+  <script src="/Assets/js/color_retest.js"></script>
+</body>
+</html>

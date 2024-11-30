@@ -1,41 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>ColorFour</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link rel="stylesheet" href="/Assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/Assets/css/main.css" />
-    <link rel="stylesheet" href="/Assets/css/closet_trash.css" />
-  </head>
-  <body>
-    <body>
-      <!-- 引入 Header -->
-      <div id="header"></div>
-    
-      <div>
-        <WardrobeFilterAndSort :brands="brands" />
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <div class="item-info-wrap ms-auto">
-            <router-link to="/closet_index" class="btn btn-outline-secondary me-2 mt-2">回衣櫃</router-link>
-            <button @click="restoreItems" class="btn btn-outline-secondary me-2 mt-2">復原</button>
-            <button @click="deleteItems" class="btn btn-outline-danger mt-2">永久刪除</button>
-          </div>
-        </div>
-        <!-- 清單元件 -->
-        <WardrobeList :items="items" :selectedItems="selectedItems" @update:selectedItems="updateSelectedItems" />
+<head>
+  <title>ColorFour</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link rel="stylesheet" href="/Assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/Assets/css/main.css" />
+  <link rel="stylesheet" href="/Assets/css/closet_trash.css" />
+</head>
+<body>
+  <!-- 引入 Header -->
+  <div id="header"></div>
+  <!-- 主內容區域 -->
+  <main class="main-content container">
+    <h2 class="section-title">篩選</h2>
+    <div class="filters">
+      <div class="filter-group">
+        <label for="category">分類：</label>
+        <select id="category" class="form-select">
+          <option value="all">全部</option>
+          <option value="t-shirt">T 恤</option>
+          <option value="bottom">下裝</option>
+          <option value="coat">外套</option>
+          <option value="dress">洋裝</option>
+          <option value="shoes">鞋子</option>
+          <option value="accessories">配件</option>
+        </select>
       </div>
-      </main>
-    
-      <!-- 引入 Footer -->
-      <div id="footer"></div>
-    
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="/Assets/js/bootstrap.min.js"></script>
-    <script src="/Assets/js/popper.min.js"></script>
-    <script defer src="/Assets/js/main.js"></script>
-    <script src="/Assets/js/closet_trash.js"></script>
-  </body>
+      <div class="filter-group">
+        <label for="brand">品牌：</label>
+        <select id="brand" class="form-select">
+          <option value="all">全部</option>
+          <option value="UNIQLO">UNIQLO</option>
+          <option value="GU">GU</option>
+          <option value="無印">無印良品</option>
+          <option value="品牌C">品牌C</option>
+          <option value="品牌A">品牌A</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="sort-by">排序方式：</label>
+        <select id="sort-by" class="form-select">
+          <option value="newest">新增時間（先到後）</option>
+          <option value="oldest">新增時間（後到先）</option>
+          <option value="brand">品牌排序</option>
+          <option value="price-low-high">價格：低到高</option>
+          <option value="price-high-low">價格：高到低</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="favorites">我的最愛：</label>
+        <select id="favorites" class="form-select">
+          <option value="all">無</option>
+          <option value="favorites">我的最愛</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 操作按鈕區 -->
+    <div class="button-group d-flex justify-content-end mt-3">
+      <a href="/Pages/closet_index.html" class="btn btn-outline-primary me-2">回衣櫃</a>
+      <button id="restoreButton" class="btn btn-outline-secondary me-2">復原</button>
+      <button id="deleteButton" class="btn btn-outline-danger">永久刪除</button>
+    </div>
+
+    <!-- 列出篩選後的項目 -->
+    <div id="itemList" class="item-list mt-4"></div>
+  </main>
+
+  <!-- 引入 Footer -->
+  <div id="footer"></div>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="/Assets/js/bootstrap.min.js"></script>
+  <script src="/Assets/js/popper.min.js"></script>
+  <script defer src="/Assets/js/main.js"></script>
+  <script src="/Assets/js/closet_trash.js"></script>
+</body>
 </html>

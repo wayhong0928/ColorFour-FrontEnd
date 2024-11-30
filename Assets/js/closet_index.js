@@ -68,12 +68,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectedCategory = categoryFilter.value;
     const selectedBrand = brandFilter.value;
     const sortBy = sortByFilter.value;
-    const favorites = favoritesInput.value.toLowerCase();
+    const favorites = favoritesInput.value;
 
     let filteredItems = items.filter((item) => {
       const categoryMatch = selectedCategory === "all" || item.category === selectedCategory;
       const brandMatch = selectedBrand === "all" || item.brand === selectedBrand;
-      const favoriteMatch = !favorites || item.name.toLowerCase().includes(favorites);
+      const favoriteMatch = favorites === "all" || (favorites === "favorites" && item.isFavorite);
       return categoryMatch && brandMatch && favoriteMatch;
     });
 
@@ -111,8 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
   categoryFilter.addEventListener("change", filterItems);
   brandFilter.addEventListener("change", filterItems);
   sortByFilter.addEventListener("change", filterItems);
-  favoritesInput.addEventListener("input", filterItems);
+  favoritesInput.addEventListener("change", filterItems);
 
   renderItems(items); // 初始化渲染
 });
-

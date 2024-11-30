@@ -71,6 +71,7 @@ const items = [
     tags: ["#百搭", "#日常"],
     addDate: "2024/11/20 下午6:30:00",
     editDate: "2024/11/20 下午7:00:00",
+    isInTrash: true  // 新增的屬性，表示此項目是否在回收桶中
   },
   {
     name: "牛仔褲",
@@ -82,6 +83,7 @@ const items = [
     tags: ["#經典", "#耐用"],
     addDate: "2024/11/19 下午4:45:00",
     editDate: "2024/11/19 下午5:15:00",
+    isInTrash: true 
   },
   {
     name: "墨鏡",

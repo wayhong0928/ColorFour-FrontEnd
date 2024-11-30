@@ -2,96 +2,81 @@
 <html lang="en">
   <head>
     <title>ColorFour</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/user_profile.css" />
+    <link rel="stylesheet" href="/Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Assets/css/main.css" />
+    <link rel="stylesheet" href="/Assets/css/user_profile.css" />
   </head>
-
-  <!-- please use 425 px, thank you. -->
-
   <body>
-    <div id="header"></div>
-
-    <main class="container">
-      <div class="row my-4">
-        <div class="col-6 d-flex justify-content-between align-items-center">
-          <div>
-            <img
-              src="https://picsum.photos/100/100?random=1"
-              alt="user profile image"
-              class="rounded-circle"
-              width="100"
-              height="100"
-            />
-            <div>
-              <h2>ColorFour</h2>
-              <p>@ColorFourAdmin</p>
-              <p>讓你的專屬穿搭造型師，給你點顏色瞧瞧！</p>
-            </div>
-          </div>
-          <div></div>
+    <body>
+      <div id="header"></div>
+      <main class="container">
+        <div id="loading">
+          <p>Loading...</p>
         </div>
-        <div class="col-6">
-          <!-- <div class="icons d-flex justify-content-end align-items-center">
-            <img width="30" height="30" src="https://img.icons8.com/material-outlined/30/share.png" alt="share" />
-            <img width="30" height="30" src="https://img.icons8.com/ios/50/settings--v1.png" alt="settings--v1" />
-          </div> -->
+        <div id="error" style="display: none;">
+          <p>Error: Unable to load user data.</p>
+        </div>
+        <div id="profile" style="display: none;">
+          <!-- Profile Information Section -->
           <div class="row my-4">
-            <div class="col-12">
-              <div class="d-flex flex-column align-items-start">
-                <p>男性</p>
-                <p>0 貼文 | 0 粉絲 | 0 追蹤中</p>
+            <div class="col-6 d-flex justify-content-between align-items-center">
+              <div>
+                <img id="profileImage" class="rounded-circle" width="100" height="100" alt="user profile image" />
+                <div>
+                  <h2 id="firstName">ColorFour User</h2>
+                  <p id="username">@ColorFourUser</p>
+                  <p id="bio">讓你的專屬穿搭造型師，給你點顏色瞧瞧！</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="row my-4">
+                <div class="col-12">
+                  <div class="d-flex flex-column align-items-start position-relative">
+                    <p id="gender">男性/女性</p>
+                    <p id="stats" style="cursor: pointer"></p>
+                    <img src="/Assets/image/bell_icon.png" alt="notification icon" class="corner-icon" style="cursor: pointer" onclick="goToUserNotice()"/>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div></div>
+    
+          <!-- Buttons Section -->
+<!-- 按鈕部分 -->
+<div class="buttons d-flex justify-content-center">
+  <button class="btn btn-outline-secondary" style="width: 45%; margin: 0 2%; border-radius: 20px" onclick="shareProfile()">分享個人檔案</button>
+  <button class="btn btn-outline-secondary" style="width: 45%; margin: 0 2%; border-radius: 20px" onclick="editProfile()">編輯個人簡介</button>
+</div>
+    
+          <!-- Navigation Tabs Section -->
+          <div class="row my-4">
+            <div class="col-12">
+              <ul class="nav nav-tabs d-flex justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link active" onclick="setActiveTab('posts')">我的貼文</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="setActiveTab('favorites')">收藏貼文</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="setActiveTab('likes')">最愛單品</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+    
+          <!-- Dynamic Content -->
+          <div id="tabContent" class="row my-4"></div>
         </div>
-      </div>
-
-      <div class="buttons d-flex justify-content-center">
-        <button
-          class="btn btn-outline-secondary d-flex justify-content-center"
-          style="width: 45%; margin: 0 2%; border-radius: 20px"
-        >
-          編輯個人簡介
-        </button>
-        <button
-          class="btn btn-outline-secondary d-flex justify-content-center"
-          style="width: 45%; margin: 0 2%; border-radius: 20px"
-        >
-          分享個人檔案
-        </button>
-      </div>
-      <div class="row my-4">
-        <div class="col-12">
-          <ul class="nav nav-tabs d-flex justify-content-center" style="border-radius: 10px">
-            <li class="nav-item">
-              <a class="nav-link active" style="border-radius: 10px" href="#">我的貼文</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style="border-radius: 10px" href="#">收藏穿搭</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style="border-radius: 10px" href="#">最愛單品</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="row my-4">
-        <div class="col-12 text-center">
-          <p>尚未發布任何穿搭</p>
-        </div>
-      </div>
-    </main>
-    <div class="zone"></div>
-    <div id="footer"></div>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script defer src="../js/main.js"></script>
+      </main>
+      <div class="zone"></div>
+      <div id="footer"></div>
+    <script src="/Assets/js/bootstrap.min.js"></script>
+    <script src="/Assets/js/popper.min.js"></script>
+    <script defer src="/Assets/js/main.js"></script>
+    <script src="/Assets/js/user_profile.js"></script>
   </body>
 </html>
