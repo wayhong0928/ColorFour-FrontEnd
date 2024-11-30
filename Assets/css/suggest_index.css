@@ -1,21 +1,65 @@
+.container {
+  margin-top: 0px;
+}
+
+.bread {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  margin-top: 90px;
+  margin-left: 3%;
+}
+
+.bread li {
+  padding: 0 20px;
+}
+
+.bread li + li {
+  padding-left: 0;
+}
+
+.bread li + li:before {
+  content: ">";
+  color: #333;
+  margin-right: 20px;
+}
+
+.bread a {
+  text-decoration: none;
+  color: #333;
+}
+
 .card-img-top {
   width: 60%;
   height: 60%;
   border-radius: 20px;
   margin: 20px auto;
 }
+
 .row .card {
   width: 45%;
-  margin: 0 auto;
+  margin: 20px auto;
   display: flex;
-  margin: 20px;
 }
+
 .card-body {
   width: 100%;
   margin: 10px auto;
   display: flex;
   flex-direction: column;
 }
+
+.item-info-wrap .btn {
+  margin-right: 10px;
+}
+
+
+.form-check {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
 @media (max-width: 768px) {
   .row .card {
     width: 90%;

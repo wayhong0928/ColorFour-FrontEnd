@@ -1,57 +1,107 @@
-import { closetApiMixin } from "../mixins/closet_ApiMixin.js";
-import { closet_filterSortMixin } from "../mixins/closet_filterSortMixin.js";
-import WardrobeFilterAndSort from "../components/Wardrobe_FilterAndSort.vue";
-import WardrobeList from "../components/Wardrobe_List.vue";
+document.addEventListener("DOMContentLoaded", () => {
+  let items = [
+    {
+      name: "小白鞋",
+      category: "shoes",
+      brand: "無印",
+      price: 80,
+      image: "/Assets/image/closet_05.png",
+      link: "/Pages/closet_detail.html?item=shoes",
+      deleted: false, // Add a "deleted" status to track removal
+    },
+    {
+      name: "牛仔褲",
+      category: "bottom",
+      brand: "GU",
+      price: 120,
+      image: "/Assets/image/closet_03.png",
+      link: "closet_detail.html?item=bottom",
+      deleted: false,
+    },
+  ];
 
-export default {
-  mixins: [closetApiMixin, closet_filterSortMixin],
-  components: {
-    WardrobeFilterAndSort,
-    WardrobeList,
-  },
-  data() {
-    return {
-      items: [],
-      selectedItems: [], // 用於存放使用者選中的項目
-    };
-  },
-  methods: {
-    updateSelectedItems(newSelectedItems) {
-      this.selectedItems = newSelectedItems;
-    },
-    async restoreItems() {
-      if (this.selectedItems.length === 0) {
-        alert("請選擇要復原的項目！");
-        return;
+  const itemList = document.getElementById("itemList");
+  const selectedItems = new Set();
+
+  // Filter items based on selected criteria
+  const filterItems = () => {
+    const categoryFilter = document.getElementById("category").value;
+    const brandFilter = document.getElementById("brand").value;
+    const favoriteFilter = document.getElementById("favorites").value;
+    const sortedItems = items.filter(item => {
+      if (item.deleted) return false; // Skip deleted items
+      if (categoryFilter !== "all" && item.category !== categoryFilter) return false;
+      if (brandFilter !== "all" && item.brand !== brandFilter) return false;
+      return true;
+    });
+
+    renderItems(sortedItems);
+  };
+
+  // Render items to the page
+  const renderItems = (itemsToRender) => {
+    itemList.innerHTML = ''; // Clear current list
+    itemsToRender.forEach((item, index) => {
+      const listItem = document.createElement("div");
+      listItem.className = "item-card";
+      listItem.innerHTML = `
+        <input type="checkbox" class="item-select" id="item-${index}" data-index="${index}" />
+        <label for="item-${index}" class="item-label">
+          <img src="${item.image}" alt="${item.name}" class="item-image" />
+          <div class="item-info">
+            <h5><a href="${item.link}">${item.name}</a></h5>
+          </div>
+        </label>
+      `;
+      itemList.appendChild(listItem);
+    });
+  };
+
+  // Initialize items display
+  renderItems(items);
+
+  // Handle filter changes
+  document.querySelectorAll(".form-select").forEach(selectElement => {
+    selectElement.addEventListener("change", filterItems);
+  });
+
+  // Restore selected items
+  document.getElementById("restoreButton").addEventListener("click", () => {
+    if (selectedItems.size === 0) {
+      alert("請選擇要復原的項目！");
+      return;
+    }
+    selectedItems.forEach(index => {
+      items[index].deleted = true; // Restore deleted items
+    });
+    alert("復原成功！");
+    selectedItems.clear();
+    filterItems();
+  });
+
+  // Permanently delete selected items
+  document.getElementById("deleteButton").addEventListener("click", () => {
+    if (selectedItems.size === 0) {
+      alert("請選擇要刪除的項目！");
+      return;
+    }
+    selectedItems.forEach(index => {
+      items[index].deleted = true; // Mark item as deleted
+    });
+    alert("項目已永久刪除！");
+    selectedItems.clear();
+    filterItems();
+  });
+
+  // Handle item selection
+  document.querySelectorAll(".item-select").forEach((checkbox) => {
+    checkbox.addEventListener("change", (e) => {
+      const index = e.target.dataset.index;
+      if (e.target.checked) {
+        selectedItems.add(index);
+      } else {
+        selectedItems.delete(index);
       }
-      try {
-        await this.modifyItem("restore", this.selectedItems);
-        alert("已成功復原所選項目");
-        this.fetchItems("trash");
-      } catch (error) {
-        console.error("復原失敗:", error);
-        alert("復原失敗");
-      }
-    },
-    async deleteItems() {
-      if (this.selectedItems.length === 0) {
-        alert("請選擇要刪除的項目！");
-        return;
-      }
-      try {
-        await this.modifyItem("delete", this.selectedItems);
-        alert("已永久刪除所選項目");
-        this.fetchItems("trash");
-      } catch (error) {
-        console.error("刪除失敗:", error);
-        alert("刪除失敗");
-      }
-    },
-    goBack() {
-      this.$router.go(-1);
-    },
-  },
-  mounted() {
-    this.fetchItems("trash");
-  },
-};
+    });
+  });
+});

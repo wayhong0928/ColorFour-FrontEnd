@@ -1,6 +1,68 @@
-.container {
-  width: 100%;
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.filters {
+  margin-bottom: 2rem;
+}
+.filter-group {
+  margin-bottom: 1rem;
+}
+.filter-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.item-card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.item-card input[type="checkbox"] {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.item-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.item-info h5 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.item-info p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.item-info .btn {
+  font-size: 14px;
+}
+
+/* Align buttons to the right */
+.button-group {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
 }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ColorFour</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="/Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Assets/css/main.css" />
+    <link rel="stylesheet" href="/Assets/css/user_setting.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <main>
+      <div class="user-setting">
+        <div class="account-management">
+          <h3>登入帳戶管理</h3>
+          <div class="linked-accounts" id="linked-accounts">
+            <!-- 動態生成內容 -->
+          </div>
+        </div>
+    
+        <div class="personal-info">
+          <h3>編輯個人資料</h3>
+          <div class="form-group">
+            <label for="profile_image">頭像</label>
+            <input type="file" id="profile_image" onchange="handleImageChange(event)" />
+            <div id="image-preview"></div>
+          </div>
+          <div class="form-group">
+            <label for="nickname">姓名</label>
+            <input type="text" id="nickname" placeholder="輸入暱稱">
+          </div>
+          <div class="form-group">
+            <label for="username">用戶名稱</label>
+            <input type="text" id="username" placeholder="輸入英文、符號">
+          </div>
+          <div class="form-group">
+            <label for="gender">性別</label>
+            <div class="radio-group">
+              <div class="radio-option">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">男性</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">女性</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">不方便回答</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="talk">個人簡介</label>
+            <input type="text" id="talk" placeholder="輸入簡介">
+          </div>
+          <div class="form-group">
+            <label for="birthday">生日</label>
+            <input type="date" id="birthday">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="輸入Email">
+          </div>
+          <button class="savePersonalInfo"onclick="savePersonalInfo()">保存</button>
+        </div>
+      </div>
+    </main>
+    <div id="footer"></div>
+    <script src="/Assets/js/bootstrap.min.js"></script>
+    <script src="/Assets/js/popper.min.js"></script>
+    <script defer src="/Assets/js/main.js"></script>
+    <script src="/Assets/js/user_setting.js"></script>
+  </body>
+</html>

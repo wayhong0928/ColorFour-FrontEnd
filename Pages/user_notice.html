@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ColorFour</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="/Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Assets/css/main.css" />
+    <link rel="stylesheet" href="/Assets/css/user_notice.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <main>
+    <ol class="bread">
+      <li><a href="/Pages/user_profile.html">ㄑ</a></li>
+    </ol>
+
+      <div id="loading" class="text-center my-4">
+        <p>Loading...</p>
+      </div>
+      <div id="error" class="text-center my-4" style="display: none;">
+        <p>無法載入通知，請稍後再試。</p>
+      </div>
+      <div id="notices-container" style="display: none;">
+        <div class="row my-4">
+          <div class="col-12">
+            <div class="notification-tabs">
+              <button class="tab active-tab">動態消息</button>
+            </div>
+            <ul class="list-group" id="notice-list"></ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="zone"></div>
+    <div id="footer"></div>
+  </div>
+    <script src="/Assets/js/bootstrap.min.js"></script>
+    <script src="/Assets/js/popper.min.js"></script>
+    <script defer src="/Assets/js/main.js"></script>
+    <script src="/Assets/js/user_notice.js"></script>
+  </body>
+</html>

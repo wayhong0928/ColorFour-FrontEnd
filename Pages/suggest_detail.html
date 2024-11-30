@@ -2,36 +2,53 @@
 <html lang="en">
   <head>
     <title>ColorFour</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Bootstrap CSS v5.2.1 -->
     <link rel="stylesheet" href="/Assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/Assets/css/main.css" />
     <link rel="stylesheet" href="/Assets/css/suggest_detail.css" />
   </head>
-
   <body>
     <div id="header"></div>
     <main>
+      <nav aria-label="breadcrumb">
+        <ol class="bread">
+          <li><a href="/">首頁</a></li>
+          <li><a href="suggest_index.html">推薦總覽</a></li>
+          <li aria-current="page">推薦詳情</li>
+        </ol>
+      </nav>
       <div class="wrap">
-        <button class="btn btn-outline-secondary">編輯推薦</button>
-        <button class="btn btn-outline-secondary">回推薦總覽</button>
+        <a class="btn btn-outline-secondary edit-button" href="social_new.html">新增貼文</a>
+        <button class="btn btn-outline-secondary edit-button" id="editButton">編輯推薦</button>
+        <button class="btn btn-outline-danger delete-button" id="deleteButton">刪除推薦</button>
       </div>
       <section class="container">
         <div class="item-img">
-          <img src="https://via.placeholder.com/150" alt="推薦圖片" id="itemImage" />
+          <img id="itemImage" src="" alt="推薦圖片">
         </div>
-        <div class="item-info">
-          <h1 id="itemName">推薦名稱</h1>
-          <p id="itemDescription">推薦結果敘述</p>
-          <p class="added-date" id="itemDate">推薦日期</p>
+        <div class="item-info" id="itemInfo">
+          <h1 id="itemName">查無資料</h1>
+          <p>位置： <span id="itemLocation">查無資料</span></p>
+          <p>場合： <span id="itemOccasion">查無資料</span></p>
+          <p>氣色： <span id="itemSkinTone">查無資料</span></p>
+          <p>推薦日期： <span id="itemDate">查無資料</span></p>
+        </div>
+        <div class="edit-form" id="editForm" style="display: none;">
+          <label>名稱:</label>
+          <input id="editName" type="text">
+          <label>位置:</label>
+          <input id="editLocation" type="text">
+          <label>場合:</label>
+          <input id="editOccasion" type="text">
+          <label>氣色:</label>
+          <input id="editSkinTone" type="text">
+          <button class="btn btn-outline-secondary" id="saveEdit">儲存</button>
         </div>
       </section>
+      <button class="btn btn-outline-secondary" id="backButton">返回上一頁</button>
     </main>
-    <div class="zone"></div>
     <div id="footer"></div>
-    <!-- Bootstrap JavaScript Libraries -->
     <script src="/Assets/js/bootstrap.min.js"></script>
     <script src="/Assets/js/popper.min.js"></script>
     <script defer src="/Assets/js/main.js"></script>

@@ -1,28 +1,112 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // 從URL取得參數
-  const urlParams = new URLSearchParams(window.location.search);
-  const itemId = urlParams.get('id');
-
-  // 模擬資料庫資料
+document.addEventListener("DOMContentLoaded", () => {
+  // 假資料集
   const recommendations = [
-    { id: 1, title: "表演服", image: "../img/suggest_01.png", link:"suggest_detail.html?id=1", description: "夏天、百搭、休閒、全妝", date: "2023-06-01" },
-    { id: 2, title: "期末報告穿搭", image: "../img/suggest_03.png", link:"suggest_detail.html?id=2", description: "夏天、正式、報告", date: "2023-06-02" },
-    { id: 3, title: "推薦穿搭3", image: "https://picsum.photos/300/200?random=3", link:"suggest_detail.html?id=3", description: "這是推薦穿搭3的描述。", date: "2023-06-03" },
+    {
+      id: 1,
+      recommendation_name: "表演服",
+      location: "美術館",
+      occasion: "夏天、百搭、休閒",
+      skin_tone: "全妝",
+      recommendation_image: "/Assets/image/suggest_01.png",
+      created_at: "2024-10-30T19:04:07",
+    },
+    {
+      id: 2,
+      recommendation_name: "期末報告穿搭",
+      location: "演講廳",
+      occasion: "夏天、正式、報告",
+      skin_tone: "裸妝",
+      recommendation_image: "/Assets/image/suggest_03.png",
+      created_at: "2024-11-01T10:30:00",
+    },
+    {
+      id: 3,
+      recommendation_name: "戶外休閒裝",
+      location: "公園",
+      occasion: "秋天、休閒、運動",
+      skin_tone: "素顏",
+      recommendation_image: "/Assets/image/suggest_02.png",
+      created_at: "2024-11-05T15:45:00",
+    },
   ];
 
-  // 根據參數找到對應的項目
-  const item = recommendations.find(i => i.link.includes(`id=${itemId}`));
+  // 從 URL 取得推薦 ID
+  const urlParams = new URLSearchParams(window.location.search);
+  const recommendationId = parseInt(urlParams.get("id"), 10);
 
-  // 更新頁面上的元素
-  if (item) {
-    document.getElementById('itemImage').src = item.image;
-    document.getElementById('itemName').textContent = item.title;
-    document.getElementById('itemDescription').textContent = item.description;
-    document.getElementById('itemDate').textContent = '推薦日期: ' + item.date;
-  } else {
-    document.getElementById('itemImage').src = "https://via.placeholder.com/150";
-    document.getElementById('itemName').textContent = "查無資料";
-    document.getElementById('itemDescription').textContent = "查無資料";
-    document.getElementById('itemDate').textContent = "推薦日期: 查無資料";
+  // 找到對應的推薦詳情
+  const itemInfo = recommendations.find((item) => item.id === recommendationId);
+
+  if (!itemInfo) {
+    alert("找不到推薦詳情，請檢查網址！");
+    return;
   }
+
+  // DOM 元素
+  const itemName = document.getElementById("itemName");
+  const itemLocation = document.getElementById("itemLocation");
+  const itemOccasion = document.getElementById("itemOccasion");
+  const itemSkinTone = document.getElementById("itemSkinTone");
+  const itemDate = document.getElementById("itemDate");
+  const itemImage = document.getElementById("itemImage");
+
+  const editButton = document.getElementById("editButton");
+  const deleteButton = document.getElementById("deleteButton");
+  const backButton = document.getElementById("backButton");
+
+  const itemInfoSection = document.getElementById("itemInfo");
+  const editForm = document.getElementById("editForm");
+
+  const editName = document.getElementById("editName");
+  const editLocation = document.getElementById("editLocation");
+  const editOccasion = document.getElementById("editOccasion");
+  const editSkinTone = document.getElementById("editSkinTone");
+
+  // 填充數據
+  function renderItemDetails() {
+    itemName.textContent = itemInfo.recommendation_name;
+    itemLocation.textContent = itemInfo.location;
+    itemOccasion.textContent = itemInfo.occasion;
+    itemSkinTone.textContent = itemInfo.skin_tone;
+    itemDate.textContent = new Date(itemInfo.created_at).toLocaleString();
+    itemImage.src = itemInfo.recommendation_image;
+  }
+
+  renderItemDetails();
+
+  // 編輯模式切換
+  editButton.addEventListener("click", () => {
+    const isEditing = editForm.style.display === "block";
+    itemInfoSection.style.display = isEditing ? "block" : "none";
+    editForm.style.display = isEditing ? "none" : "block";
+
+    if (!isEditing) {
+      editName.value = itemInfo.recommendation_name;
+      editLocation.value = itemInfo.location;
+      editOccasion.value = itemInfo.occasion;
+      editSkinTone.value = itemInfo.skin_tone;
+    }
+  });
+
+  // 儲存編輯
+  document.getElementById("saveEdit").addEventListener("click", () => {
+    itemInfo.recommendation_name = editName.value;
+    itemInfo.location = editLocation.value;
+    itemInfo.occasion = editOccasion.value;
+    itemInfo.skin_tone = editSkinTone.value;
+    renderItemDetails();
+    editButton.click(); // 退出編輯模式
+    alert("推薦已成功更新！");
+  });
+
+  // 返回上一頁
+  backButton.addEventListener("click", () => {
+    history.back();
+  });
+
+  // 刪除推薦
+  deleteButton.addEventListener("click", () => {
+    alert("推薦已刪除！");
+    window.location.href = "/Pages/suggest_index.html";
+  });
 });
