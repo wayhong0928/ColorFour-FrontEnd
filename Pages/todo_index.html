@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>穿搭日程</title>
+  <link rel="stylesheet" href="../Assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../Assets/css/main.css" />
+  <link rel="stylesheet" href="../Assets/css/todo_index.css" />
+</head>
+<div id="header"></div>
+<body>
+  <div class="container text-center">
+    <div class="my-4">
+      
+    </div>
+
+    <!-- 穿搭日程顯示區域 -->
+    <div id="schedules-container">
+        <h2>穿搭日程</h2>
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <button id="delete-selected-btn" class="btn btn-custom">刪除日程</button>
+        <button id="add-schedule-btn" class="btn btn-custom">新增穿搭</button>
+      </div>
+      <ul id="schedules-list" class="list-group"></ul>
+    </div>
+
+    <!-- 新增穿搭的 Modal -->
+    <div id="add-schedule-modal" class="modal-backdrop" style="display: none;">
+      <div class="modal-content">
+        <h3>選擇穿搭組合</h3>
+        <div class="form-group">
+          <label for="schedule-date">選擇日期：</label>
+          <input type="date" id="schedule-date" />
+        </div>
+        <div class="form-group">
+          <h4>可選擇的推薦穿搭：</h4>
+          <div>
+            <input type="checkbox" class="form-check-input" id="rec-1" value="表演服" />
+            <label class="form-check-label" for="rec-1">表演服</label>
+          </div>
+          <div>
+            <input type="checkbox" class="form-check-input" id="rec-2" value="期末報告穿搭" />
+            <label class="form-check-label" for="rec-2">期末報告穿搭</label>
+          </div>
+          <div>
+            <input type="checkbox" class="form-check-input" id="rec-3" value="上課裝" />
+            <label class="form-check-label" for="rec-3">上課裝</label>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <button id="save-schedule-btn" class="btn btn-custom">儲存</button>
+          <button id="cancel-modal-btn" class="btn btn-custom ml-2">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../Assets/js/bootstrap.min.js"></script>
+  <script src="../Assets/js/main.js"></script>
+  <script src="../Assets/js/todo_index.js"></script>
+</body>
+<div id="footer"></div>
+</html>
