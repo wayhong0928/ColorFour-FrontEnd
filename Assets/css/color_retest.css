@@ -1,9 +1,14 @@
+.header {
+  z-index: 3; /* 確保 header 在 footer 之上 */
+}
+
+.footer {
+  z-index: 1; /* 設定較低的層級 */
+}
+
 .container {
   width: 95%;
   margin: 0 auto;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .close-btn {
