@@ -1,158 +1,251 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
-  <link rel="stylesheet" href="Assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="Assets/css/main.css" />
-  <link rel="stylesheet" href="Assets/css/index.css" />
-</head>
-<div id="header_index"></div>
-<body>
-  <div class="container">
-    <!-- 橫幅 -->
-    <section class="banner mb-5">
-      <div class="banner-background position-relative">
-        <img src="Assets/image/index_banner.png" alt="index_banner" class="banner-image img-fluid" />
-        <div class="banner-text d-flex flex-row justify-content-start align-items-center" id="understand">
-          <a href="Pages/about.html" class="btn btn-main me-3">了解我們</a>
-          <a href="Pages/system07.html" class="btn btn-main">關於LINE Bot</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ColorFour</title>
+    <link rel="stylesheet" href="Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Assets/css/main.css" />
+    <link rel="stylesheet" href="Assets/css/index.css" />
+  </head>
+  <header class="header">
+    <div class="nav">
+      <img class="nav-text" src="Assets/image/colorfour_text.png" alt="colorfour" />
+      <button href="javascript:void(0);" id="sidebar-toggle">
+        <img src="Assets/image/menu_button_icon.png" class="zoom" style="width: 45px; height: 50px" />
+      </button>
+    </div>
+    <aside class="sidebar">
+      <img src="https://picsum.photos/100/100?random=1" alt="會員照片" class="member-photo" />
+      <hr class="sidebar-divider" />
+      <div class="page-links">
+        <a href="index.html">回到首頁</a>
+        <a href="Pages/color_index.html">我的氣色</a>
+        <a href="Pages/closet_index.html">線上衣櫃</a>
+        <a href="Pages/suggest_index.html">穿搭建議師</a>
+        <a href="Pages/buy_index.html">採購建議師</a>
+        <a href="Pages/social_index.html">社群互動</a>
+        <a href="Pages/todo_index.html">穿搭日程</a>
+        <a href="Pages/user_profile.html">會員管理</a>
+        <a href="Pages/Login.html"> 登入</a>
+        <hr class="sidebar-divider" />
+        <a href="Pages/team.html">關於我們</a>
+        <a href="Pages/contact.html">聯繫客服</a>
+      </div>
+      <div class="zone"></div>
+    </aside>
+
+    <style>
+      .header {
+        height: 70px;
+        background-color: var(--header-footer-bg-color) !important;
+      }
+
+      .nav-text {
+        height: 50px;
+        margin: 0 auto;
+      }
+
+      .member-photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+
+      .sidebar-divider {
+        border: 0;
+        height: 1px;
+        margin: 20px 0;
+        background-color: var(--divider-color);
+      }
+
+      .sidebar.show {
+        display: block;
+      }
+
+      .sidebar {
+        display: none;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        height: calc(100% - 70px);
+        overflow-y: auto;
+        z-index: 10;
+      }
+
+      .zone {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </header>
+  <body>
+    <div class="container">
+      <!-- 橫幅 -->
+      <section class="banner mb-5">
+        <div class="banner-background position-relative">
+          <img src="Assets/image/index_banner.png" alt="index_banner" class="banner-image img-fluid" />
+          <div class="banner-text d-flex flex-row justify-content-start align-items-center" id="understand">
+            <a href="Pages/team.html" class="btn btn-main me-3">了解我們</a>
+            <a href="Pages/system07.html" class="btn btn-main">關於LINE Bot</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 主要內容 -->
+      <div class="content">
+        <div class="content-box">
+          <!-- 第一張卡片 -->
+          <div class="image-text-pair card m-3">
+            <img src="Assets/image/makeup.png" alt="Image 2" class="card-img-top" />
+            <div class="card-body text-center">
+              <h3 class="card-title">我的氣色</h3>
+              <p class="card-text">判斷你的四季型色彩及推薦。</p>
+              <div class="d-flex justify-content-center">
+                <a href="Pages/color_index.html" class="btn btn-main me-3">前往</a>
+                <a href="Pages/system06.html" class="btn btn-main">了解更多</a>
+              </div>
+            </div>
+          </div>
+          <!-- 第二張卡片 -->
+          <div class="image-text-pair card m-3">
+            <img src="Assets/image/community.png" alt="Image 3" class="card-img-top" />
+            <div class="card-body text-center">
+              <h3 class="card-title">社群互動</h3>
+              <p class="card-text">與其他使用者分享穿搭經驗。</p>
+              <div class="d-flex justify-content-center">
+                <a href="Pages/social_index.html" class="btn btn-main me-3">前往</a>
+                <a href="Pages/system05.html" class="btn btn-main">了解更多</a>
+              </div>
+            </div>
+          </div>
+          <!-- 第三張卡片 -->
+          <div class="image-text-pair card m-3">
+            <img src="Assets/image/To_do_list.png" alt="Image 4" class="card-img-top" />
+            <div class="card-body text-center">
+              <h3 class="card-title">日程安排</h3>
+              <p class="card-text">將穿搭推薦納入你的行程表。</p>
+              <div class="d-flex justify-content-center">
+                <a href="Pages/todo_index.html" class="btn btn-main me-3">前往</a>
+                <a href="Pages/system04.html" class="btn btn-main">了解更多</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>    
 
-    <!-- 主要內容 -->
-    <div class="content">
-      <div class="content-box">
-        <!-- 第一張卡片 -->
-        <div class="image-text-pair card m-3">
-          <img src="Assets/image/makeup.png" alt="Image 2" class="card-img-top" />
-          <div class="card-body text-center">
-            <h3 class="card-title">我的氣色</h3>
-            <p class="card-text">判斷你的四季型色彩及推薦。</p>
-            <div class="d-flex justify-content-center">
-              <a href="Pages/color_index.html" class="btn btn-main me-3">前往</a>
-              <a href="Pages/system06.html" class="btn btn-main">了解更多</a>
+      <!-- 更多內容區 -->
+      <section class="container my-5">
+        <!-- 第一區 -->
+        <div class="row mb-4">
+          <div class="col-md-6 order-md-2 d-flex flex-column justify-content-center mx-auto">
+            <h2>線上衣櫃</h2>
+            <p>把你的實體衣櫃搬到線上，方便管理。</p>
+            <div class="d-flex">
+              <a href="Pages/closet_index.html" class="btn btn-main me-3">前往</a>
+              <a href="Pages/system01.html" class="btn btn-main">了解更多</a>
+            </div>
+          </div>
+          <div class="col-md-6 order-md-1 position-relative">
+            <div class="image-container">
+              <img src="Assets/image/closet.png" class="img-fluid rounded" alt="線上衣櫃" />
+              <div class="overlay1"></div>
             </div>
           </div>
         </div>
-        <!-- 第二張卡片 -->
-        <div class="image-text-pair card m-3">
-          <img src="Assets/image/community.png" alt="Image 3" class="card-img-top" />
-          <div class="card-body text-center">
-            <h3 class="card-title">社群互動</h3>
-            <p class="card-text">與其他使用者分享穿搭經驗。</p>
-            <div class="d-flex justify-content-center">
-              <a href="Pages/social_index.html" class="btn btn-main me-3">前往</a>
-              <a href="Pages/system05.html" class="btn btn-main">了解更多</a>
+        <!-- 第二區 -->
+        <div class="row mb-4 extra-margin">
+          <div class="col-md-6 d-flex flex-column justify-content-center mx-auto">
+            <h2>穿搭建議</h2>
+            <p>獲得適合你的穿搭建議。</p>
+            <div class="d-flex">
+              <a href="Pages/suggest_index.html" class="btn btn-main me-3">前往</a>
+              <a href="Pages/system03.html" class="btn btn-main">了解更多</a>
+            </div>
+          </div>
+          <div class="col-md-6 position-relative">
+            <div class="image-container">
+              <img src="Assets/image/outfit.png" class="img-fluid rounded" alt="穿搭建議" />
+              <div class="overlay2"></div>
             </div>
           </div>
         </div>
-        <!-- 第三張卡片 -->
-        <div class="image-text-pair card m-3">
-          <img src="Assets/image/To_do_list.png" alt="Image 4" class="card-img-top" />
-          <div class="card-body text-center">
-            <h3 class="card-title">日程安排</h3>
-            <p class="card-text">將穿搭推薦納入你的行程表。</p>
-            <div class="d-flex justify-content-center">
-              <a href="Pages/todo_index.html" class="btn btn-main me-3">前往</a>
-              <a href="Pages/system04.html" class="btn btn-main">了解更多</a>
+        <!-- 第三區 -->
+        <div class="row mb-4 extra-margin position-relative">
+          <div class="overlay3"></div>
+          <div class="col-md-6 order-md-2 d-flex flex-column justify-content-center mx-auto adjusted">
+            <h2>採購建議</h2>
+            <p>判斷你的衣櫃有無重複衣物並提供採購建議。</p>
+            <div class="d-flex">
+              <a href="Pages/buy_index.html" class="btn btn-main me-3">前往</a>
+              <a href="Pages/system02.html" class="btn btn-main">了解更多</a>
+            </div>
+          </div>
+          <div class="col-md-5 order-md-1 position-relative">
+            <div class="image-container">
+              <img src="Assets/image/advice.png" class="img-fluid rounded" alt="採購建議" />
             </div>
           </div>
         </div>
+        <!-- 第四區 -->
+        <div class="row mb-5 extra-margin p-4 align-items-center section-bg">
+          <div class="col-md-6 d-flex flex-column justify-content-center mx-auto">
+            <h2 class="section-title">專題緣起</h2>
+            <p class="section-text">
+              「今天到底要穿什麼？這些服飾搭配起來真的適合我嗎？為什麼這件衣服買了卻沒穿過？」快速的潮流變化與百花齊放的審美觀念讓現代人無所適從，外貌焦慮與跟風購物充斥在彼此的
+              生活中，我們真的知道我們需要什麼嗎？
+            </p>
+            <p class="section-text">
+              「你的專屬穿搭造型師
+              ColorFour」便是為了解決這些問題而產生，這不僅僅是單純的穿搭輔助工具，更將智慧衣櫃、採購建議、穿搭推薦、穿搭日程、社群平台、色彩分析和
+              LineBot 服務無縫整合，實現全方位的服裝管理解決方案。
+            </p>
+            <p class="section-text">
+              「你的專屬穿搭造型師
+              ColorFour」的最終目標是提供全方位的服裝管理解決方案，讓每一位使用者都能夠輕鬆解決「今天要穿什麼」的難題，成為每一位時尚愛好者不可或缺的穿搭助
+              手與風格顧問。
+            </p>
+          </div>
+        </div>
+
+        <!-- 第五區 -->
+        <div class="row mb-5 extra-margin p-4 align-items-center section-bg">
+          <div class="col-md-6 order-md-2 d-flex flex-column justify-content-center mx-auto adjusted">
+            <h2 class="section-title">專題貢獻</h2>
+            <p class="section-text">
+              「你的專屬穿搭造型師
+              ColorFour」的最終目標是提供全方位的服裝管理解決方案，讓每一位使用者都能夠輕鬆解決「今天要穿什麼」的難題，提升自信心，並實現永續浪費。
+            </p>
+            <p class="section-text">
+              未來，ColorFour
+              不僅是個人的專屬穿搭造型師，更是引領未來智慧時尚生活的重要夥伴。隨著技術進步和市場需求的增長，我們將持續創新，讓
+              ColorFour 成為每一位時尚愛好者不可 或缺的穿搭助手與風格顧問。
+            </p>
+            <p class="section-text">「找推薦？ColorFour！」讓你的專屬穿搭造型師，給你點顏色瞧瞧！</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="Assets/js/bootstrap.min.js"></script>
+    <script src="Assets/js/popper.min.js"></script>
+  </body>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <a href="index.html"><img src="../Assets/image/house_icon.png" class="zoom" style="width: 50px; height: 50px" /></a>
+        <a href="Pages/suggest_index.html"
+          ><img src="Assets/image/clothing_icon.png" class="zoom" style="width: 45px; height: 50px"
+        /></a>
+        <a href="Pages/social_new.html"
+          ><img src="Assets/image/new_post_icon.png" class="zoom" style="width: 50px; height: 50px"
+        /></a>
+        <a href="Pages/closet_index.html"
+          ><img src="Assets/image/closet_icon.png" class="zoom" style="width: 50px; height: 50px"
+        /></a>
+        <a href="Pages/user_profile.html"
+          ><img src="Assets/image/user_icon.png" class="zoom" style="width: 45px; height: 50px"
+        /></a>
       </div>
     </div>
-
-    <!-- 更多內容區 -->
-    <section class="container my-5">
-      <!-- 第一區 -->
-      <div class="row mb-4">
-        <div class="col-md-6 order-md-2 d-flex flex-column justify-content-center mx-auto">
-          <h2>線上衣櫃</h2>
-          <p>把你的實體衣櫃搬到線上，方便管理。</p>
-          <div class="d-flex">
-            <a href="Pages/closet_index.html" class="btn btn-main me-3">前往</a>
-            <a href="Pages/system01.html" class="btn btn-main">了解更多</a>
-          </div>
-        </div>
-        <div class="col-md-6 order-md-1 position-relative">
-          <div class="image-container">
-            <img src="Assets/image/closet.png" class="img-fluid rounded" alt="線上衣櫃" />
-            <div class="overlay1"></div>
-          </div>
-        </div>
-      </div>
-      <!-- 第二區 -->
-      <div class="row mb-4 extra-margin">
-        <div class="col-md-6 d-flex flex-column justify-content-center mx-auto">
-          <h2>穿搭建議</h2>
-          <p>獲得適合你的穿搭建議。</p>
-          <div class="d-flex">
-            <a href="Pages/suggest_index.html" class="btn btn-main me-3">前往</a>
-            <a href="Pages/system03.html" class="btn btn-main">了解更多</a>
-          </div>
-        </div>
-        <div class="col-md-6 position-relative">
-          <div class="image-container">
-            <img src="Assets/image/outfit.png" class="img-fluid rounded" alt="穿搭建議" />
-            <div class="overlay2"></div>
-          </div>
-        </div>
-      </div>
-      <!-- 第三區 -->
-      <div class="row mb-4 extra-margin position-relative">
-        <div class="overlay3"></div>
-        <div class="col-md-6 order-md-2 d-flex flex-column justify-content-center mx-auto adjusted">
-          <h2>採購建議</h2>
-          <p>判斷你的衣櫃有無重複衣物並提供採購建議。</p>
-          <div class="d-flex">
-            <a href="Pages/buy_index.html" class="btn btn-main me-3">前往</a>
-            <a href="Pages/system02.html" class="btn btn-main">了解更多</a>
-          </div>
-        </div>
-        <div class="col-md-5 order-md-1 position-relative">
-          <div class="image-container">
-            <img src="Assets/image/advice.png" class="img-fluid rounded" alt="採購建議" />
-          </div>
-        </div>
-      </div>
-      <!-- 第四區 -->
-      <div class="row mb-5 extra-margin p-4 align-items-center section-bg">
-        <div class="col-md-6 d-flex flex-column justify-content-center mx-auto">
-          <h2 class="section-title">專題緣起</h2>
-          <p class="section-text">
-            「今天到底要穿什麼？這些服飾搭配起來真的適合我嗎？為什麼這件衣服買了卻沒穿過？」快速的潮流變化與百花齊放的審美觀念讓現代人無所適從，外貌焦慮與跟風購物充斥在彼此的      生活中，我們真的知道我們需要什麼嗎？
-          </p>
-          <p class="section-text">
-            「你的專屬穿搭造型師 ColorFour」便是為了解決這些問題而產生，這不僅僅是單純的穿搭輔助工具，更將智慧衣櫃、採購建議、穿搭推薦、穿搭日程、社群平台、色彩分析和 LineBot       服務無縫整合，實現全方位的服裝管理解決方案。
-          </p>
-          <p class="section-text">
-            「你的專屬穿搭造型師 ColorFour」的最終目標是提供全方位的服裝管理解決方案，讓每一位使用者都能夠輕鬆解決「今天要穿什麼」的難題，成為每一位時尚愛好者不可或缺的穿搭助      手與風格顧問。
-          </p>
-        </div>
-      </div>
-
-      <!-- 第五區 -->
-      <div class="row mb-5 extra-margin p-4 align-items-center section-bg">
-        <div class="col-md-6 order-md-2 d-flex flex-column justify-content-center mx-auto adjusted">
-          <h2 class="section-title">專題貢獻</h2>
-          <p class="section-text">
-            「你的專屬穿搭造型師 ColorFour」的最終目標是提供全方位的服裝管理解決方案，讓每一位使用者都能夠輕鬆解決「今天要穿什麼」的難題，提升自信心，並實現永續浪費。
-          </p>
-          <p class="section-text">
-            未來，ColorFour 不僅是個人的專屬穿搭造型師，更是引領未來智慧時尚生活的重要夥伴。隨著技術進步和市場需求的增長，我們將持續創新，讓 ColorFour 成為每一位時尚愛好者不可      或缺的穿搭助手與風格顧問。
-          </p>
-          <p class="section-text">
-            「找推薦？ColorFour！」讓你的專屬穿搭造型師，給你點顏色瞧瞧！
-          </p>
-        </div>
-      </div>
-    </section>
-  </div>
-  <script src="Assets/js/bootstrap.min.js"></script>
-  <script src="Assets/js/popper.min.js"></script>
-  <script defer src="Assets/js/load_index.js"></script>
-</body>
-<div id="footer_index"></div>
+  </footer>
 </html>
