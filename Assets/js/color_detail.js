@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     春季型: {
       uploadedImage: "/Assets/image/spring_person.jpeg",
       title: "春季型人",
-      testDate: "2024-11-28T10:00:00Z",
+      testDate: "2023-11-24T10:00:00",
       description: [
         "☆ 春季型人具備自然的春天所帶來的美好特質，例如：生機、活潑、明媚。",
         "☆ 他們皮膚明亮，眼神閃耀、光潔，是生活中最具快樂和靚麗的一族，正如大自然春天帶給我們的欣悅一般，春季型人是朝氣而充滿活力的。",
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     夏季型: {
       uploadedImage: "/Assets/image/summer_person.jpg",
       title: "夏季型人",
-      testDate: "2024-11-29T12:00:00Z",
+      testDate: "2023-12-25T14:30:00",
       description: [
         "☆ 夏季型人就像夏天一樣給人一種溫柔、清新、淡雅的特質。",
         "☆ 他們給人溫婉飄逸、柔和而親切的感覺，如同一潭靜謐的湖水。",
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     秋季型: {
       uploadedImage: "/Assets/image/autumn_person.jpg",
       title: "秋季型人",
-      testDate: "2024-11-30T14:30:00Z",
+      testDate: "2024-01-06T09:15:00",
       description: [
         "☆ 秋季型人就像秋天一樣穩重、成熟、高雅華貴。",
         "☆ 他們是大地色的代言人，給人深邃知性美的感覺。",
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     冬季型: {
       uploadedImage: "/Assets/image/winter_person.jpg",
       title: "冬季型人",
-      testDate: "2024-12-01T16:45:00Z",
+      testDate: "2024-05-17T16:45:00",
       description: [
         "☆ 冬季型人讓人聯想到冷冽的冬日空氣、純白的雪。",
         "☆ 他們給人酷帥、華麗的氣質，本身的存在感非常強烈。",

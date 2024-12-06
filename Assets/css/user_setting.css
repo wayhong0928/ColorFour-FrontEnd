@@ -1,3 +1,11 @@
+.header {
+  z-index: 3; /* 確保 header 在 footer 之上 */
+}
+
+.footer {
+  z-index: 1; /* 設定較低的層級 */
+}
+
 .preview-image {
   width: 100px;
   height: 100px;
