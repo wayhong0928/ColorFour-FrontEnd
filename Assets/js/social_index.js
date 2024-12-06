@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const posts = [
     {
       id: 1,
-      username: "嗡嗡",
-      avatar: "https://picsum.photos/30?random=1",
+      username: "咖樂很佛系",
+      avatar: "../Assets/image/咖樂很佛系.jpg",
       content: "今天的穿搭，甜酷風超適合這個季節！",
       media_url: "../Assets/image/post_01.jpg",
       location: "戶外",
@@ -14,32 +14,35 @@ document.addEventListener("DOMContentLoaded", function () {
       isFollowing: null, // 沒有追蹤按鈕
       dropdownOptions: ["edit", "delete", "share", "collect"], // 第一則貼文擁有完整功能
       commentList: [
-        { avatar: "https://picsum.photos/25?random=1", username: "留言者1", content: "搭配好時尚！" },
-        { avatar: "https://picsum.photos/25?random=2", username: "留言者2", content: "喜歡這種風格！" },
+        { avatar: "../Assets/image/3.jpg", username: "愛買仕", content: "搭配好時尚！" },
+        { avatar: "../Assets/image/1.jpg", username: "香香兒", content: "喜歡這種風格！" },
+        { avatar: "../Assets/image/8.jpg", username: "迪襖", content: "美女！" },
+        { avatar: "../Assets/image/4.jpg", username: "包包瑞", content: "我兩個都要！" },
+        { avatar: "../Assets/image/2.jpg", username: "布拉達", content: "超愛！" },
       ],
     },
     {
       id: 2,
       username: "潘美人",
-      avatar: "https://picsum.photos/30?random=2",
+      avatar: "../Assets/image/潘美人.jpg",
       content: "剛到達冰島，極光真的美得讓人驚嘆！",
       media_url: "../Assets/image/post_03.jpg",
       location: "冰島",
       created_at: "2024-11-01T20:15:30",
       likes: 50,
-      comments: 8,
+      comments: 2,
       tags: ["春季型", "旅行", "冬季穿搭"],
-      isFollowing: true,
+      isFollowing: false,
       dropdownOptions: ["share", "collect"], // 只包含分享與收藏
       commentList: [
-        { avatar: "https://picsum.photos/25?random=3", username: "旅行迷", content: "極光太夢幻了！" },
-        { avatar: "https://picsum.photos/25?random=4", username: "攝影愛好者", content: "期待更多照片！" },
+        { avatar: "../Assets/image/9.jpg", username: "旅行迷", content: "極光太夢幻了！" },
+        { avatar: "../Assets/image/5.jpg", username: "攝影愛好者", content: "期待更多照片！" },
       ],
     },
     {
       id: 3,
       username: "秉哥不畫餅",
-      avatar: "https://picsum.photos/30?random=3",
+      avatar: "../Assets/image/秉哥.jpg",
       content: "今天嘗試了全新的法式甜點，非常推薦！",
       media_url: "../Assets/image/post_04.jpg",
       location: "巴黎",
@@ -47,11 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
       likes: 35,
       comments: 3,
       tags: ["下午茶", "秋季型", "酷帥風"],
-      isFollowing: false,
+      isFollowing: true,
       dropdownOptions: ["share", "collect"], // 只包含分享與收藏
       commentList: [
-        { avatar: "https://picsum.photos/25?random=5", username: "甜點控", content: "看起來超好吃！" },
-        { avatar: "https://picsum.photos/25?random=6", username: "吃貨日記", content: "在哪家餐廳買的？" },
+        { avatar: "../Assets/image/6.jpg", username: "甜點控", content: "看起來超好吃！" },
+        { avatar: "../Assets/image/7.jpg", username: "吃貨日記", content: "在哪家餐廳買的？" },
+        { avatar: "../Assets/image/user_profile_avatar.png", username: "吃貨", content: "能跟你偶遇嗎？" },
       ],
     },
   ];

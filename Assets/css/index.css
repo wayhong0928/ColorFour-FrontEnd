@@ -24,6 +24,7 @@ body {
   justify-content: center;
   overflow: hidden;
   border-radius: 20px;
+  position: relative;
 }
 
 .banner-image {
@@ -49,10 +50,11 @@ body {
 }
 
 .banner-text {
-  position: relative;
+  position: absolute;
+  bottom: -40%; /* 距離圖片底部的距離 */
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
   color: #917b56;
   text-shadow: 2px 2px 4px rgba(127, 125, 125, 0.4);
 }
@@ -295,5 +297,50 @@ img {
 
   .featurette:nth-child(odd) .col-md-5 {
     order: 1;
+  }
+}
+
+.section-bg {
+  background-color: #f9f9f9; /* 柔和的背景色 */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #b2967d; /* 主題色 */
+  margin-bottom: 15px;
+}
+
+.section-text {
+  font-size: 1rem;
+  line-height: 1.8; /* 提升文字間距讓內容更易讀 */
+  color: #555555;
+  margin-bottom: 15px;
+}
+
+.extra-margin {
+  margin-top: 30px;
+}
+
+.align-items-center {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .section-bg {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .section-text {
+    text-align: justify;
+    font-size: 0.9rem;
   }
 }

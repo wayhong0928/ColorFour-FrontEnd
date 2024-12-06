@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 1,
       username: "ㄐㄌ不ㄌㄌ",
-      avatar: "https://picsum.photos/25?random=1",
+      avatar: "../Assets/image/ㄐㄌ.jpg",
       user_id: 1,
       content: "宋江真的好帥，又奶又痞的!!",
       media_url: "../Assets/image/post_05.jpg",
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 2,
       username: "李小華",
-      avatar: "https://picsum.photos/25?random=2",
+      avatar: "../Assets/image/李小華.jpg",
       user_id: 2,
       content: "我今天去爬山了，風景真美！",
       media_url: "../Assets/image/post_02.jpeg",
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 3,
       username: "老大永遠帥",
-      avatar: "https://picsum.photos/25?random=3",
+      avatar: "../Assets/image/老大.jpg",
       user_id: 3,
       content: "今天去看五月天演唱會，超讚！",
       media_url: "../Assets/image/post_06.jpg",

@@ -1,0 +1,112 @@
+body {
+    padding-top: 70px; /* 根據 header 的高度調整 */
+    margin-bottom: 100px; /* 為 footer 留出空間 */
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+h2, h3 {
+    font-weight: bold;
+}
+  
+.my-4 {
+    margin: 20px 0;
+}
+  
+.list-group {
+    padding: 0;
+}
+  
+.list-group-item {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.schedule-date {
+    flex: 1;
+    text-align: center; /* 日期至中 */
+}
+  
+.schedule-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 對齊到左邊 */
+    margin-left: 10px; /* 調整與勾選框的距離 */
+}
+  
+.schedule-date,
+.schedule-title {
+    margin: 0; /* 移除預設邊距 */
+}
+  
+  
+button {
+    border-radius: 5px;
+    font-size: 16px;
+}
+  
+.btn-custom {
+    background-color: #d4b7a1;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+  
+  .btn-custom:hover {
+    background-color: #D9A68C;
+    color: white;
+  }
+  
+.detail-btn {
+    margin-left: auto;
+    margin-right: 0;
+}
+  
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+.form-group {
+    margin-bottom: 15px;
+}
+  
+.form-check {
+    margin-bottom: 10px;
+}
+  
+.text-center {
+    text-align: center;
+}
+  
+.mt-3 {
+    margin-top: 15px;
+}
+  
+.ml-2 {
+    margin-left: 10px;
+}

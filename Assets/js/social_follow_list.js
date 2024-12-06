@@ -1,15 +1,15 @@
 // 假設的用戶數據（名稱改為中文，並且所有的追蹤狀態都設為 true）
 const followingList = [
-  { id: 1, username: "容易成美女", isFollowing: true, avatar: "https://picsum.photos/40?random=1" },
-  { id: 2, username: "李小華", isFollowing: true, avatar: "https://picsum.photos/40?random=2" },
-  { id: 3, username: "ㄐㄌ不ㄌㄌ", isFollowing: true, avatar: "https://picsum.photos/40?random=3" },
-  { id: 4, username: "老大永遠帥", isFollowing: true, avatar: "https://picsum.photos/40?random=4" },
-  { id: 5, username: "雲朵飄飄", isFollowing: true, avatar: "https://picsum.photos/40?random=5" },
-  { id: 6, username: "哒嘟又生氣", isFollowing: true, avatar: "https://picsum.photos/40?random=6" },
-  { id: 7, username: "小林退熱貼", isFollowing: true, avatar: "https://picsum.photos/40?random=7" },
-  { id: 8, username: "芊芊哭汪汪", isFollowing: true, avatar: "https://picsum.photos/40?random=8" },
-  { id: 9, username: "秉哥不畫餅", isFollowing: true, avatar: "https://picsum.photos/40?random=9" },
-  { id: 10, username: "嗡嗡不是蚊", isFollowing: true, avatar: "https://picsum.photos/40?random=10" }
+  { id: 1, username: "容易成美女", isFollowing: true, avatar: "../Assets/image/容.jpg" },
+  { id: 2, username: "李小華", isFollowing: true, avatar: "../Assets/image/李小華.jpg" },
+  { id: 3, username: "ㄐㄌ不ㄌㄌ", isFollowing: true, avatar: "../Assets/image/ㄐㄌ.jpg" },
+  { id: 4, username: "老大永遠帥", isFollowing: true, avatar: "../Assets/image/老大.jpg" },
+  { id: 5, username: "雲朵飄飄", isFollowing: true, avatar: "../Assets/image/雲.jpg" },
+  { id: 6, username: "哒嘟又生氣", isFollowing: true, avatar: "../Assets/image/嘟.jpg" },
+  { id: 7, username: "小林退熱貼", isFollowing: true, avatar: "../Assets/image/小林.png" },
+  { id: 8, username: "芊芊哭汪汪", isFollowing: true, avatar: "../Assets/image/芊.jpg" },
+  { id: 9, username: "秉哥不畫餅", isFollowing: true, avatar: "../Assets/image/秉哥.jpg" },
+  { id: 10, username: "嗡嗡不是蚊", isFollowing: true, avatar: "../Assets/image/蚊.jpg" }
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
