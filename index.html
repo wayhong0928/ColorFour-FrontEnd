@@ -16,7 +16,7 @@
       </button>
     </div>
     <aside class="sidebar">
-      <img src="https://picsum.photos/100/100?random=1" alt="會員照片" class="member-photo" />
+      <img src="../Assets/image/咖樂很佛系.jpg" alt="會員照片" class="member-photo" />
       <hr class="sidebar-divider" />
       <div class="page-links">
         <a href="index.html">回到首頁</a>
@@ -228,6 +228,29 @@
     </div>
     <script src="Assets/js/bootstrap.min.js"></script>
     <script src="Assets/js/popper.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebar = document.querySelector(".sidebar"); // 選擇側邊欄
+        const toggleButton = document.getElementById("sidebar-toggle"); // 選擇按鈕
+    
+        if (sidebar && toggleButton) {
+          toggleButton.addEventListener("click", function () {
+            // 切換側邊欄的顯示與隱藏
+            sidebar.classList.toggle("show");
+          });
+    
+          // 點擊側邊欄外部時隱藏側邊欄
+          document.addEventListener("click", function (event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+              sidebar.classList.remove("show");
+            }
+          });
+        } else {
+          console.error("Sidebar or toggle button not found.");
+        }
+      });
+    </script>
+    
   </body>
   <footer class="footer">
     <div class="footer-container">

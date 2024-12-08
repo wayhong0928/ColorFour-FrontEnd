@@ -2,8 +2,8 @@
 <html lang="zh-TW">
   <head>
     <title>ColorFour</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../Assets/css/main.css" />
     <link rel="stylesheet" href="../Assets/css/about.css" />
@@ -12,62 +12,131 @@
   <body>
     <section>
       <div class="wrap">
-        <div class="item">
-          <img src="../Assets/image/11044144.jpg">
+        <div class="item" data-state="front" onclick="toggleText(this)">
+          <img src="../Assets/image/44.jpg" />
           <div class="text">
             <h2>11044144 陳威宏</h2>
-            <p>在這次的專案中我負責了前端的購物車介面與商品詳細資訊的介面，
-              雖然課程只有對前端程式設計做基礎的介紹，但是在做專案的過程中，
-              我透過研究他人的程式碼，學到了很多實戰的技巧，獲益良多。
+            <p class="front">
+              Hi，我是陳威宏！ 沉穩內斂的個性與負責任的做事態度是大家對我的評價。
+              在系上的分組專案中經常擔任組長，讓我學會把事情如期、如質的做好，而且不讓所有事情拖延到最後一刻。在學期間，我曾參與各種競賽，不僅有機會與其他高手切戳，更透過實戰提升自己各方面的能力，尤其是面對失敗時，思考如何讓同樣的失敗不會再次出現。
+            </p>
+
+            <p class="back" style="display: none">
+              凝聚相同的共識，一起努力；把 SA、SE 學到的知識發揮得淋漓盡致。
+              透過Notion，我們有了公共圖書館；透過工作包，我們能按照進度開發；透過競賽，我們找到進步的方法。最重要的還是指導教授不厭其煩的指導以及組員之間的配合與支援，讓我們一起闖進全國賽，前進台大體育館。最終的大魔王讓我們拚盡全力去爭取名次，雖然結果遺憾，但已經是發揮得最好的一次了。很榮幸有這個機會跟大家一起進步，謝謝大家:D
             </p>
           </div>
         </div>
-        <div class="item">
-          <img src="../Assets/image/11044105.jpg">
+        <div class="item" data-state="front" onclick="toggleText(this)">
+          <img src="../Assets/image/11044105.jpg" />
           <div class="text">
             <h2>11044105 翁苡馨</h2>
-            <p>
-              這次的專題經歷帶給我許多寶貴的收穫，想做的主題被確認為專題方向真的很開心。在這段旅程中，成員們齊心協力一起帶著colorfour不斷地完善構思、規劃與執行，而從中我也學會了許多新技術，我們懵懵懂懂的摸索，互相的溝通，一步一步地完成我們的專題，過程中我們還參與了大大小小的比賽，雖然最終未能獲得名次，但能夠進入決賽已經是一種對我們努力的肯定，也讓我們收穫了寶貴的經驗與成長。希望能將這次的學習與經驗，運用到未來的挑戰中去。
+            <p class="front">
+              我是翁苡馨，在專題初期，我主要負責構建文件雛形並進行資料搜集，分析ColorFour的定位與價值，以及它如何為使用者帶來幫助與創造商機，為專題提供前期的方向指引。
+              開發階段中，我主要負責前端的工作，將所有功能的版面設計出來，並分工用HTML、Vue.js去呈現出來，力求打造一個完整且實用的應用系統。
+              這次專題的參與過程讓我充分體會到從市場分析到技術落地的完整流程，也讓我對專題開發有了更深層的認識。
+            </p>
+
+            <p class="back" style="display: none">
+              這次的專題經歷帶給我許多寶貴的收穫，想做的主題被確認為專題方向真的很開心。在這段旅程中，成員們齊心協力一起帶著colorfour不斷地完善構思、規劃與執行，而從中我也學會了許多新技術，像是Vue.js、Github等更高效的工具，我們懵懵懂懂的摸索，互相的溝通，一步一步地完成我們的專題，過程中我們還參與了大大小小的比賽，雖然最終未能獲得名次，但能夠進入決賽已經是一種對我們努力的肯定，也讓我們收穫了寶貴的經驗與成長。希望能將這次的學習與經驗，運用到未來的挑戰中去。
             </p>
           </div>
         </div>
-        <div class="item">
-          <img src="../Assets/image/11044145.jpg">
+        <div class="item" data-state="front" onclick="toggleText(this)">
+          <img src="../Assets/image/45.jpg" />
           <div class="text">
             <h2>11044145 陳秉庭</h2>
-            <p>
-              這次的前端網頁設計我對css和JavaScript的使用都還不太熟練，
-              但經過這次的專案後我也有慢慢的在進步，
-              除此之外我也了解到了要把網頁設計的好看是一件非常不容易的事，
-              希望未來我能夠多練習，讓我的技術持續進步。
+            <p class="front">
+              我是陳秉庭，在此次的專題中，初期我主要負責針對衣櫃相關功能進行構思與設計，根據使用者可能會有的相關需求，進行功能和相關資料的規劃，開發階段，我主要負責後端開發的部分，使用
+              Django 框架來實現基本的資料處理和資料庫串接，完成基本功能的實作。
+            </p>
+
+            <p class="back" style="display: none">
+              為期一年的專題即將結束，在這一年中從初賽的專題題目發想，功能的制定與商業可行性的分析，再到下半年度開始的軟體開發與實作，過程中學習到了很多的東西，這次的專題中，使用了我過去不曾接觸過的前後端開發框架，像是我們在前端使用了Vue.js，這個JavaScript網頁開發框架，後端的部分則使用了Django這個由Python寫成的應用框架，經過這次的專題，讓我認識到了「Web應用框架」此一概念，了解到了這項工具可以讓我們能夠專注在功能的實作上，讓我們在開發的過程中效率大增，此外，在協作的過程中，也學習了如何使用Github這一項工具，幫助我們對程式碼進行有效的管理，這次專案讓我明白了要將功能在實際開發中實作出來的困難度，也讓我體會到了一個APP要在消費市場上成功，會面臨到的不僅僅只是開發上的挑戰，更包括對市場需求，用戶體驗等相關因素的理解和應對，總結來說此次專題的經歷，讓我認識到了自己在實作技術上的不足，以及對於消費市場、用戶需求等方面的不了解，未來我也會帶著此次的經驗繼續努力，以提升自己的專業能力。
+              最後謝謝專題組員們，相比於他們我的貢獻相對有限，我對開發的概念僅有初步的了解，並不成熟，實作過程中面臨了許多挑戰，也因為不熟悉相關技術，因此遇到了許多的困難，感謝組員們在這一年來給了我許多的指導和幫助，我才能逐步克服困難，感謝你們的支持與幫助，讓我在這次的專題中可以獲得成長，也讓專題順利完成。
             </p>
           </div>
         </div>
-        <div class="item">
-          <img src="../Assets/image/11044109.jpg">
+        <div class="item" data-state="front" onclick="toggleText(this)">
+          <img src="../Assets/image/09.jpg" />
           <div class="text">
             <h2>11044109 李靖苓</h2>
-            <p> 我有一個感情很好的姐姐，我跟姐姐共用同一個爸媽，
-              但我們從不曾為此吵過架，她下禮拜要去瑞典留學了，我想想念她的</p>
+            <p class="front">
+              我是李靖苓（ㄐㄌ）。我具備自學能力、細心特質。在專案規劃和執行時，我會先釐清需求，確保細節有被考量到，再與組員討論專案的預期成果。學習方面，若遇到瓶頸會主動搜尋解決方法，樂意學習新知識。我在專題中負責API串接與linebot開發，從做專題的過程中增強了使用者體驗，也學到問題解決的能力。在學期間，擔任過系學會總務，負責活動的經費管理與規劃學期預算，培養我管理能力與團隊合作的經驗。
+            </p>
+
+            <p class="back" style="display: none">
+              這一年因為專題合作學習到了很多東西，像是串接API、後端知識、簡報與海報的製作。除此之外，也體驗了從無到有的系統設計與開發，闕老師提供的各種建議與組長的帶領下，再加上組員的配合，讓專題能夠順利完成，非常感謝老師的指導以及組員們，使這一年的專題能劃下完美的句點。
+            </p>
           </div>
         </div>
-        <div class="item">
-          <img src="../Assets/image/11044131.jpg">
+        <div class="item" data-state="front" onclick="toggleText(this)">
+          <img src="../Assets/image/31.jpg" />
           <div class="text">
             <h2>11044131 潘莛家</h2>
-            <p>雖然第一次修沒有過，但是這次重修真的了解到網程是非常實用的東西，
-              希望以後可以帶著學習到的東西繼續努力下去。</p>
+            <p class="front">
+              專題中我的主要負責工作為文書處理與簡報準備，配合競賽需求調整簡報方向與內容。前期參與主題發想與問卷蒐集，後期專注於文件編修、簡報設計與發表。在專題期間精進我在資料整理、視覺設計與溝通表達上的能力。
+            </p>
+
+            <p class="back" style="display: none">
+              在專題期間我跟著組長學習到了很多，也體認到自己在專案管理與程式方面有多不足。在專題前期負責發想，與理論實踐討論，也參加了各大競賽，花了大量的時間在進行文件調整與簡報設計。因為人生規劃與能力不足，加大了其他組員的工作量，很感謝組員們的包容與協助。我有一群好隊友！很感謝老師這一年以來悉心的指導，帶我們一路挺進了全國賽，因為有您，讓我們變得更好。
+            </p>
           </div>
         </div>
-        <div class="item">
-          <img src="../Assets/image/11041224.jpg">
+        <div class="item" data-state="front" onclick="toggleText(this)">
+          <img src="../Assets/image/24.jpg" />
           <div class="text">
             <h2>11041224 陳容節</h2>
-            <p>我是負責後端程式的部分。</p>
+            <p class="front">
+              我是陳容節，這次專題的初期負責市場分析部分的雛形製作及資料搜集，嘗試找到為何專屬穿搭造型師（ColorFour）在市場中存在的意義和它將帶來的商機及對使用者的幫助。開發階段則是負責前端的部分，從一開始運用HTML、CSS、JavaScript來實作，到後來轉而採用Vue.js框架進行開發，期望能提升前端開發效率與使用者體驗，以實現更完整的系統功能。
+            </p>
+
+            <p class="back" style="display: none">
+              首先真的非常感謝指導教授和我的專題組員們，讓我有機會能參與到ColorFour這個專題的製作，在這過程中我接觸了許多的新技術也得到了很多珍貴的經驗。ColorFour
+              的每一階段成果都讓我覺得自己是何其幸運，才能遇到這些友善、厲害的人們，有機會見證並參與ColorFour的構築過程。儘管在這個過程中我們或許沒有每一階段都受到所有人的肯定，但以我的視角而言，每一步都是我從沒想過自己能參與企及的高度。由衷地謝謝大家在這段過程中很多很多的幫助及包容，讓我不僅僅只是完成專題，而是得到了無法量化的珍貴經歷。
+            </p>
           </div>
         </div>
       </div>
     </section>
+    <script>
+      function toggleText(item) {
+        const frontText = item.querySelector(".front");
+        const backText = item.querySelector(".back");
+        const state = item.getAttribute("data-state");
+
+        if (state === "front") {
+          frontText.style.display = "none";
+          backText.style.display = "block";
+          item.setAttribute("data-state", "back");
+        } else {
+          frontText.style.display = "block";
+          backText.style.display = "none";
+          item.setAttribute("data-state", "front");
+        }
+      }
+
+      // 確保 hover 不影響手機的點擊切換邏輯
+      if (window.innerWidth >= 768) {
+        document.querySelectorAll(".item").forEach((item) => {
+          const frontText = item.querySelector(".front");
+          const backText = item.querySelector(".back");
+
+          item.addEventListener("mouseover", () => {
+            frontText.style.display = "none";
+            backText.style.display = "block";
+          });
+
+          item.addEventListener("mouseout", () => {
+            const state = item.getAttribute("data-state");
+            if (state === "front") {
+              frontText.style.display = "block";
+              backText.style.display = "none";
+            }
+          });
+        });
+      }
+    </script>
   </body>
   <div id="footer"></div>
   <!-- Bootstrap JavaScript Libraries -->
