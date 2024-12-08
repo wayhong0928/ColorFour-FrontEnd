@@ -1,7 +1,7 @@
 // 假設的用戶數據（名稱改為中文，並且所有的追蹤狀態都設為 true）
 const followingList = [
   { id: 1, username: "容易成美女", isFollowing: true, avatar: "../Assets/image/容.jpg" },
-  { id: 2, username: "李小華", isFollowing: true, avatar: "../Assets/image/李小華.jpg" },
+  { id: 2, username: "李華華", isFollowing: true, avatar: "../Assets/image/李小華.jpg" },
   { id: 3, username: "ㄐㄌ不ㄌㄌ", isFollowing: true, avatar: "../Assets/image/ㄐㄌ.jpg" },
   { id: 4, username: "老大永遠帥", isFollowing: true, avatar: "../Assets/image/老大.jpg" },
   { id: 5, username: "雲朵飄飄", isFollowing: true, avatar: "../Assets/image/雲.jpg" },

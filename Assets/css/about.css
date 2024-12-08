@@ -4,67 +4,73 @@ body {
 }
 
 .wrap {
-  width: 80%;
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
   margin: 5% auto;
 }
+
 .item {
-  width: 400px;
-  margin: 5% auto;
+  width: 30%;
+  max-width: 400px;
   text-align: center;
   border-radius: 20px;
   background-color: #fff;
-  transform: translateY(0px);
-  transition: 0.5s;
-}
-.text {
-  color: #000000;
-  padding: 20px;
-}
-.item img {
-  margin-top: 25px;
-  width: 80%;
-  border-radius: 20px;
-  vertical-align: middle;
-}
-.item h2 {
-  border-bottom: 1px solid#888;
-  padding-bottom: 0.3em;
-  margin-bottom: 0.4em;
-  font-weight: 700;
-  transition: 0.5s;
-}
-.item p {
-  text-align: justify;
-  font-size: 18px;
-  line-height: 1.5;
-  font-weight: 500;
-  transition: 0.5s;
-}
-.item .text:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: 0;
-  top: 0;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
-@media screen and (min-width:1023px) {
-  .wrap {
-    max-width: 1500px;
+.item img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.item:hover img {
+  transform: scale(1.05);
+}
+
+.text {
+  flex: 1; /* 確保文字區域統一填滿剩餘空間 */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 0 0 20px 20px;
+}
+
+.text h2 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.text p {
+  font-size: 16px;
+  line-height: 1.5;
+  display: none; /* 預設隱藏所有文字 */
+}
+
+.text .front {
+  display: block; /* 顯示前置文字 */
+}
+
+.item:hover .front {
+  display: none; /* hover 時隱藏前置文字 */
+}
+
+.item:hover .back {
+  display: block; /* hover 時顯示後置文字 */
+}
+
+@media screen and (max-width: 1024px) {
+  .item {
+    width: 45%;
   }
-  .item:hover {
-    transform: translateY(-50px);
-    background-color:#b2967d;
-    border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    width: 90%;
   }
-  .item:hover h2 {
-    color: var(--header-footer-bg-color) !important;
-    border-bottom-color: #fff;
-  }
-  .item:hover p {
-    color: #fff;
-  }    
 }
