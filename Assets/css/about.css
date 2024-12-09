@@ -1,11 +1,7 @@
-body {
-  padding-top: 70px; /* 根據 header 的高度調整 */
-  margin-bottom: 100px; /* 為 footer 留出空間 */
-}
-
 .wrap {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1200px;
   gap: 20px;
   justify-content: center;
   margin: 5% auto;
@@ -38,6 +34,7 @@ body {
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 0 0 20px 20px;
+  text-align: justify;
 }
 
 .text h2 {

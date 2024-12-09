@@ -12,17 +12,6 @@ function goToUserNotice() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const user = {
-    first_name: "咖樂很佛系",
-    username: "ColorFourStyle",
-    bio: "在時尚與舒適中尋找平衡，用穿搭打造屬於自己的風格。",
-    gender: "女性",
-    posts_count: 1,
-    followers_count: 120,
-    following_count: 90,
-    photo_url: "/Assets/image/咖樂很佛系.jpg",
-  };
-
   const posts = [
     {
       id: 1,
@@ -67,11 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
       user_id: 3,
       content: "今天去看五月天演唱會，超讚！",
       media_url: "../Assets/image/post_06.jpg",
-      tags: ["演唱會", "夏季型","型男風"],
+      tags: ["演唱會", "夏季型", "型男風"],
       isFollowing: true,
     },
   ];
-
 
   const favoriteItems = [
     {
@@ -130,22 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
-  const loading = document.getElementById("loading");
-  const error = document.getElementById("error");
-  const profile = document.getElementById("profile");
-
-  // 填入用戶資料
-  loading.style.display = "none";
-  error.style.display = "none";
-  profile.style.display = "block";
-
-  document.getElementById("profileImage").src = user.photo_url || "default.jpg";
-  document.getElementById("firstName").textContent = user.first_name;
-  document.getElementById("username").textContent = `@${user.username}`;
-  document.getElementById("bio").textContent = user.bio;
-  document.getElementById("gender").textContent = user.gender;
-  document.getElementById("stats").textContent = `${user.posts_count} 貼文 | ${user.followers_count} 粉絲 | ${user.following_count} 追蹤中`;
-
   const setActiveTab = (tab) => {
     const tabContent = document.getElementById("tabContent");
     tabContent.innerHTML = ""; // 清除既有內容
@@ -155,13 +127,14 @@ document.addEventListener("DOMContentLoaded", () => {
       renderPosts();
     } else if (tab === "favorites") {
       renderFavorites(tabContent);
-    } else if (tab === "likes") {renderlikes(tabContent);
+    } else if (tab === "likes") {
+      renderlikes(tabContent);
     }
   };
 
   const renderPosts = () => {
     const postContainer = document.getElementById("post-container");
-  
+
     posts.forEach((post) => {
       const postElement = document.createElement("div");
       // 新增外框樣式
@@ -201,7 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
       postContainer.appendChild(postElement);
     });
   };
-  
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -257,11 +229,11 @@ document.addEventListener("DOMContentLoaded", () => {
       container.innerHTML = `<p>目前沒有收藏的單品。</p>`;
       return;
     }
-  
+
     // 新增 Row 容器
     const row = document.createElement("div");
     row.className = "row g-4";
-  
+
     favoriteItems.forEach((item) => {
       // 單品卡片
       const col = document.createElement("div");
@@ -284,14 +256,13 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
       `;
-  
+
       row.appendChild(col);
     });
-  
+
     container.appendChild(row);
   };
 
-  
   document.querySelectorAll(".nav-link").forEach((tab) => {
     tab.addEventListener("click", (e) => {
       e.preventDefault();
@@ -302,6 +273,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setActiveTab("posts");
 });
-
-
-
