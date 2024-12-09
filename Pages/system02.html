@@ -11,6 +11,89 @@
 <div id="header"></div>
 <body>
 
+  <main>
+    <body class="wardrobe-introduction">
+      <!-- 介紹文字區 -->
+      <section class="introduction-section">
+          <div class="intro-content">
+              <img src="/Assets/image/buy_icon.png" alt="採購圖片" class="intro-icon">
+              <div class="intro-text">
+                  <h1>採購建議介紹</h1>
+                  <p>
+                    使用者拍照上傳希望購買的服飾，系統自動比對衣櫃中的現有服飾，
+                    判斷想購買商品的重複率和適合程度，降低衝動購物機會，避免重複購買類似物品，減少浪費。                    
+                  </p>
+              </div>
+          </div>
+      </section>
+  
+    <!-- 圖片展示區 -->
+    <section class="images-section">
+      <!-- 圖左文右（第一張圖片） -->
+      <div class="image-row image-left-right">
+        <img src="/Assets/image/system02_1.png" alt="選擇服飾種類" class="image">
+        <div class="image-text">
+          <h2>選擇服飾種類（LineBot 聊天機器人示例）</h2>
+          <p>
+            點選採購建議，先選擇主要和次要的服飾種類。
+          </p>
+        </div>
+      </div>
+
+      <!-- 圖左文右（第二張圖片） -->
+      <div class="image-row image-left-right">
+        <img src="/Assets/image/system02_2.png" alt="採購建議流程" class="image">
+        <div class="image-text">
+          <h2>採購建議流程</h2>
+          <p>
+            (1) 選擇完服飾種類，上傳圖片讓系統辨識。<br>
+(2) 系統回傳去背圖片和辨識結果。<br>
+(3) 若有錯誤，使用者可以選擇重新辨識、修改描述。<br>
+          </p>
+        </div>
+      </div>
+
+      <!-- 圖右文左（第三張圖片） -->
+      <div class="image-row image-right-left">
+        <div class="image-text">
+          <h2>重新辨識</h2>
+          <p>
+            (1) 點選重新辨識，系統會重新執行一次圖片去背和顏色、圖案辨識。<br>
+            (2) 若辨識正確，點選確定即可。<br>
+            ✧ 示意圖片中，點選重新辨識後，辨識結果由米白色修正為白色。<br>
+          </p>
+        </div>
+        <img src="/Assets/image/system02_3.png" alt="重新辨識" class="image">
+      </div>
+  
+      <!-- 圖右文左（第四張圖片） -->
+      <div class="image-row image-right-left">
+        <div class="image-text">
+          <h2>修改描述</h2>
+          <p>
+            (1) 點選修改描述，可以修改顏色、描述。<br>
+            (2) 點選確定之後進行下一步。<br>
+          </p>
+        </div>
+        <img src="/Assets/image/system02_4.png" alt="修改描述" class="image">
+      </div>
+
+      <!-- 圖左文右（第五張圖片） -->
+      <div class="image-row image-left-right">
+        <img src="/Assets/image/system02_5.png" alt="採購建議結果" class="image">
+        <div class="image-text">
+          <h2>採購建議結果</h2>
+          <p>
+            (1) 點選確定之後，系統判斷該服飾的重複率、適合程度並回傳。<br>
+(2) 點選取消之後，就取消該次的採購建議流程。<br>
+          </p>
+        </div>
+      </div>
+
+
+    </section>
+  </main>
+  
   <script src="../Assets/js/bootstrap.min.js"></script>
   <script src="../Assets/js/system02.js"></script>
   <script src="../Assets/js/main.js"></script>

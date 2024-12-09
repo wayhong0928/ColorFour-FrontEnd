@@ -13,84 +13,65 @@ function goToUserNotice() {
 
 document.addEventListener("DOMContentLoaded", () => {
   const user = {
-    first_name: "Emma",
-    username: "EmmaStyle",
-    bio: "熱愛穿搭與旅行，喜歡記錄生活中的小美好。",
+    first_name: "咖樂很佛系",
+    username: "ColorFourStyle",
+    bio: "在時尚與舒適中尋找平衡，用穿搭打造屬於自己的風格。",
     gender: "女性",
-    posts_count: 25,
-    followers_count: 1200,
-    following_count: 350,
-    photo_url: "/Assets/image/user_profile_avatar.png",
+    posts_count: 1,
+    followers_count: 120,
+    following_count: 90,
+    photo_url: "/Assets/image/咖樂很佛系.jpg",
   };
 
   const posts = [
     {
       id: 1,
-      username: "嗡嗡",
-      avatar: "https://picsum.photos/30?random=1",
+      username: "咖樂很佛系",
+      avatar: "/Assets/image/咖樂很佛系.jpg",
       content: "今天的穿搭，甜酷風超適合這個季節！",
-      media_url: "https://picsum.photos/600/400?random=1",
+      media_url: "/Assets/image/post_01.jpg",
       location: "戶外",
       created_at: "2024-10-23T16:29:45",
       likes: 20,
       comments: 5,
       tags: ["甜酷風", "秋季穿搭", "夏季型"],
-    },
-    {
-      id: 2,
-      username: "潘美人",
-      avatar: "https://picsum.photos/30?random=2",
-      content: "剛到達冰島，極光真的美得讓人驚嘆！",
-      media_url: "https://picsum.photos/600/400?random=2",
-      location: "冰島",
-      created_at: "2024-11-01T20:15:30",
-      likes: 50,
-      comments: 8,
-      tags: ["春季型", "旅行", "冬季穿搭"],
-    },
-    {
-      id: 3,
-      username: "秉哥不畫餅",
-      avatar: "https://picsum.photos/30?random=3",
-      content: "今天嘗試了全新的法式甜點，非常推薦！",
-      media_url: "https://picsum.photos/600/400?random=3",
-      location: "巴黎",
-      created_at: "2024-10-20T14:00:00",
-      likes: 35,
-      comments: 3,
-      tags: ["下午茶", "秋季型", "酷帥風"],
+      dropdownOptions: ["edit", "delete", "share", "collect"], // 第一則貼文擁有完整功能
     },
   ];
 
   const collectedPosts = [
     {
       id: 1,
-      username: "陳小明",
-      avatar: "https://picsum.photos/25?random=1",
+      username: "ㄐㄌ不ㄌㄌ",
+      avatar: "../Assets/image/ㄐㄌ.jpg",
       user_id: 1,
-      content: "這是第一篇收藏的貼文，分享了我的日常生活。",
-      media_url: "https://picsum.photos/600/400?random=1",
-      tags: ["生活", "日常", "分享"],
+      content: "宋江真的好帥，又奶又痞的!!",
+      media_url: "../Assets/image/post_05.jpg",
+      tags: ["帥哥穿搭", "日常", "分享"],
+      isFollowing: true,
     },
     {
       id: 2,
       username: "李小華",
-      avatar: "https://picsum.photos/25?random=2",
+      avatar: "../Assets/image/李小華.jpg",
       user_id: 2,
       content: "我今天去爬山了，風景真美！",
-      media_url: "https://picsum.photos/600/400?random=2",
+      media_url: "../Assets/image/post_02.jpeg",
       tags: ["爬山", "自然", "風景"],
+      isFollowing: false,
     },
     {
       id: 3,
-      username: "王大強",
-      avatar: "https://picsum.photos/25?random=3",
+      username: "老大永遠帥",
+      avatar: "../Assets/image/老大.jpg",
       user_id: 3,
-      content: "今天吃了超好吃的火鍋，推薦大家來嘗試！",
-      media_url: "https://picsum.photos/600/400?random=3",
-      tags: ["美食", "火鍋"],
+      content: "今天去看五月天演唱會，超讚！",
+      media_url: "../Assets/image/post_06.jpg",
+      tags: ["演唱會", "夏季型","型男風"],
+      isFollowing: true,
     },
   ];
+
 
   const favoriteItems = [
     {
@@ -242,9 +223,13 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="${post.avatar}" alt="User Avatar" class="post-avatar rounded-circle" />
             <span class="post-username ms-2">${post.username}</span>
           </div>
-          <button class="btn btn-outline-primary" onclick="handleToggleFollow(${post.user_id})">
-            追蹤
-          </button>
+          ${
+            post.isFollowing !== null
+              ? `<button class="btn btn-outline-secondary follow-button me-3" onclick="toggleFollow(${post.id})">
+                   ${post.isFollowing ? "已追蹤" : "追蹤"}
+                 </button>`
+              : ""
+          }
         </div>
 
         <div class="post-image mt-3">

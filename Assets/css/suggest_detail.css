@@ -153,6 +153,71 @@ main button {
   margin-top: 5px;
 }
 
+/* 保持圖片在左邊，敘述和編輯表單在右邊 */
+.container {
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* 上下置中 */
+  flex-wrap: wrap;
+  background-color: #e9e8e8;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.item-img {
+  width: 45%;
+  height: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px; /* 確保圖片和文字有空隙 */
+}
+
+.item-info, .edit-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* 文字上下居中 */
+  justify-content: center; /* 文字上下居中 */
+  text-align: center;   /* 水平居中 */
+}
+
+.item-info h1,
+.item-info p {
+  margin: 5px 0;
+}
+
+.item-info h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.item-info p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* 讓編輯表單中的文字也保持置中 */
+.edit-form {
+  display: none;
+  width: 100%;
+}
+
+.edit-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+
 @media screen and (max-width: 768px) {
   .item-img {
     width: 90%;

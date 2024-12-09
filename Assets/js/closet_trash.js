@@ -1,22 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   let items = [
-    {
-      name: "小白鞋",
-      category: "shoes",
-      brand: "無印",
-      price: 80,
-      image: "/Assets/image/closet_05.png",
-      link: "/Pages/closet_detail.html?item=shoes",
-      deleted: false, // Add a "deleted" status to track removal
-    },
-    {
-      name: "牛仔褲",
-      category: "bottom",
-      brand: "GU",
-      price: 120,
-      image: "/Assets/image/closet_03.png",
-      link: "closet_detail.html?item=bottom",
-      deleted: false,
+    {name: "牛仔褲", 
+    category: "bottom_jeans", 
+    brand: "GU", price: 120, 
+    image: "/Assets/image/closet_03.png", 
+    link: "closet_detail.html?item=bottom_jeans",
+    deleted: false,
     },
   ];
 
