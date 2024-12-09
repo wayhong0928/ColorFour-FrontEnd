@@ -2,10 +2,6 @@
   z-index: 3; /* 確保 header 在 footer 之上 */
 }
 
-.footer {
-  z-index: 1; /* 設定較低的層級 */
-}
-
 .container {
   max-width: 600px;
   margin: 0 auto;

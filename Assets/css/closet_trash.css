@@ -19,10 +19,6 @@
   z-index: 3; /* 確保 header 在 footer 之上 */
 }
 
-.footer {
-  z-index: 1; /* 設定較低的層級 */
-}
-
 .item-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
