@@ -84,3 +84,42 @@ function unlinkLine() {
 document.addEventListener("DOMContentLoaded", () => {
   renderLinkedAccounts();
 });
+
+// 填入假資料
+function populateFakeData() {
+  user = {
+    profile_image: null,
+    nickname: "咖樂很佛系",
+    username: "ColorFourStyle",
+    gender: "female",
+    talk: "在時尚與舒適中尋找平衡，用穿搭打造屬於自己的風格。",
+    birthday: "2003-01-01",
+    email: "Color@example.com",
+    isGoogleLinked: true,
+    isLineLinked: false,
+    loginProvider: "google",
+  };
+
+  // 填入表單欄位
+  document.getElementById("nickname").value = user.nickname;
+  document.getElementById("username").value = user.username;
+  document.getElementById("talk").value = user.talk;
+  document.getElementById("birthday").value = user.birthday;
+  document.getElementById("email").value = user.email;
+  document.getElementById(user.gender).checked = true;
+
+  // 若需要顯示已上傳的頭像
+  if (user.profile_image) {
+    const imagePreview = document.getElementById("image-preview");
+    imagePreview.innerHTML = `<img src="${URL.createObjectURL(user.profile_image)}" alt="預覽" class="preview-image">`;
+  }
+
+  // 更新帳戶連結部分
+  renderLinkedAccounts();
+}
+
+// 初始化頁面
+document.addEventListener("DOMContentLoaded", () => {
+  populateFakeData(); // 頁面載入時填入假資料
+  renderLinkedAccounts();
+});

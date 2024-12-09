@@ -1,3 +1,4 @@
+
 .section-title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -21,8 +22,8 @@
 
 .item-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(4, 1fr); /* 每列固定顯示 4 個 */
+  gap: 20px; /* 項目之間的間距 */
 }
 
 .item-card {
@@ -32,18 +33,16 @@
   padding: 10px;
   background-color: #fff;
   text-align: center;
-}
-
-.item-card input[type="checkbox"] {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  display: flex;
+  flex-direction: column; /* 垂直排列內容 */
+  justify-content: space-between; /* 項目之間平均分布 */
 }
 
 .item-card img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  margin-bottom: 10px; /* 圖片與文字之間的間距 */
 }
 
 .item-info h5 {
@@ -58,14 +57,14 @@
   margin-bottom: 10px;
 }
 
-.item-info .btn {
-  font-size: 14px;
+.item-card input[type="checkbox"] {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
-/* Align buttons to the right */
-.button-group {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 20px;
+@media (max-width: 768px) {
+  .item-list {
+    grid-template-columns: repeat(2, 1fr); /* 平板顯示 2 個一列 */
+  }
 }

@@ -110,3 +110,24 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "/Pages/suggest_index.html";
   });
 });
+
+// 編輯模式切換
+editButton.addEventListener("click", () => {
+  const isEditing = editForm.style.display === "block";
+  itemInfoSection.style.display = isEditing ? "block" : "none";
+  editForm.style.display = isEditing ? "none" : "block";
+
+  // 在編輯模式下，添加 "editing" 類別
+  if (!isEditing) {
+    document.querySelector('.container').classList.add('editing');
+  } else {
+    document.querySelector('.container').classList.remove('editing');
+  }
+
+  if (!isEditing) {
+    editName.value = itemInfo.recommendation_name;
+    editLocation.value = itemInfo.location;
+    editOccasion.value = itemInfo.occasion;
+    editSkinTone.value = itemInfo.skin_tone;
+  }
+});

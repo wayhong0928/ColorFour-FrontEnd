@@ -1,0 +1,160 @@
+/* 全局樣式 */
+body {
+  font-family: 'Noto Sans TC', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+main {
+  padding: 40px 20px;
+}
+
+/* 介紹文字區（圖左文右） */
+.introduction-section {
+  margin-bottom: 50px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.intro-icon {
+  width: 200px;
+  height: auto;
+}
+
+.intro-image {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text h1 {
+  font-size: 2.5rem;
+  color: #917b56;
+  margin-bottom: 15px;
+}
+
+.intro-text p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* 圖片展示區 */
+.images-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.image-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 圖左文右（第一張圖） */
+.image-left-right {
+  flex-direction: row;
+}
+
+.image-left-right .image {
+  width: 40%;
+}
+
+.image-left-right .image-text {
+  width: 50%;
+}
+
+/* 圖右文左（第二張圖） */
+.image-right-left {
+  flex-direction: left;
+}
+
+.image-right-left .image {
+  width: 40%;
+}
+
+.image-right-left .image-text {
+  width: 50%;
+}
+
+.image-text h2 {
+  font-size: 1.5rem;
+  color: #495057;
+  margin-bottom: 10px;
+}
+
+.image-text p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* 響應式設計 */
+@media (max-width: 700px) {
+  .intro-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-image {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .image-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-left-right, .image-right-left {
+    flex-direction: column;
+  }
+
+  .image-left-right .image, .image-right-left .image {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .image-left-right .image-text, .image-right-left .image-text {
+    width: 80%;
+  }
+
+  .image-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .image-text p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text h1 {
+    font-size: 2rem;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+  }
+
+  .image-text h2 {
+    font-size: 1rem;
+  }
+
+  .image-text p {
+    font-size: 0.8rem;
+  }
+}
