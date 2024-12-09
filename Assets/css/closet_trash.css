@@ -1,3 +1,25 @@
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.filters {
+  margin-bottom: 2rem;
+}
+.filter-group {
+  margin-bottom: 1rem;
+}
+.filter-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.header {
+  z-index: 3; /* 確保 header 在 footer 之上 */
+}
+
 .item-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 每列固定顯示 4 個 */
