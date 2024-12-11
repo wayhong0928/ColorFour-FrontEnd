@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       // 模擬提交成功的效果，直接跳轉
       alert("測驗成功提交！");
-      window.location.href = "color_result.html";
+      window.location.href = "../Pages/color_result.html";
     } catch (error) {
       console.error("提交失敗:", error);
       alert(error.message || "提交失敗，請重試！");

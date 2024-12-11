@@ -4,11 +4,11 @@ function shareProfile() {
 }
 
 function editProfile() {
-  window.location.href = "/Pages/user_setting.html"; // 導向編輯頁面
+  window.location.href = "../Pages/user_setting.html"; // 導向編輯頁面
 }
 
 function goToUserNotice() {
-  window.location.href = "/Pages/user_notice.html"; // 導向編輯頁面
+  window.location.href = "../Pages/user_notice.html"; // 導向編輯頁面
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: 1,
       username: "咖樂很佛系",
-      avatar: "/Assets/image/咖樂很佛系.jpg",
+      avatar: "../Assets/image/咖樂很佛系.jpg",
       content: "今天的穿搭，甜酷風超適合這個季節！",
-      media_url: "/Assets/image/post_01.jpg",
+      media_url: "../Assets/image/post_01.jpg",
       location: "戶外",
       created_at: "2024-10-23T16:29:45",
       likes: 20,
@@ -67,25 +67,16 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "t-shirt",
       brand: "UNIQLO",
       price: 150,
-      image: "/Assets/image/Uniqlo_white_Tshirt.png",
+      image: "../Assets/image/Uniqlo_white_Tshirt.png",
       color: "白色",
       tags: ["#休閒", "#上課"],
-    },
-    {
-      name: "短褲",
-      category: "bottom",
-      brand: "GU",
-      price: 70,
-      image: "/Assets/image/closet_04.png",
-      color: "藍色",
-      tags: ["#夏日", "#運動"],
     },
     {
       name: "西裝外套",
       category: "coat",
       brand: "UNIQLO",
       price: 220,
-      image: "/Assets/image/closet_06.png",
+      image: "../Assets/image/closet_06.png",
       color: "黑色",
       tags: ["#正式", "#商務"],
     },
@@ -94,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "dress",
       brand: "GU",
       price: 100,
-      image: "/Assets/image/closet_02.png",
+      image: "../Assets/image/closet_02.png",
       color: "紅色",
       tags: ["#派對", "#春季"],
     },
@@ -103,18 +94,18 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "shoes",
       brand: "無印",
       price: 80,
-      image: "/Assets/image/closet_05.png",
+      image: "../Assets/image/closet_05.png",
       color: "白色",
       tags: ["#百搭", "#日常"],
     },
     {
-      name: "牛仔褲",
-      category: "bottom",
-      brand: "GU",
-      price: 120,
-      image: "/Assets/image/closet_03.png",
-      color: "藍色",
-      tags: ["#經典", "#耐用"],
+      name: "墨鏡",
+      category: "sunglasses",
+      brand: "NET",
+      price: 50,
+      image: "../Assets/image/closet_07.png",
+      color: "黑色",
+      tags: ["#夏日", "#旅遊"],
     },
   ];
 
@@ -241,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
       col.innerHTML = `
         <div class="favorite-item border rounded position-relative p-3">
           <!-- 愛心圖示 -->
-           <img src="/Assets/image/愛了.png" alt="Favorite Icon" class="position-absolute top-0 end-0 m-2" style="width: 50px; height: 50px;">
+           <img src="../Assets/image/愛了.png" alt="Favorite Icon" class="position-absolute top-0 end-0 m-2" style="width: 50px; height: 50px;">
   
           <div class="d-flex align-items-center">
             <img src="${item.image}" alt="${item.name}" class="rounded me-3" 

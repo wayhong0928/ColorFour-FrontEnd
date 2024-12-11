@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       location: "美術館",
       occasion: "夏天、百搭、休閒",
       skin_tone: "全妝",
-      recommendation_image: "/Assets/image/suggest_01.png",
+      recommendation_image: "../Assets/image/suggest_01.png",
       created_at: "2024-10-30T19:04:07",
     },
     {
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       location: "演講廳",
       occasion: "夏天、正式、報告",
       skin_tone: "裸妝",
-      recommendation_image: "/Assets/image/suggest_03.png",
+      recommendation_image: "../Assets/image/suggest_03.png",
       created_at: "2024-11-01T10:30:00",
     },
     {
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       location: "公園",
       occasion: "秋天、休閒、運動",
       skin_tone: "素顏",
-      recommendation_image: "/Assets/image/suggest_02.png",
+      recommendation_image: "../Assets/image/suggest_02.png",
       created_at: "2024-11-05T15:45:00",
     },
   ];
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 刪除推薦
   deleteButton.addEventListener("click", () => {
     alert("推薦已刪除！");
-    window.location.href = "/Pages/suggest_index.html";
+    window.location.href = "../Pages/suggest_index.html";
   });
 });
 

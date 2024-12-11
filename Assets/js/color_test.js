@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const questionnaireContainer = document.getElementById("questionnaire-container");
 
   const seasons = [
-    { image: "/Assets/image/color_season_1.png" },
-    { image: "/Assets/image/color_season_2.png" },
-    { image: "/Assets/image/color_season_3.png" },
-    { image: "/Assets/image/color_season_4.png" },
+    { image: "../Assets/image/color_season_1.png" },
+    { image: "../Assets/image/color_season_2.png" },
+    { image: "../Assets/image/color_season_3.png" },
+    { image: "../Assets/image/color_season_4.png" },
   ];
 
   const questions = [

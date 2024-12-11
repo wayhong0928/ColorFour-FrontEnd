@@ -2,7 +2,7 @@
 const outfitDetails = [
   {
     id: 1,
-    outfit_image: "/Assets/image/suggest_01.png",
+    outfit_image: "../Assets/image/suggest_01.png",
     outfit_name: "正式場合穿搭",
     description: "適合出席正式場合的穿搭。",
     created_at: "2024-11-25T07:51:42",
@@ -13,7 +13,7 @@ const outfitDetails = [
   },
   {
     id: 2,
-    outfit_image: "/Assets/image/suggest_02.png",
+    outfit_image: "../Assets/image/suggest_02.png",
     outfit_name: "戶外活動穿搭",
     description: "適合戶外活動的輕便穿搭。",
     created_at: "2024-11-20T10:00:00",
@@ -24,7 +24,7 @@ const outfitDetails = [
   },
   {
     id: 3,
-    outfit_image: "/Assets/image/suggest_03.png",
+    outfit_image: "../Assets/image/suggest_03.png",
     outfit_name: "日常休閒穿搭",
     description: "適合日常使用的簡約風格。",
     created_at: "2024-11-18T15:30:00",
@@ -105,7 +105,7 @@ function saveEdit() {
 function deleteOutfit() {
   if (confirm("確定要刪除嗎？")) {
     alert("穿搭已刪除！");
-    window.location.href = "/Pages/closet_outfit_index.html"; // 返回穿搭總覽
+    window.location.href = "../Pages/closet_outfit_index.html"; // 返回穿搭總覽
   }
 }
 
@@ -114,7 +114,7 @@ function goBack() {
   if (document.referrer) {
     window.history.back();
   } else {
-    window.location.href = "/Pages/closet_outfit_index.html";
+    window.location.href = "../Pages/closet_outfit_index.html";
   }
 }
 

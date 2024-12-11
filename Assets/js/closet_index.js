@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 初始項目列表
   const items = [
-    { name: "白T萬歲", category: "t-shirt", brand: "UNIQLO", price: 150, image: "/Assets/image/Uniqlo_white_Tshirt.png", link: "closet_detail.html?item=t-shirt" },
-    { name: "短褲", category: "bottom", brand: "GU", price: 70, image: "/Assets/image/closet_04.png", link: "closet_detail.html?item=bottom" },
-    { name: "西裝外套", category: "coat", brand: "UNIQLO", price: 220, image: "/Assets/image/closet_06.png", link: "closet_detail.html?item=coat" },
-    { name: "連身裙", category: "dress", brand: "GU", price: 100, image: "/Assets/image/closet_02.png", link: "closet_detail.html?item=dress" },
-    { name: "小白鞋", category: "shoes", brand: "無印", price: 80, image: "/Assets/image/closet_05.png", link: "closet_detail.html?item=shoes" },
-    { name: "牛仔褲", category: "bottom_jeans", brand: "GU", price: 120, image: "/Assets/image/closet_03.png", link: "closet_detail.html?item=bottom_jeans" },
-    { name: "墨鏡", category: "accessories", brand: "NET", price: 50, image: "/Assets/image/closet_07.png", link: "closet_detail.html?item=sunglasses" },
-    { name: "針織衫", category: "top", brand: "GAP", price: 90, image: "/Assets/image/closet_08.png", link: "closet_detail.html?item=sweater" },
+    { name: "白T萬歲", category: "t-shirt", brand: "UNIQLO", price: 150, image: "../Assets/image/Uniqlo_white_Tshirt.png", link: "closet_detail.html?item=t-shirt" },
+    { name: "短褲", category: "bottom", brand: "GU", price: 70, image: "../Assets/image/closet_04.png", link: "closet_detail.html?item=bottom" },
+    { name: "西裝外套", category: "coat", brand: "UNIQLO", price: 220, image: "../Assets/image/closet_06.png", link: "closet_detail.html?item=coat" },
+    { name: "連身裙", category: "dress", brand: "GU", price: 100, image: "../Assets/image/closet_02.png", link: "closet_detail.html?item=dress" },
+    { name: "小白鞋", category: "shoes", brand: "無印", price: 80, image: "../Assets/image/closet_05.png", link: "closet_detail.html?item=shoes" },
+    { name: "牛仔褲", category: "bottom_jeans", brand: "GU", price: 120, image: "../Assets/image/closet_03.png", link: "closet_detail.html?item=bottom_jeans" },
+    { name: "墨鏡", category: "accessories", brand: "NET", price: 50, image: "../Assets/image/closet_07.png", link: "closet_detail.html?item=sunglasses" },
+    { name: "針織衫", category: "top", brand: "GAP", price: 90, image: "../Assets/image/closet_08.png", link: "closet_detail.html?item=sweater" },
   ];
 
   let selectedItems = []; // 選中的項目
