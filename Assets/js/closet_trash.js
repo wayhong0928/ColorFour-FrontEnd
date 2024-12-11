@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     {name: "牛仔褲", 
     category: "bottom_jeans", 
     brand: "GU", price: 120, 
-    image: "/Assets/image/closet_03.png", 
-    link: "closet_detail.html?item=bottom_jeans",
+    image: "../Assets/image/closet_03.png", 
+    link: "../Pages/closet_detail.html?item=bottom_jeans",
     deleted: false,
     },
   ];

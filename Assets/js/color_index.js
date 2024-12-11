@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const itemDiv = document.createElement("div");
       itemDiv.className = "result-item";
   
-      const detailUrl = `/Pages/color_detail.html?season=${encodeURIComponent(item.result_type)}`;
+      const detailUrl = `../Pages/color_detail.html?season=${encodeURIComponent(item.result_type)}`;
 
       itemDiv.innerHTML = `
         <div class="d-flex justify-content-between align-items-center">
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         測驗時間：<br />${formatDate(item.test_date)}
         <a href="${detailUrl}">
-          <img src="/Assets/image/next_icon.png" class="icon" alt="查看詳細">
+          <img src="../Assets/image/next_icon.png" class="icon" alt="查看詳細">
         </a>
       `;
   

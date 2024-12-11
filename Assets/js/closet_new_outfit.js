@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("選擇的單品:", selectedItems);
 
       // 模擬新增後跳轉
-      window.location.href = "/Pages/closet_outfit_index.html";
+      window.location.href = "../Pages/closet_outfit_index.html";
     }
   });
 

@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 假資料
   const recommendations = [
-    { id: 1, title: "表演服", image: "/Assets/image/suggest_01.png", link: "suggest_detail.html?id=1", date: "2024-10-30T19:04:07" },
-    { id: 2, title: "期末報告穿搭", image: "/Assets/image/suggest_03.png", link: "suggest_detail.html?id=2", date: "2024-11-01T10:30:00" },
-    { id: 3, title: "戶外休閒裝", image: "/Assets/image/suggest_02.png", link: "suggest_detail.html?id=3", date: "2024-11-05T15:45:00" },
+    { id: 1, title: "表演服", image: "../Assets/image/suggest_01.png", link: "../Pages/suggest_detail.html?id=1", date: "2024-10-30T19:04:07" },
+    { id: 2, title: "期末報告穿搭", image: "../Assets/image/suggest_03.png", link: "../Pages/suggest_detail.html?id=2", date: "2024-11-01T10:30:00" },
+    { id: 3, title: "戶外休閒裝", image: "../Assets/image/suggest_02.png", link: "../Pages/suggest_detail.html?id=3", date: "2024-11-05T15:45:00" },
   ];
 
   // 渲染推薦列表

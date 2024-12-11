@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const recommendations = [
-    { id: 1, imgSrc: "/Assets/image/suggest_01.png", altText: "表演裝" },
-    { id: 2, imgSrc: "/Assets/image/suggest_03.png", altText: "期末報告穿搭" },
-    { id: 3, imgSrc: "/Assets/image/suggest_02.png", altText: "展覽裝" },
+    { id: 1, imgSrc: "../Assets/image/suggest_01.png", altText: "表演裝" },
+    { id: 2, imgSrc: "../Assets/image/suggest_03.png", altText: "期末報告穿搭" },
+    { id: 3, imgSrc: "../Assets/image/suggest_02.png", altText: "展覽裝" },
   ];
   let selectedIndex = null;
 
@@ -65,6 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("推薦已儲存成功！");
     
     // 直接跳轉到 suggest_index.html 頁面
-    window.location.href = "/Pages/suggest_index.html";
+    window.location.href = "../Pages/suggest_index.html";
   });
 });

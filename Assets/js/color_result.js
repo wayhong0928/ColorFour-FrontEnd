@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mockResult = {
     testName: "簡單淡妝",
     resultType: "夏季型人",
-    imageSrc: "/Assets/image/summer_person.jpg",
+    imageSrc: "../Assets/image/summer_person.jpg",
     description: [
       "☆ 春季型人具備自然的春天所帶來的美好特質，例如：生機、活潑、明媚。",
       "☆ 他們皮膚明亮，眼神閃耀、光潔，是生活中最具快樂和靚麗的一族。",
@@ -29,13 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   confirmButton.addEventListener("click", () => {
     alert("紀錄已確認");
-    window.location.href = "/Pages/color_index.html"; // 返回首页
+    window.location.href = "../Pages/color_index.html"; // 返回首页
   });
 
   deleteButton.addEventListener("click", () => {
     if (confirm("確定要刪除該紀錄嗎？")) {
       alert("紀錄已刪除");
-      window.location.href = "/Pages/color_test.html"; // 删除后跳转
+      window.location.href = "../Pages/color_test.html"; // 删除后跳转
     }
   });
 });
