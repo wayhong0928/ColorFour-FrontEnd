@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     alert("推薦已提交成功！");
     console.log(formData);
-    window.location.href = "/Pages/suggest_results.html";
+    window.location.href = "../Pages/suggest_results.html";
   });
 
   document.getElementById("backButton").addEventListener("click", () => {

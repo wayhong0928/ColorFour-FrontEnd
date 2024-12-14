@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("所有問題均為必填！");
     } else {
       console.log("提交的答案：", answers);
-      window.location.href = "/Pages/color_result.html";
+      window.location.href = "../Pages/color_result.html";
     }
   });
 

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 模擬數據
   const mockData = {
     春季型: {
-      uploadedImage: "/Assets/image/spring_person.jpeg",
+      uploadedImage: "../Assets/image/spring_person.jpeg",
       title: "春季型人",
       testDate: "2023-11-24T10:00:00",
       description: [
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
     },
     夏季型: {
-      uploadedImage: "/Assets/image/summer_person.jpg",
+      uploadedImage: "../Assets/image/summer_person.jpg",
       title: "夏季型人",
       testDate: "2023-12-25T14:30:00",
       description: [
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
     },
     秋季型: {
-      uploadedImage: "/Assets/image/autumn_person.jpg",
+      uploadedImage: "../Assets/image/autumn_person.jpg",
       title: "秋季型人",
       testDate: "2024-01-06T09:15:00",
       description: [
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
     },
     冬季型: {
-      uploadedImage: "/Assets/image/winter_person.jpg",
+      uploadedImage: "../Assets/image/winter_person.jpg",
       title: "冬季型人",
       testDate: "2024-05-17T16:45:00",
       description: [
@@ -133,6 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 重新測驗按鈕功能
   goToRetestButton.addEventListener("click", () => {
-    window.location.href = "/Pages/color_retest.html";
+    window.location.href = "../Pages/color_retest.html";
   });
 });

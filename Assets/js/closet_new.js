@@ -207,7 +207,7 @@ occasions.forEach((occasion) => {
 
     // 顯示成功消息並跳轉
     alert("新增單品成功！");
-    window.location.href = "/Pages/closet_index.html"; // 模擬跳轉到單品列表頁面
+    window.location.href = "../Pages/closet_index.html"; // 模擬跳轉到單品列表頁面
   });
 
   // 返回按鈕

@@ -30,7 +30,7 @@ function savePersonalInfo() {
 
   console.log("Saved user data:", user);
   alert("個人資料已更新");
-  window.location.href = "/Pages/user_profile.html"; 
+  window.location.href = "../Pages/user_profile.html"; 
 }
 
 // 動態生成帳戶管理部分

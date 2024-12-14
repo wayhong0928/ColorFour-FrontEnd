@@ -15,99 +15,113 @@ document.addEventListener("DOMContentLoaded", function () {
   let isEditing = false;
   let item = null; // 用於保存當前項目的數據
 
-// 模拟数据
-const items = [
-  {
-    name: "白T萬歲",
-    category: "t-shirt",
-    brand: "UNIQLO",
-    price: 150,
-    image: "/Assets/image/Uniqlo_white_Tshirt.png",
-    color: "白色",
-    tags: ["#休閒", "#上課"],
-    addDate: "2024/11/24 下午5:36:51",
-    editDate: "2024/11/24 下午5:36:51",
-  },
-  {
-    name: "短褲",
-    category: "bottom",
-    brand: "GU",
-    price: 70,
-    image: "/Assets/image/closet_04.png",
-    color: "藍色",
-    tags: ["#夏日", "#運動"],
-    addDate: "2024/11/23 下午3:12:34",
-    editDate: "2024/11/23 下午4:00:00",
-  },
-  {
-    name: "西裝外套",
-    category: "coat",
-    brand: "UNIQLO",
-    price: 220,
-    image: "/Assets/image/closet_06.png",
-    color: "黑色",
-    tags: ["#正式", "#商務"],
-    addDate: "2024/11/22 下午2:15:20",
-    editDate: "2024/11/22 下午3:30:00",
-  },
-  {
-    name: "連身裙",
-    category: "dress",
-    brand: "GU",
-    price: 100,
-    image: "/Assets/image/closet_02.png",
-    color: "紅色",
-    tags: ["#派對", "#春季"],
-    addDate: "2024/11/21 下午1:10:10",
-    editDate: "2024/11/21 下午2:00:00",
-  },
-  {
-    name: "小白鞋",
-    category: "shoes",
-    brand: "無印",
-    price: 80,
-    image: "/Assets/image/closet_05.png",
-    color: "白色",
-    tags: ["#百搭", "#日常"],
-    addDate: "2024/11/20 下午6:30:00",
-    editDate: "2024/11/20 下午7:00:00",
-    isInTrash: true  // 新增的屬性，表示此項目是否在回收桶中
-  },
-  {
-    name: "牛仔褲",
-    category: "bottom_jeans",
-    brand: "GU",
-    price: 120,
-    image: "/Assets/image/closet_03.png",
-    color: "藍色",
-    tags: ["#經典", "#耐用"],
-    addDate: "2024/11/19 下午4:45:00",
-    editDate: "2024/11/19 下午5:15:00",
-    isInTrash: true 
-  },
-  {
-    name: "墨鏡",
-    category: "sunglasses",
-    brand: "NET",
-    price: 50,
-    image: "/Assets/image/closet_07.png",
-    color: "黑色",
-    tags: ["#夏日", "#旅遊"],
-    addDate: "2024/11/18 上午10:20:00",
-    editDate: "2024/11/18 上午11:00:00",
-  },
-  {
-    name: "針織衫",
-    category: "sweater",
-    brand: "GAP",
-    price: 90,
-    image: "/Assets/image/closet_08.png",
-    color: "米白色",
-    tags: ["#冬季", "#舒適"],
-    addDate: "2024/11/13 下午2:30:00",
-    editDate: "2024/11/13 下午3:15:00",
-  },
-];
+  // 模擬數據
+  const items = [
+    {
+      name: "白T萬歲",
+      category: "t-shirt",
+      brand: "UNIQLO",
+      price: 150,
+      image: "../Assets/image/Uniqlo_white_Tshirt.png",
+      color: "白色",
+      tags: ["#休閒", "#上課"],
+      addDate: "2024/11/24 下午5:36:51",
+      editDate: "2024/11/24 下午5:36:51",
+      isFavorite: true,
+      isInTrash: false,
+    },
+    {
+      name: "短褲",
+      category: "bottom",
+      brand: "GU",
+      price: 70,
+      image: "../Assets/image/closet_04.png",
+      color: "藍色",
+      tags: ["#夏日", "#運動"],
+      addDate: "2024/11/23 下午3:12:34",
+      editDate: "2024/11/23 下午4:00:00",
+      isFavorite: false,
+      isInTrash: false,
+    },
+    {
+      name: "西裝外套",
+      category: "coat",
+      brand: "UNIQLO",
+      price: 220,
+      image: "../Assets/image/closet_06.png",
+      color: "黑色",
+      tags: ["#正式", "#商務"],
+      addDate: "2024/11/22 下午2:15:20",
+      editDate: "2024/11/22 下午3:30:00",
+      isFavorite: true,
+      isInTrash: false,
+    },
+    {
+      name: "連身裙",
+      category: "dress",
+      brand: "GU",
+      price: 100,
+      image: "../Assets/image/closet_02.png",
+      color: "紅色",
+      tags: ["#派對", "#春季"],
+      addDate: "2024/11/21 下午1:10:10",
+      editDate: "2024/11/21 下午2:00:00",
+      isFavorite: true,
+      isInTrash: false,
+    },
+    {
+      name: "小白鞋",
+      category: "shoes",
+      brand: "無印",
+      price: 80,
+      image: "../Assets/image/closet_05.png",
+      color: "白色",
+      tags: ["#百搭", "#日常"],
+      addDate: "2024/11/20 下午6:30:00",
+      editDate: "2024/11/20 下午7:00:00",
+      isFavorite: true,
+      isInTrash: false,
+    },
+    {
+      name: "牛仔褲",
+      category: "bottom_jeans",
+      brand: "GU",
+      price: 120,
+      image: "../Assets/image/closet_03.png",
+      color: "藍色",
+      tags: ["#經典", "#耐用"],
+      addDate: "2024/11/19 下午4:45:00",
+      editDate: "2024/11/19 下午5:15:00",
+      isFavorite: false,
+      isInTrash: false,
+    },
+    {
+      name: "墨鏡",
+      category: "sunglasses",
+      brand: "NET",
+      price: 50,
+      image: "../Assets/image/closet_07.png",
+      color: "黑色",
+      tags: ["#夏日", "#旅遊"],
+      addDate: "2024/11/18 上午10:20:00",
+      editDate: "2024/11/18 上午11:00:00",
+      isFavorite: true,
+      isInTrash: false,
+    },
+    {
+      name: "針織衫",
+      category: "sweater",
+      brand: "GAP",
+      price: 90,
+      image: "../Assets/image/closet_08.png",
+      color: "米白色",
+      tags: ["#冬季", "#舒適"],
+      addDate: "2024/11/13 下午2:30:00",
+      editDate: "2024/11/13 下午3:15:00",
+      isFavorite: false,
+      isInTrash: false,
+    },
+  ];
 
   // 從 URL 中獲取參數
   function getQueryParam(param) {
@@ -119,7 +133,6 @@ const items = [
   function getItemFromURL() {
     const itemCategory = getQueryParam("item"); // URL 中的 `item` 對應 category
     if (itemCategory) {
-      // 根據類別查找對應的項目
       item = items.find((itm) => itm.category === itemCategory);
     }
     if (!item) {
@@ -142,7 +155,8 @@ const items = [
     document.getElementById("item-edit-date").textContent = `編輯時間: ${item.editDate}`;
     document.getElementById("item-image").src = item.image;
 
-    // 切換垃圾桶和恢復按鈕
+    favoriteImage.src = item.isFavorite ? "../Assets/image/愛了.png" : "../Assets/image/未愛.png";
+
     moveToTrashButton.style.display = item.isInTrash ? "none" : "inline-block";
     restoreButton.style.display = item.isInTrash ? "inline-block" : "none";
     deleteButton.style.display = item.isInTrash ? "inline-block" : "none";
@@ -150,9 +164,9 @@ const items = [
 
   // 切換最愛功能
   favoriteIcon.addEventListener("click", function () {
-    isFavorite = !isFavorite;
-    favoriteImage.src = isFavorite ? "/Assets/image/愛了.png" : "/Assets/image/未愛.png";
-    alert(isFavorite ? "已加入最愛" : "已移除最愛");
+    item.isFavorite = !item.isFavorite;
+    favoriteImage.src = item.isFavorite ? "../Assets/image/愛了.png" : "../Assets/image/未愛.png";
+    alert(item.isFavorite ? "已加入最愛" : "已移除最愛");
   });
 
   // 編輯按鈕
